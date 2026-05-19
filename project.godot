@@ -15,6 +15,10 @@ run/main_scene="uid://p4ectxskesqu"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Globals="*uid://dftjio7vuwohg"
+
 [input]
 
 "Left Click"={
