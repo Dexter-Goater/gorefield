@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://n0p5gn8whaag"
-path="res://.godot/imported/chopping board.png-e1cd9851fdf07c1e204e5a4f0296957a.ctex"
+uid="uid://bqt7ehmg3hcvc"
+path="res://.godot/imported/onion_sheet.png-bf753109aad179abd9e47668e9905372.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/2D/Lasagne/chopping board.png"
-dest_files=["res://.godot/imported/chopping board.png-e1cd9851fdf07c1e204e5a4f0296957a.ctex"]
+source_file="res://Art/2D/Minigame 1/onion_sheet.png"
+dest_files=["res://.godot/imported/onion_sheet.png-bf753109aad179abd9e47668e9905372.ctex"]
 
 [params]
 

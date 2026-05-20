@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqt7ehmg3hcvc"
-path="res://.godot/imported/onion_sheet.png-96c2da23691118158dde347a420f5a82.ctex"
+uid="uid://klc2hsgof2lg"
+path="res://.godot/imported/arrow.png-420e13db857fca5e631a98bb8c704409.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/2D/Lasagne/onion_sheet.png"
-dest_files=["res://.godot/imported/onion_sheet.png-96c2da23691118158dde347a420f5a82.ctex"]
+source_file="res://Art/2D/Minigame 2/arrow.png"
+dest_files=["res://.godot/imported/arrow.png-420e13db857fca5e631a98bb8c704409.ctex"]
 
 [params]
 
