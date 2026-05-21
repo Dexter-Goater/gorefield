@@ -1,6 +1,6 @@
 extends Node2D
 
-
+var speed = 0.3
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -8,4 +8,4 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	$Path2D/PathFollow2D.progress_ratio += delta * speed
