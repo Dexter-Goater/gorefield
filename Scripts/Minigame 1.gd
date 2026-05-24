@@ -11,4 +11,3 @@ func _process(delta: float) -> void:
 			$AnimatedSprite2D.play("Veg {veg}".format({'veg':veg}))
 	if veg >= 4 and Globals.minigame < 2:
 		Globals.minigame += 1
-		Globals.gorefield_appeasment = 5

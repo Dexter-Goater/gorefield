@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dbn8saxufndr3"]
+
+[node name="2D to 3D cutscene" type="Node2D" unique_id=1525341654]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=510556755]
+
+[node name="Label" type="Label" parent="." unique_id=1220534978]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "You died"

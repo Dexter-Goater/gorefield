@@ -539,7 +539,7 @@ _data = {
 point_count = 3
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bmxlf"]
-size = Vector2(4, 20)
+size = Vector2(1.9999981, 20)
 
 [node name="Main" type="Node2D" unique_id=1107761980]
 script = ExtResource("1_v1gob")
@@ -632,3 +632,12 @@ shape = SubResource("RectangleShape2D_bmxlf")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1346206867]
 zoom = Vector2(10, 10)
+
+[connection signal="area_entered" from="Minigame 2/Bar/Green" to="Minigame 2" method="_on_green_area_entered"]
+[connection signal="area_exited" from="Minigame 2/Bar/Green" to="Minigame 2" method="_on_green_area_exited"]
+[connection signal="area_entered" from="Minigame 2/Bar/Yellow" to="Minigame 2" method="_on_yellow_area_entered"]
+[connection signal="area_exited" from="Minigame 2/Bar/Yellow" to="Minigame 2" method="_on_yellow_area_exited"]
+[connection signal="area_entered" from="Minigame 2/Bar/Red" to="Minigame 2" method="_on_red_area_entered"]
+[connection signal="area_exited" from="Minigame 2/Bar/Red" to="Minigame 2" method="_on_red_area_exited"]
+[connection signal="area_entered" from="Minigame 2/Bar/Orange" to="Minigame 2" method="_on_orange_area_entered"]
+[connection signal="area_exited" from="Minigame 2/Bar/Orange" to="Minigame 2" method="_on_orange_area_exited"]
