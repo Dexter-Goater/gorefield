@@ -7,8 +7,6 @@ func _ready() -> void:
 		if child.name.begins_with("Minigame"):
 			child.hide()
 	
-	if Globals.gorefield_appeasment == 0:
-		get_tree().change_scene_to_file("res://Scenes/2d_to_3d_cutscene.tscn")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -22,3 +20,6 @@ func _process(delta: float) -> void:
 		for child in get_children():
 			if child.name.begins_with("Minigame") and child.name.ends_with(str(current_minigame)):
 				child.show()
+	
+	if Globals.gorefield_appeasment <= 0.0:
+		get_tree().change_scene_to_file("res://Scenes/2d_to_3d_cutscene.tscn")
