@@ -14,6 +14,7 @@ func _process(delta: float) -> void:
 			$AnimatedSprite2D.play("Veg {veg}".format({'veg':veg}))
 			$Timer.start()
 	if veg >= 4 and Globals.minigame < 2:
-		
+		if Globals.gorefield_appeasment <= 0.0:
+			get_tree().change_scene_to_file("res://Scenes/2d_to_3d_cutscene.tscn")
 		Globals.gorefield_appeasment = 5
 		Globals.minigame += 1

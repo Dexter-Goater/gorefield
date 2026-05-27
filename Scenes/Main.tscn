@@ -9,6 +9,9 @@
 [ext_resource type="Script" uid="uid://8ocq5krur27u" path="res://Scripts/minigame_2.gd" id="7_jw32o"]
 [ext_resource type="Texture2D" uid="uid://cdjgaqo8emydl" path="res://Art/2D/Minigame 2/Drop bar.png" id="8_vy5pj"]
 [ext_resource type="Texture2D" uid="uid://klc2hsgof2lg" path="res://Art/2D/Minigame 2/arrow.png" id="9_bmxlf"]
+[ext_resource type="Script" uid="uid://cw6pqlml5vpoj" path="res://Scripts/minigame_3.gd" id="10_grg3l"]
+[ext_resource type="Texture2D" uid="uid://jo1l8tcvqndb" path="res://Art/2D/Minigame 3/Circle.png" id="11_frkhe"]
+[ext_resource type="Texture2D" uid="uid://derkegth2p2d2" path="res://Art/2D/Minigame 3/dot.png" id="12_1p5hy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4kpch"]
 atlas = ExtResource("4_50glp")
@@ -541,10 +544,14 @@ point_count = 3
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bmxlf"]
 size = Vector2(1.9999981, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2w5on"]
+size = Vector2(2, 2)
+
 [node name="Main" type="Node2D" unique_id=1107761980]
 script = ExtResource("1_v1gob")
 
 [node name="Minigame 1" type="Node2D" parent="." unique_id=102660986]
+visible = false
 script = ExtResource("1_kln2b")
 
 [node name="Sprite2D" type="Sprite2D" parent="Minigame 1" unique_id=323531969]
@@ -561,6 +568,7 @@ wait_time = 5.0
 one_shot = true
 
 [node name="Minigame 2" type="Node2D" parent="." unique_id=664336338]
+visible = false
 script = ExtResource("7_jw32o")
 
 [node name="Bar" type="Sprite2D" parent="Minigame 2" unique_id=448214026]
@@ -634,6 +642,28 @@ texture = ExtResource("9_bmxlf")
 position = Vector2(1, 18)
 shape = SubResource("RectangleShape2D_bmxlf")
 
+[node name="Minigame3" type="Node2D" parent="." unique_id=1728431537]
+script = ExtResource("10_grg3l")
+
+[node name="Sprite2D" type="Sprite2D" parent="Minigame3" unique_id=919015525]
+texture = ExtResource("11_frkhe")
+
+[node name="Pivot" type="Node2D" parent="Minigame3" unique_id=101972404]
+
+[node name="Dot" type="Sprite2D" parent="Minigame3/Pivot" unique_id=1579355427]
+position = Vector2(0, -9)
+texture = ExtResource("12_1p5hy")
+
+[node name="Area2D" type="Area2D" parent="Minigame3/Pivot" unique_id=367565696]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Minigame3/Pivot/Area2D" unique_id=470655692]
+position = Vector2(0, -9)
+shape = SubResource("RectangleShape2D_2w5on")
+
+[node name="Minigame Over" type="Timer" parent="Minigame3" unique_id=1998200558]
+wait_time = 10.0
+one_shot = true
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1346206867]
 zoom = Vector2(10, 10)
 
@@ -645,3 +675,5 @@ zoom = Vector2(10, 10)
 [connection signal="area_exited" from="Minigame 2/Bar/Red" to="Minigame 2" method="_on_red_area_exited"]
 [connection signal="area_entered" from="Minigame 2/Bar/Orange" to="Minigame 2" method="_on_orange_area_entered"]
 [connection signal="area_exited" from="Minigame 2/Bar/Orange" to="Minigame 2" method="_on_orange_area_exited"]
+[connection signal="mouse_entered" from="Minigame3/Pivot/Area2D" to="Minigame3" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Minigame3/Pivot/Area2D" to="Minigame3" method="_on_area_2d_mouse_exited"]
