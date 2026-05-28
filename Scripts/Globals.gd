@@ -1,3 +1,3 @@
 extends Node
-var minigame = 1
+var minigame = 3
 var gorefield_appeasment = 5
