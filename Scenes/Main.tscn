@@ -13,6 +13,9 @@
 [ext_resource type="Texture2D" uid="uid://jo1l8tcvqndb" path="res://Art/2D/Minigame 3/Circle.png" id="11_frkhe"]
 [ext_resource type="Texture2D" uid="uid://derkegth2p2d2" path="res://Art/2D/Minigame 3/dot.png" id="12_1p5hy"]
 [ext_resource type="Script" uid="uid://cbbco6t3nsu4s" path="res://Scripts/minigame_4.gd" id="13_frkhe"]
+[ext_resource type="Texture2D" uid="uid://bpg4endxnh3vh" path="res://Art/2D/Minigame 4/lasagne base.png" id="14_1p5hy"]
+[ext_resource type="Texture2D" uid="uid://b3ebsfptdvo64" path="res://Art/2D/Minigame 4/Ragu.png" id="15_erwvk"]
+[ext_resource type="Texture2D" uid="uid://mxuw1svlvebb" path="res://Art/2D/Minigame 4/Bechamel_Sauce.png" id="16_2w5on"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4kpch"]
 atlas = ExtResource("4_50glp")
@@ -668,6 +671,17 @@ one_shot = true
 
 [node name="Minigame 4" type="Node2D" parent="." unique_id=918677780]
 script = ExtResource("13_frkhe")
+
+[node name="Tray" type="Sprite2D" parent="Minigame 4" unique_id=1130195807]
+texture = ExtResource("14_1p5hy")
+
+[node name="Ragu" type="Sprite2D" parent="Minigame 4" unique_id=1743045704]
+position = Vector2(-37, 0)
+texture = ExtResource("15_erwvk")
+
+[node name="Bechamel Sauce" type="Sprite2D" parent="Minigame 4" unique_id=1810634057]
+position = Vector2(44, 0)
+texture = ExtResource("16_2w5on")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1346206867]
 zoom = Vector2(10, 10)
