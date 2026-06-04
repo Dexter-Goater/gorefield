@@ -575,7 +575,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_tbeql")
 }],
 "loop": false,
-"name": &"Bechamel Sauce",
+"name": &"Bechamel",
 "speed": 0.0
 }, {
 "frames": [{
@@ -598,7 +598,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8kgcr")
 }],
-"loop": true,
+"loop": false,
 "name": &"Ragu",
 "speed": 0.0
 }]
@@ -622,7 +622,6 @@ default_font_size = 32
 script = ExtResource("1_v1gob")
 
 [node name="Minigame 1" type="Node2D" parent="." unique_id=102660986]
-visible = false
 script = ExtResource("1_kln2b")
 
 [node name="Sprite2D" type="Sprite2D" parent="Minigame 1" unique_id=323531969]
@@ -737,13 +736,14 @@ wait_time = 10.0
 one_shot = true
 
 [node name="Minigame 4" type="Node2D" parent="." unique_id=918677780]
+visible = false
 script = ExtResource("13_frkhe")
 
 [node name="Tray" type="Area2D" parent="Minigame 4" unique_id=1397393123]
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="Minigame 4/Tray" unique_id=289578257]
 sprite_frames = SubResource("SpriteFrames_52a0j")
-animation = &"Blank"
+animation = &"Ragu"
 autoplay = "Blank"
 metadata/_edit_lock_ = true
 
