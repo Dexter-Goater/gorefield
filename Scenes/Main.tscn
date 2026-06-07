@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bo020on3tihdr" path="res://Scripts/Minigame 1.gd" id="1_kln2b"]
 [ext_resource type="Script" uid="uid://bvnefw1bmvsff" path="res://Scripts/CookingMain.gd" id="1_v1gob"]
+[ext_resource type="Script" uid="uid://cho1vr7yrhukw" path="res://Scripts/lasagne.gd" id="2_346fj"]
 [ext_resource type="Texture2D" uid="uid://n0p5gn8whaag" path="res://Art/2D/Minigame 1/chopping board.png" id="3_jw32o"]
 [ext_resource type="Texture2D" uid="uid://bkckcppbdyisw" path="res://Art/2D/Minigame 1/carrot_sheet.png" id="4_50glp"]
 [ext_resource type="Texture2D" uid="uid://bqt7ehmg3hcvc" path="res://Art/2D/Minigame 1/onion_sheet.png" id="5_vy5pj"]
@@ -621,170 +622,174 @@ default_font_size = 32
 [node name="Main" type="Node2D" unique_id=1107761980]
 script = ExtResource("1_v1gob")
 
-[node name="Minigame 1" type="Node2D" parent="." unique_id=102660986]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1346206867]
+zoom = Vector2(10, 10)
+metadata/_edit_lock_ = true
+
+[node name="Lasagne" type="Node2D" parent="." unique_id=537758055]
+script = ExtResource("2_346fj")
+
+[node name="Minigame 1" type="Node2D" parent="Lasagne" unique_id=102660986]
 script = ExtResource("1_kln2b")
 
-[node name="Sprite2D" type="Sprite2D" parent="Minigame 1" unique_id=323531969]
+[node name="Sprite2D" type="Sprite2D" parent="Lasagne/Minigame 1" unique_id=323531969]
 texture = ExtResource("3_jw32o")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Minigame 1" unique_id=841010811]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Lasagne/Minigame 1" unique_id=841010811]
 position = Vector2(16, 0)
 sprite_frames = SubResource("SpriteFrames_erwvk")
 animation = &"Veg 3"
 autoplay = "Veg 1"
 
-[node name="Timer" type="Timer" parent="Minigame 1" unique_id=1173723208]
+[node name="Timer" type="Timer" parent="Lasagne/Minigame 1" unique_id=1173723208]
 wait_time = 5.0
 one_shot = true
 
-[node name="Minigame 2" type="Node2D" parent="." unique_id=664336338]
-visible = false
+[node name="Minigame 2" type="Node2D" parent="Lasagne" unique_id=664336338]
 script = ExtResource("7_jw32o")
 
-[node name="Bar" type="Sprite2D" parent="Minigame 2" unique_id=448214026]
+[node name="Bar" type="Sprite2D" parent="Lasagne/Minigame 2" unique_id=448214026]
 position = Vector2(0, -5.0000005)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("8_vy5pj")
 
-[node name="Green" type="Area2D" parent="Minigame 2/Bar" unique_id=851047872]
+[node name="Green" type="Area2D" parent="Lasagne/Minigame 2/Bar" unique_id=851047872]
 position = Vector2(0, 19.999998)
 scale = Vector2(1.2499999, 1.2499999)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Minigame 2/Bar/Green" unique_id=1764297339]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lasagne/Minigame 2/Bar/Green" unique_id=1764297339]
 position = Vector2(-0.49999997, -15.999996)
 scale = Vector2(0.9569999, 0.9569999)
 shape = SubResource("RectangleShape2D_4kpch")
 
-[node name="Yellow" type="Area2D" parent="Minigame 2/Bar" unique_id=959800643]
+[node name="Yellow" type="Area2D" parent="Lasagne/Minigame 2/Bar" unique_id=959800643]
 position = Vector2(0, 19.999998)
 scale = Vector2(1.2499999, 1.2499999)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Minigame 2/Bar/Yellow" unique_id=1876860374]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lasagne/Minigame 2/Bar/Yellow" unique_id=1876860374]
 position = Vector2(-6.0000005, -16)
 scale = Vector2(1.009999, 0.95699954)
 shape = SubResource("RectangleShape2D_grg3l")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Minigame 2/Bar/Yellow" unique_id=813097584]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Lasagne/Minigame 2/Bar/Yellow" unique_id=813097584]
 position = Vector2(4.9999995, -15.999996)
 scale = Vector2(1.0099996, 0.95699984)
 shape = SubResource("RectangleShape2D_frkhe")
 
-[node name="Red" type="Area2D" parent="Minigame 2/Bar" unique_id=57632672]
+[node name="Red" type="Area2D" parent="Lasagne/Minigame 2/Bar" unique_id=57632672]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Minigame 2/Bar/Red" unique_id=172950298]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lasagne/Minigame 2/Bar/Red" unique_id=172950298]
 position = Vector2(-45.112495, 0)
 scale = Vector2(2.4999998, 0.95699996)
 shape = SubResource("RectangleShape2D_1p5hy")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Minigame 2/Bar/Red" unique_id=1700659531]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Lasagne/Minigame 2/Bar/Red" unique_id=1700659531]
 position = Vector2(43.87499, 0)
 scale = Vector2(2.4999995, 0.95699984)
 shape = SubResource("RectangleShape2D_h1m7h")
 
-[node name="Orange" type="Area2D" parent="Minigame 2/Bar" unique_id=1185848865]
+[node name="Orange" type="Area2D" parent="Lasagne/Minigame 2/Bar" unique_id=1185848865]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Minigame 2/Bar/Orange" unique_id=1630594384]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lasagne/Minigame 2/Bar/Orange" unique_id=1630594384]
 position = Vector2(-18.96867, 4.7683716e-07)
 scale = Vector2(2.6999998, 0.95699996)
 shape = SubResource("RectangleShape2D_vy5pj")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Minigame 2/Bar/Orange" unique_id=1805970073]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Lasagne/Minigame 2/Bar/Orange" unique_id=1805970073]
 position = Vector2(17.499998, 9.536743e-07)
 scale = Vector2(2.6999993, 0.9569998)
 shape = SubResource("RectangleShape2D_erwvk")
 
-[node name="Path2D" type="Path2D" parent="Minigame 2" unique_id=1768610465]
+[node name="Path2D" type="Path2D" parent="Lasagne/Minigame 2" unique_id=1768610465]
 curve = SubResource("Curve2D_vy5pj")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Minigame 2/Path2D" unique_id=512632965]
+[node name="PathFollow2D" type="PathFollow2D" parent="Lasagne/Minigame 2/Path2D" unique_id=512632965]
 position = Vector2(-26.652105, -13)
 progress = 23.349976
 rotates = false
 
-[node name="Arrow" type="Sprite2D" parent="Minigame 2/Path2D/PathFollow2D" unique_id=539250224]
+[node name="Arrow" type="Sprite2D" parent="Lasagne/Minigame 2/Path2D/PathFollow2D" unique_id=539250224]
 position = Vector2(0, -1)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("9_bmxlf")
 
-[node name="Arrow" type="Area2D" parent="Minigame 2/Path2D/PathFollow2D/Arrow" unique_id=1054064364]
+[node name="Arrow" type="Area2D" parent="Lasagne/Minigame 2/Path2D/PathFollow2D/Arrow" unique_id=1054064364]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Minigame 2/Path2D/PathFollow2D/Arrow/Arrow" unique_id=1946436939]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lasagne/Minigame 2/Path2D/PathFollow2D/Arrow/Arrow" unique_id=1946436939]
 position = Vector2(1, 18)
 shape = SubResource("RectangleShape2D_bmxlf")
 
-[node name="Minigame 3" type="Node2D" parent="." unique_id=1728431537]
-visible = false
+[node name="Minigame 3" type="Node2D" parent="Lasagne" unique_id=1728431537]
 script = ExtResource("10_grg3l")
 
-[node name="Sprite2D" type="Sprite2D" parent="Minigame 3" unique_id=919015525]
+[node name="Sprite2D" type="Sprite2D" parent="Lasagne/Minigame 3" unique_id=919015525]
 texture = ExtResource("11_frkhe")
 
-[node name="Pivot" type="Node2D" parent="Minigame 3" unique_id=101972404]
+[node name="Pivot" type="Node2D" parent="Lasagne/Minigame 3" unique_id=101972404]
 
-[node name="Dot" type="Sprite2D" parent="Minigame 3/Pivot" unique_id=1579355427]
+[node name="Dot" type="Sprite2D" parent="Lasagne/Minigame 3/Pivot" unique_id=1579355427]
 position = Vector2(0, -9)
 texture = ExtResource("12_1p5hy")
 
-[node name="Area2D" type="Area2D" parent="Minigame 3/Pivot" unique_id=367565696]
+[node name="Area2D" type="Area2D" parent="Lasagne/Minigame 3/Pivot" unique_id=367565696]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Minigame 3/Pivot/Area2D" unique_id=470655692]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lasagne/Minigame 3/Pivot/Area2D" unique_id=470655692]
 position = Vector2(0, -9)
 shape = SubResource("RectangleShape2D_2w5on")
 
-[node name="Minigame Over" type="Timer" parent="Minigame 3" unique_id=1998200558]
+[node name="Minigame Over" type="Timer" parent="Lasagne/Minigame 3" unique_id=1998200558]
 wait_time = 10.0
 one_shot = true
 
-[node name="Minigame 4" type="Node2D" parent="." unique_id=918677780]
-visible = false
+[node name="Minigame 4" type="Node2D" parent="Lasagne" unique_id=918677780]
 script = ExtResource("13_frkhe")
 
-[node name="Tray" type="Area2D" parent="Minigame 4" unique_id=1397393123]
+[node name="Tray" type="Area2D" parent="Lasagne/Minigame 4" unique_id=1397393123]
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="Minigame 4/Tray" unique_id=289578257]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Lasagne/Minigame 4/Tray" unique_id=289578257]
 sprite_frames = SubResource("SpriteFrames_52a0j")
 animation = &"Ragu"
 autoplay = "Blank"
 metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Minigame 4/Tray" unique_id=1264834603]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lasagne/Minigame 4/Tray" unique_id=1264834603]
 shape = SubResource("RectangleShape2D_mx20r")
 metadata/_edit_lock_ = true
 
-[node name="Ragu" type="Area2D" parent="Minigame 4" unique_id=1778918912]
+[node name="Ragu" type="Area2D" parent="Lasagne/Minigame 4" unique_id=1778918912]
 position = Vector2(-41, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Minigame 4/Ragu" unique_id=1298256556]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lasagne/Minigame 4/Ragu" unique_id=1298256556]
 shape = SubResource("RectangleShape2D_rpc3w")
 metadata/_edit_lock_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Minigame 4/Ragu" unique_id=1743045704]
+[node name="Sprite2D" type="Sprite2D" parent="Lasagne/Minigame 4/Ragu" unique_id=1743045704]
 texture = ExtResource("15_erwvk")
 metadata/_edit_lock_ = true
 
-[node name="Bechamel Sauce" type="Area2D" parent="Minigame 4" unique_id=1852503570]
+[node name="Bechamel Sauce" type="Area2D" parent="Lasagne/Minigame 4" unique_id=1852503570]
 position = Vector2(41, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Minigame 4/Bechamel Sauce" unique_id=764125836]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lasagne/Minigame 4/Bechamel Sauce" unique_id=764125836]
 shape = SubResource("RectangleShape2D_3k6d1")
 metadata/_edit_lock_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Minigame 4/Bechamel Sauce" unique_id=1810634057]
+[node name="Sprite2D" type="Sprite2D" parent="Lasagne/Minigame 4/Bechamel Sauce" unique_id=1810634057]
 texture = ExtResource("16_2w5on")
 metadata/_edit_lock_ = true
 
-[node name="Pasta" type="Area2D" parent="Minigame 4" unique_id=1370308223]
+[node name="Pasta" type="Area2D" parent="Lasagne/Minigame 4" unique_id=1370308223]
 position = Vector2(0, -21)
 
-[node name="Sprite2D" type="Sprite2D" parent="Minigame 4/Pasta" unique_id=660995091]
+[node name="Sprite2D" type="Sprite2D" parent="Lasagne/Minigame 4/Pasta" unique_id=660995091]
 texture = ExtResource("17_346fj")
 metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Minigame 4/Pasta" unique_id=1044275532]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lasagne/Minigame 4/Pasta" unique_id=1044275532]
 shape = SubResource("RectangleShape2D_fq6d3")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="Minigame 4" unique_id=1380798231]
+[node name="Label" type="Label" parent="Lasagne/Minigame 4" unique_id=1380798231]
 offset_left = -50.0
 offset_top = -30.0
 offset_right = -28.0
@@ -793,26 +798,22 @@ scale = Vector2(0.1, 0.1)
 theme = SubResource("Theme_2w5on")
 text = "Temp"
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1346206867]
-zoom = Vector2(10, 10)
-metadata/_edit_lock_ = true
-
-[connection signal="area_entered" from="Minigame 2/Bar/Green" to="Minigame 2" method="_on_green_area_entered"]
-[connection signal="area_exited" from="Minigame 2/Bar/Green" to="Minigame 2" method="_on_green_area_exited"]
-[connection signal="area_entered" from="Minigame 2/Bar/Yellow" to="Minigame 2" method="_on_yellow_area_entered"]
-[connection signal="area_exited" from="Minigame 2/Bar/Yellow" to="Minigame 2" method="_on_yellow_area_exited"]
-[connection signal="area_entered" from="Minigame 2/Bar/Red" to="Minigame 2" method="_on_red_area_entered"]
-[connection signal="area_exited" from="Minigame 2/Bar/Red" to="Minigame 2" method="_on_red_area_exited"]
-[connection signal="area_entered" from="Minigame 2/Bar/Orange" to="Minigame 2" method="_on_orange_area_entered"]
-[connection signal="area_exited" from="Minigame 2/Bar/Orange" to="Minigame 2" method="_on_orange_area_exited"]
-[connection signal="mouse_entered" from="Minigame 3/Pivot/Area2D" to="Minigame 3" method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="Minigame 3/Pivot/Area2D" to="Minigame 3" method="_on_area_2d_mouse_exited"]
-[connection signal="timeout" from="Minigame 3/Minigame Over" to="Minigame 3" method="_on_minigame_over_timeout"]
-[connection signal="mouse_entered" from="Minigame 4/Tray" to="Minigame 4" method="_on_tray_mouse_entered"]
-[connection signal="mouse_exited" from="Minigame 4/Tray" to="Minigame 4" method="_on_tray_mouse_exited"]
-[connection signal="mouse_entered" from="Minigame 4/Ragu" to="Minigame 4" method="_on_ragu_mouse_entered"]
-[connection signal="mouse_exited" from="Minigame 4/Ragu" to="Minigame 4" method="_on_ragu_mouse_exited"]
-[connection signal="mouse_entered" from="Minigame 4/Bechamel Sauce" to="Minigame 4" method="_on_bechamel_sauce_mouse_entered"]
-[connection signal="mouse_exited" from="Minigame 4/Bechamel Sauce" to="Minigame 4" method="_on_bechamel_sauce_mouse_exited"]
-[connection signal="mouse_entered" from="Minigame 4/Pasta" to="Minigame 4" method="_on_pasta_mouse_entered"]
-[connection signal="mouse_exited" from="Minigame 4/Pasta" to="Minigame 4" method="_on_pasta_mouse_exited"]
+[connection signal="area_entered" from="Lasagne/Minigame 2/Bar/Green" to="Lasagne/Minigame 2" method="_on_green_area_entered"]
+[connection signal="area_exited" from="Lasagne/Minigame 2/Bar/Green" to="Lasagne/Minigame 2" method="_on_green_area_exited"]
+[connection signal="area_entered" from="Lasagne/Minigame 2/Bar/Yellow" to="Lasagne/Minigame 2" method="_on_yellow_area_entered"]
+[connection signal="area_exited" from="Lasagne/Minigame 2/Bar/Yellow" to="Lasagne/Minigame 2" method="_on_yellow_area_exited"]
+[connection signal="area_entered" from="Lasagne/Minigame 2/Bar/Red" to="Lasagne/Minigame 2" method="_on_red_area_entered"]
+[connection signal="area_exited" from="Lasagne/Minigame 2/Bar/Red" to="Lasagne/Minigame 2" method="_on_red_area_exited"]
+[connection signal="area_entered" from="Lasagne/Minigame 2/Bar/Orange" to="Lasagne/Minigame 2" method="_on_orange_area_entered"]
+[connection signal="area_exited" from="Lasagne/Minigame 2/Bar/Orange" to="Lasagne/Minigame 2" method="_on_orange_area_exited"]
+[connection signal="mouse_entered" from="Lasagne/Minigame 3/Pivot/Area2D" to="Lasagne/Minigame 3" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Lasagne/Minigame 3/Pivot/Area2D" to="Lasagne/Minigame 3" method="_on_area_2d_mouse_exited"]
+[connection signal="timeout" from="Lasagne/Minigame 3/Minigame Over" to="Lasagne/Minigame 3" method="_on_minigame_over_timeout"]
+[connection signal="mouse_entered" from="Lasagne/Minigame 4/Tray" to="Lasagne/Minigame 4" method="_on_tray_mouse_entered"]
+[connection signal="mouse_exited" from="Lasagne/Minigame 4/Tray" to="Lasagne/Minigame 4" method="_on_tray_mouse_exited"]
+[connection signal="mouse_entered" from="Lasagne/Minigame 4/Ragu" to="Lasagne/Minigame 4" method="_on_ragu_mouse_entered"]
+[connection signal="mouse_exited" from="Lasagne/Minigame 4/Ragu" to="Lasagne/Minigame 4" method="_on_ragu_mouse_exited"]
+[connection signal="mouse_entered" from="Lasagne/Minigame 4/Bechamel Sauce" to="Lasagne/Minigame 4" method="_on_bechamel_sauce_mouse_entered"]
+[connection signal="mouse_exited" from="Lasagne/Minigame 4/Bechamel Sauce" to="Lasagne/Minigame 4" method="_on_bechamel_sauce_mouse_exited"]
+[connection signal="mouse_entered" from="Lasagne/Minigame 4/Pasta" to="Lasagne/Minigame 4" method="_on_pasta_mouse_entered"]
+[connection signal="mouse_exited" from="Lasagne/Minigame 4/Pasta" to="Lasagne/Minigame 4" method="_on_pasta_mouse_exited"]

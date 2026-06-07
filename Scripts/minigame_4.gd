@@ -12,7 +12,7 @@ var ingredient
 
 
 func _process(delta: float) -> void:
-	if Globals.minigame == 4:
+	if Globals.minigame == 4 and Globals.current_recipie == "Lasagne":
 		ingredient = order[0]
 		if ingredient == "end":
 			Globals.minigame += 1
@@ -58,25 +58,25 @@ func _process(delta: float) -> void:
 
 
 func _on_tray_mouse_entered() -> void:
-	if Globals.minigame == 4:
+	if Globals.minigame == 4 and Globals.current_recipie == "Lasagne":
 		intray = true
 func _on_tray_mouse_exited() -> void:
 	intray = false
 
 func _on_ragu_mouse_entered() -> void:
-	if Globals.minigame == 4:
+	if Globals.minigame == 4 and Globals.current_recipie == "Lasagne":
 		inragu = true
 func _on_ragu_mouse_exited() -> void:
 	inragu = false
 
 func _on_bechamel_sauce_mouse_entered() -> void:
-	if Globals.minigame == 4:
+	if Globals.minigame == 4 and Globals.current_recipie == "Lasagne":
 		insauce = true
 func _on_bechamel_sauce_mouse_exited() -> void:
 	insauce = false
 
 func _on_pasta_mouse_entered() -> void:
-	if Globals.minigame == 4:
+	if Globals.minigame == 4 and Globals.current_recipie == "Lasagne":
 		inpasta = true
 func _on_pasta_mouse_exited() -> void:
 	inpasta = false

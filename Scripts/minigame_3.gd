@@ -9,7 +9,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if minigame_started == true and Globals.minigame == 3:
+	if minigame_started == true and Globals.minigame == 3 and Globals.current_recipie == "Lasagne":
 		$Pivot.rotation += 0.5 * delta
 		if mouse_in == true:
 			Globals.gorefield_appeasment += 0.02
@@ -18,7 +18,7 @@ func _process(delta: float) -> void:
 		print(Globals.gorefield_appeasment)
 
 func _on_area_2d_mouse_entered() -> void:
-	if Globals.minigame == 3:
+	if Globals.minigame == 3 and Globals.current_recipie == "Lasagne":
 		if minigame_started == false:
 			minigame_started = true
 			$"Minigame Over".start()

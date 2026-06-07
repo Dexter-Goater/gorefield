@@ -13,7 +13,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Globals.minigame == 2:
+	if Globals.minigame == 2 and Globals.current_recipie == "Lasagne":
 		$Path2D/PathFollow2D.progress_ratio += delta * speed
 		if ingredients <= 0:
 			Globals.minigame += 1
@@ -30,7 +30,7 @@ func _process(delta: float) -> void:
 			Globals.gorefield_appeasment -= 2
 			ingredients -= 1
 func _on_green_area_entered(area: Area2D) -> void:
-	if Globals.minigame == 2:
+	if Globals.minigame == 2 and Globals.current_recipie == "Lasagne":
 		in_green = true
 
 func _on_green_area_exited(area: Area2D) -> void:
