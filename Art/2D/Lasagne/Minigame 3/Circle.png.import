@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfp15kwxn1ee3"
-path="res://.godot/imported/lasagne tray.png-bd7c2b7529961922aa59338c513d9c47.ctex"
+uid="uid://jo1l8tcvqndb"
+path="res://.godot/imported/Circle.png-32ca5c2836bf642e326da1694c6d55e7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/2D/Minigame 4/lasagne tray.png"
-dest_files=["res://.godot/imported/lasagne tray.png-bd7c2b7529961922aa59338c513d9c47.ctex"]
+source_file="res://Art/2D/Lasagne/Minigame 3/Circle.png"
+dest_files=["res://.godot/imported/Circle.png-32ca5c2836bf642e326da1694c6d55e7.ctex"]
 
 [params]
 

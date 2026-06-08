@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkckcppbdyisw"
-path="res://.godot/imported/carrot_sheet.png-0431748223c6b7b940dfd9c9070cc6c5.ctex"
+uid="uid://bfp15kwxn1ee3"
+path="res://.godot/imported/lasagne tray.png-40cebffba0670bb981f8584481dadf01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/2D/Minigame 1/carrot_sheet.png"
-dest_files=["res://.godot/imported/carrot_sheet.png-0431748223c6b7b940dfd9c9070cc6c5.ctex"]
+source_file="res://Art/2D/Lasagne/Minigame 4/lasagne tray.png"
+dest_files=["res://.godot/imported/lasagne tray.png-40cebffba0670bb981f8584481dadf01.ctex"]
 
 [params]
 

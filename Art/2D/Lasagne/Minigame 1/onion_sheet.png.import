@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5fxuhenkogr8"
-path="res://.godot/imported/celery_sheet.png-fe20a8548d46abf81fa985b361b2118c.ctex"
+uid="uid://bqt7ehmg3hcvc"
+path="res://.godot/imported/onion_sheet.png-9b08f39c0e1853d7b2928e2f606e2111.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/2D/Minigame 1/celery_sheet.png"
-dest_files=["res://.godot/imported/celery_sheet.png-fe20a8548d46abf81fa985b361b2118c.ctex"]
+source_file="res://Art/2D/Lasagne/Minigame 1/onion_sheet.png"
+dest_files=["res://.godot/imported/onion_sheet.png-9b08f39c0e1853d7b2928e2f606e2111.ctex"]
 
 [params]
 

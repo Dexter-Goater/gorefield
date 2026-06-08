@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://derkegth2p2d2"
-path="res://.godot/imported/dot.png-99009e41ee9d0ff12c2f77a515540638.ctex"
+uid="uid://mxuw1svlvebb"
+path="res://.godot/imported/Bechamel_Sauce.png-76597b8ee0a69dff0062696385613934.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/2D/Minigame 3/dot.png"
-dest_files=["res://.godot/imported/dot.png-99009e41ee9d0ff12c2f77a515540638.ctex"]
+source_file="res://Art/2D/Lasagne/Minigame 4/Bechamel_Sauce.png"
+dest_files=["res://.godot/imported/Bechamel_Sauce.png-76597b8ee0a69dff0062696385613934.ctex"]
 
 [params]
 

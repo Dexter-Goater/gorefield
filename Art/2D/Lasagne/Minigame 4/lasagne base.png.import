@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cb025orqs7ctm"
-path="res://.godot/imported/Pasta.png-5d2178a00a389123c1656fa4168737a2.ctex"
+uid="uid://bpg4endxnh3vh"
+path="res://.godot/imported/lasagne base.png-38549955f369b952565996213bd7e8fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/2D/Minigame 4/Pasta.png"
-dest_files=["res://.godot/imported/Pasta.png-5d2178a00a389123c1656fa4168737a2.ctex"]
+source_file="res://Art/2D/Lasagne/Minigame 4/lasagne base.png"
+dest_files=["res://.godot/imported/lasagne base.png-38549955f369b952565996213bd7e8fe.ctex"]
 
 [params]
 

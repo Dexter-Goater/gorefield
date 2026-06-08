@@ -3,21 +3,21 @@
 [ext_resource type="Script" uid="uid://bo020on3tihdr" path="res://Scripts/Minigame 1.gd" id="1_kln2b"]
 [ext_resource type="Script" uid="uid://bvnefw1bmvsff" path="res://Scripts/CookingMain.gd" id="1_v1gob"]
 [ext_resource type="Script" uid="uid://cho1vr7yrhukw" path="res://Scripts/lasagne.gd" id="2_346fj"]
-[ext_resource type="Texture2D" uid="uid://n0p5gn8whaag" path="res://Art/2D/Minigame 1/chopping board.png" id="3_jw32o"]
-[ext_resource type="Texture2D" uid="uid://bkckcppbdyisw" path="res://Art/2D/Minigame 1/carrot_sheet.png" id="4_50glp"]
-[ext_resource type="Texture2D" uid="uid://bqt7ehmg3hcvc" path="res://Art/2D/Minigame 1/onion_sheet.png" id="5_vy5pj"]
-[ext_resource type="Texture2D" uid="uid://5fxuhenkogr8" path="res://Art/2D/Minigame 1/celery_sheet.png" id="6_bmxlf"]
+[ext_resource type="Texture2D" uid="uid://n0p5gn8whaag" path="res://Art/2D/Lasagne/Minigame 1/chopping board.png" id="3_jw32o"]
+[ext_resource type="Texture2D" uid="uid://bkckcppbdyisw" path="res://Art/2D/Lasagne/Minigame 1/carrot_sheet.png" id="4_50glp"]
+[ext_resource type="Texture2D" uid="uid://bqt7ehmg3hcvc" path="res://Art/2D/Lasagne/Minigame 1/onion_sheet.png" id="5_vy5pj"]
+[ext_resource type="Texture2D" uid="uid://5fxuhenkogr8" path="res://Art/2D/Lasagne/Minigame 1/celery_sheet.png" id="6_bmxlf"]
 [ext_resource type="Script" uid="uid://8ocq5krur27u" path="res://Scripts/minigame_2.gd" id="7_jw32o"]
-[ext_resource type="Texture2D" uid="uid://cdjgaqo8emydl" path="res://Art/2D/Minigame 2/Drop bar.png" id="8_vy5pj"]
-[ext_resource type="Texture2D" uid="uid://klc2hsgof2lg" path="res://Art/2D/Minigame 2/arrow.png" id="9_bmxlf"]
+[ext_resource type="Texture2D" uid="uid://cdjgaqo8emydl" path="res://Art/2D/Lasagne/Minigame 2/Drop bar.png" id="8_vy5pj"]
+[ext_resource type="Texture2D" uid="uid://klc2hsgof2lg" path="res://Art/2D/Lasagne/Minigame 2/arrow.png" id="9_bmxlf"]
 [ext_resource type="Script" uid="uid://cw6pqlml5vpoj" path="res://Scripts/minigame_3.gd" id="10_grg3l"]
-[ext_resource type="Texture2D" uid="uid://jo1l8tcvqndb" path="res://Art/2D/Minigame 3/Circle.png" id="11_frkhe"]
-[ext_resource type="Texture2D" uid="uid://derkegth2p2d2" path="res://Art/2D/Minigame 3/dot.png" id="12_1p5hy"]
+[ext_resource type="Texture2D" uid="uid://jo1l8tcvqndb" path="res://Art/2D/Lasagne/Minigame 3/Circle.png" id="11_frkhe"]
+[ext_resource type="Texture2D" uid="uid://derkegth2p2d2" path="res://Art/2D/Lasagne/Minigame 3/dot.png" id="12_1p5hy"]
 [ext_resource type="Script" uid="uid://cbbco6t3nsu4s" path="res://Scripts/minigame_4.gd" id="13_frkhe"]
-[ext_resource type="Texture2D" uid="uid://bfp15kwxn1ee3" path="res://Art/2D/Minigame 4/lasagne tray.png" id="14_2w5on"]
-[ext_resource type="Texture2D" uid="uid://b3ebsfptdvo64" path="res://Art/2D/Minigame 4/Ragu.png" id="15_erwvk"]
-[ext_resource type="Texture2D" uid="uid://mxuw1svlvebb" path="res://Art/2D/Minigame 4/Bechamel_Sauce.png" id="16_2w5on"]
-[ext_resource type="Texture2D" uid="uid://cb025orqs7ctm" path="res://Art/2D/Minigame 4/Pasta.png" id="17_346fj"]
+[ext_resource type="Texture2D" uid="uid://bfp15kwxn1ee3" path="res://Art/2D/Lasagne/Minigame 4/lasagne tray.png" id="14_2w5on"]
+[ext_resource type="Texture2D" uid="uid://b3ebsfptdvo64" path="res://Art/2D/Lasagne/Minigame 4/Ragu.png" id="15_erwvk"]
+[ext_resource type="Texture2D" uid="uid://mxuw1svlvebb" path="res://Art/2D/Lasagne/Minigame 4/Bechamel_Sauce.png" id="16_2w5on"]
+[ext_resource type="Texture2D" uid="uid://cb025orqs7ctm" path="res://Art/2D/Lasagne/Minigame 4/Pasta.png" id="17_346fj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4kpch"]
 atlas = ExtResource("4_50glp")
@@ -797,6 +797,8 @@ offset_bottom = -18.0
 scale = Vector2(0.1, 0.1)
 theme = SubResource("Theme_2w5on")
 text = "Temp"
+
+[node name="Pizza" type="Node2D" parent="." unique_id=615501577]
 
 [connection signal="area_entered" from="Lasagne/Minigame 2/Bar/Green" to="Lasagne/Minigame 2" method="_on_green_area_entered"]
 [connection signal="area_exited" from="Lasagne/Minigame 2/Bar/Green" to="Lasagne/Minigame 2" method="_on_green_area_exited"]

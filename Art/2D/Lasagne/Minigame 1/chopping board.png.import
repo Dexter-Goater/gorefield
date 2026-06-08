@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mxuw1svlvebb"
-path="res://.godot/imported/Bechamel_Sauce.png-d0aa4c9eb481434bed98088ef6a8f696.ctex"
+uid="uid://n0p5gn8whaag"
+path="res://.godot/imported/chopping board.png-8dad530335f24290c7f07bbb42b0bb5a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/2D/Minigame 4/Bechamel_Sauce.png"
-dest_files=["res://.godot/imported/Bechamel_Sauce.png-d0aa4c9eb481434bed98088ef6a8f696.ctex"]
+source_file="res://Art/2D/Lasagne/Minigame 1/chopping board.png"
+dest_files=["res://.godot/imported/chopping board.png-8dad530335f24290c7f07bbb42b0bb5a.ctex"]
 
 [params]
 

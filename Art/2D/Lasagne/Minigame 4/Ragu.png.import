@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://n0p5gn8whaag"
-path="res://.godot/imported/chopping board.png-aa5e6a59c8887d3b2602eb83a9093717.ctex"
+uid="uid://b3ebsfptdvo64"
+path="res://.godot/imported/Ragu.png-c59185ce0031cb195f97508a437a5ee1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/2D/Minigame 1/chopping board.png"
-dest_files=["res://.godot/imported/chopping board.png-aa5e6a59c8887d3b2602eb83a9093717.ctex"]
+source_file="res://Art/2D/Lasagne/Minigame 4/Ragu.png"
+dest_files=["res://.godot/imported/Ragu.png-c59185ce0031cb195f97508a437a5ee1.ctex"]
 
 [params]
 

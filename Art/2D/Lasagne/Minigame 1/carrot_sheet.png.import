@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3ebsfptdvo64"
-path="res://.godot/imported/Ragu.png-d45416bd591aa35176eb014ebfc00cf9.ctex"
+uid="uid://bkckcppbdyisw"
+path="res://.godot/imported/carrot_sheet.png-9439a92e28a6d3c7196c4a9f929ffeb8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/2D/Minigame 4/Ragu.png"
-dest_files=["res://.godot/imported/Ragu.png-d45416bd591aa35176eb014ebfc00cf9.ctex"]
+source_file="res://Art/2D/Lasagne/Minigame 1/carrot_sheet.png"
+dest_files=["res://.godot/imported/carrot_sheet.png-9439a92e28a6d3c7196c4a9f929ffeb8.ctex"]
 
 [params]
 
