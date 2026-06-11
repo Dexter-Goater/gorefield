@@ -634,7 +634,6 @@ zoom = Vector2(10, 10)
 metadata/_edit_lock_ = true
 
 [node name="Lasagne" type="Node2D" parent="." unique_id=537758055]
-visible = false
 script = ExtResource("2_346fj")
 
 [node name="Minigame 1" type="Node2D" parent="Lasagne" unique_id=102660986]
@@ -810,7 +809,6 @@ text = "Temp"
 script = ExtResource("17_0sclb")
 
 [node name="Minigame 1" type="Node2D" parent="Pizza" unique_id=2054242857]
-visible = false
 script = ExtResource("20_sxkr1")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pizza/Minigame 1" unique_id=257893768]
@@ -833,15 +831,15 @@ wait_time = 10.0
 one_shot = true
 
 [node name="Minigame 2" type="Node2D" parent="Pizza" unique_id=1172153889]
-script = ExtResource("21_hwpts")
 
 [node name="Area2D" type="Area2D" parent="Pizza/Minigame 2" unique_id=1206736011]
-
-[node name="Sprite2D" type="Sprite2D" parent="Pizza/Minigame 2/Area2D" unique_id=568973302]
-texture = ExtResource("22_jyqft")
+script = ExtResource("21_hwpts")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pizza/Minigame 2/Area2D" unique_id=1434034770]
 shape = SubResource("CircleShape2D_3tgeq")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pizza/Minigame 2/Area2D/CollisionShape2D" unique_id=568973302]
+texture = ExtResource("22_jyqft")
 
 [connection signal="area_entered" from="Lasagne/Minigame 2/Bar/Green" to="Lasagne/Minigame 2" method="_on_green_area_entered"]
 [connection signal="area_exited" from="Lasagne/Minigame 2/Bar/Green" to="Lasagne/Minigame 2" method="_on_green_area_exited"]
@@ -866,3 +864,5 @@ shape = SubResource("CircleShape2D_3tgeq")
 [connection signal="mouse_entered" from="Pizza/Minigame 1/Pivot/Area2D" to="Pizza/Minigame 1" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Pizza/Minigame 1/Pivot/Area2D" to="Pizza/Minigame 1" method="_on_area_2d_mouse_exited"]
 [connection signal="timeout" from="Pizza/Minigame 1/Minigame Over" to="Pizza/Minigame 1" method="_on_minigame_over_timeout"]
+[connection signal="mouse_entered" from="Pizza/Minigame 2/Area2D" to="Pizza/Minigame 2/Area2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Pizza/Minigame 2/Area2D" to="Pizza/Minigame 2/Area2D" method="_on_mouse_exited"]
