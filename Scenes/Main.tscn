@@ -645,7 +645,7 @@ texture = ExtResource("3_jw32o")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Lasagne/Minigame 1" unique_id=841010811]
 position = Vector2(16, 0)
 sprite_frames = SubResource("SpriteFrames_erwvk")
-animation = &"Veg 3"
+animation = &"Veg 1"
 autoplay = "Veg 1"
 
 [node name="Timer" type="Timer" parent="Lasagne/Minigame 1" unique_id=1173723208]
