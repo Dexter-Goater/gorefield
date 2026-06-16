@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://box4rqxkank3s"]
+
+[node name="WinScreen" type="Node2D" unique_id=432431971]
+
+[node name="Label" type="Label" parent="." unique_id=192513029]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Wow you won"

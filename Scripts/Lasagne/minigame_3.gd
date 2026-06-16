@@ -32,4 +32,5 @@ func _on_area_2d_mouse_exited() -> void:
 
 func _on_minigame_over_timeout() -> void:
 	Globals.minigame += 1
+	Globals.gorefield_appeasment = 5
 	

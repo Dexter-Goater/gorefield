@@ -27,3 +27,7 @@ func _process(delta: float) -> void:
 			for child in get_children():
 				if child.name.begins_with("Minigame") and child.name.ends_with(str(current_minigame)):
 					child.show()
+	if not Globals.current_recipie == "Lasagne":
+		for child in get_children():
+			if child.name.begins_with("Minigame"):
+				child.hide()

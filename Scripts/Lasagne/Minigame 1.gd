@@ -18,3 +18,7 @@ func _process(delta: float) -> void:
 			get_tree().change_scene_to_file("res://Scenes/2d_to_3d_cutscene.tscn")
 		Globals.gorefield_appeasment = 5
 		Globals.minigame += 1
+	if not Globals.current_recipie == "Lasagne":
+		for child in get_children():
+			if child.name.begins_with("Minigame"):
+				child.hide()
