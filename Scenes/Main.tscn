@@ -20,7 +20,10 @@
 [ext_resource type="Script" uid="uid://qjvdesopfj6r" path="res://Scripts/Pizza/pizza.gd" id="17_0sclb"]
 [ext_resource type="Texture2D" uid="uid://cb025orqs7ctm" path="res://Art/2D/Lasagne/Minigame 4/Pasta.png" id="17_346fj"]
 [ext_resource type="Script" uid="uid://bc0xif3vtfhq5" path="res://Scripts/Pizza/minigame_1.gd" id="20_sxkr1"]
+[ext_resource type="Script" uid="uid://blanc45a5bifp" path="res://Scripts/Pizza/minigame_2.gd" id="21_3tgeq"]
 [ext_resource type="Texture2D" uid="uid://c8d6jp1nrg5c6" path="res://Art/2D/Background/background-Sheet.png" id="21_fq0cl"]
+[ext_resource type="Texture2D" uid="uid://nyhvwn6aicab" path="res://Art/2D/Pizza/Minigame 2/pizza.png" id="22_c4ay3"]
+[ext_resource type="Texture2D" uid="uid://u40v05yamt1t" path="res://Art/2D/Pizza/Minigame 2/arrow.png" id="23_aht7i"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4kpch"]
 atlas = ExtResource("4_50glp")
@@ -686,6 +689,7 @@ script = ExtResource("1_v1gob")
 zoom = Vector2(2.3, 2.3)
 
 [node name="Lasagne" type="Node2D" parent="." unique_id=537758055]
+visible = false
 script = ExtResource("2_346fj")
 
 [node name="Minigame 1" type="Node2D" parent="Lasagne" unique_id=102660986]
@@ -894,6 +898,8 @@ text = "Temp"
 script = ExtResource("17_0sclb")
 
 [node name="Minigame 1" type="Node2D" parent="Pizza" unique_id=2054242857]
+visible = false
+scale = Vector2(4, 4)
 script = ExtResource("20_sxkr1")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pizza/Minigame 1" unique_id=257893768]
@@ -916,11 +922,24 @@ wait_time = 10.0
 one_shot = true
 
 [node name="Minigame 2" type="Node2D" parent="Pizza" unique_id=1356050981]
+scale = Vector2(4, 4)
+script = ExtResource("21_3tgeq")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=900090352]
+[node name="Sprite2D" type="Sprite2D" parent="Pizza/Minigame 2" unique_id=1727512889]
+texture = ExtResource("22_c4ay3")
+
+[node name="Arrow" type="Node2D" parent="Pizza/Minigame 2" unique_id=335770906]
+
+[node name="Sprite2D" type="Sprite2D" parent="Pizza/Minigame 2/Arrow" unique_id=2029706490]
+position = Vector2(19.25, 0.25)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("23_aht7i")
+
+[node name="Background" type="AnimatedSprite2D" parent="." unique_id=900090352]
 z_index = -10
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_othpo")
+metadata/_edit_lock_ = true
 
 [connection signal="area_entered" from="Lasagne/Minigame 2/Bar/Green" to="Lasagne/Minigame 2" method="_on_green_area_entered"]
 [connection signal="area_exited" from="Lasagne/Minigame 2/Bar/Green" to="Lasagne/Minigame 2" method="_on_green_area_exited"]
