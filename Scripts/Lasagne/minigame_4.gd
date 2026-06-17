@@ -1,5 +1,5 @@
 extends Node2D
-var order = ["Ragu","Pasta","Ragu","Bechamel","Pasta","Ragu","Bechamel","Pasta","Ragu","Bechamel","Pasta","Ragu","Bechamel","Pasta","Ragu","end"]
+var order = ["Meat Sauce","Pasta","Meat Sauce","Cheese Sauce","Pasta","Meat Sauce","Cheese Sauce","Pasta","Meat Sauce","Cheese Sauce","Pasta","Meat Sauce","Cheese Sauce","Pasta","Meat Sauce","end"]
 var intray = false
 var inragu = false
 var insauce = false
@@ -43,14 +43,14 @@ func _process(delta: float) -> void:
 				if intray:
 					if sauced:
 						$Tray/Sprite2D.play("Bechamel")
-						if ingredient == "Bechamel":
+						if ingredient == "Cheese Sauce":
 							Globals.gorefield_appeasment += 1
 						else:
 							Globals.gorefield_appeasment -= 4
 						order.pop_front()
 					if raguud:
 						$Tray/Sprite2D.play("Ragu")
-						if ingredient == "Ragu":
+						if ingredient == "Meat Sauce":
 							Globals.gorefield_appeasment += 1
 						else:
 							Globals.gorefield_appeasment -= 4

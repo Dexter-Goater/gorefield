@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 Globals="*uid://dftjio7vuwohg"
 Signals="*uid://ss2jhlxkgcca"
 
+[display]
+
+window/stretch/mode="canvas_items"
+
 [input]
 
 "Left Click"={

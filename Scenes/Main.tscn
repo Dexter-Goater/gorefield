@@ -20,8 +20,6 @@
 [ext_resource type="Script" uid="uid://qjvdesopfj6r" path="res://Scripts/Pizza/pizza.gd" id="17_0sclb"]
 [ext_resource type="Texture2D" uid="uid://cb025orqs7ctm" path="res://Art/2D/Lasagne/Minigame 4/Pasta.png" id="17_346fj"]
 [ext_resource type="Script" uid="uid://bc0xif3vtfhq5" path="res://Scripts/Pizza/minigame_1.gd" id="20_sxkr1"]
-[ext_resource type="Script" uid="uid://blanc45a5bifp" path="res://Scripts/Pizza/minigame_2.gd" id="21_hwpts"]
-[ext_resource type="Texture2D" uid="uid://nyhvwn6aicab" path="res://Art/2D/Pizza/Minigame 2/pizza.png" id="22_jyqft"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4kpch"]
 atlas = ExtResource("4_50glp")
@@ -524,6 +522,9 @@ animations = [{
 "speed": 0.0
 }]
 
+[sub_resource type="Theme" id="Theme_2w5on"]
+default_font_size = 32
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4kpch"]
 size = Vector2(3.1347966, 10.000004)
 
@@ -620,18 +621,11 @@ size = Vector2(16, 16)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fq6d3"]
 size = Vector2(14, 8)
 
-[sub_resource type="Theme" id="Theme_2w5on"]
-default_font_size = 32
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_3tgeq"]
-radius = 9.0
-
 [node name="Main" type="Node2D" unique_id=1107761980]
 script = ExtResource("1_v1gob")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1346206867]
 zoom = Vector2(10, 10)
-metadata/_edit_lock_ = true
 
 [node name="Lasagne" type="Node2D" parent="." unique_id=537758055]
 script = ExtResource("2_346fj")
@@ -651,6 +645,15 @@ autoplay = "Veg 1"
 [node name="Timer" type="Timer" parent="Lasagne/Minigame 1" unique_id=1173723208]
 wait_time = 5.0
 one_shot = true
+
+[node name="Label" type="Label" parent="Lasagne/Minigame 1" unique_id=68766460]
+offset_left = -50.0
+offset_top = -30.0
+offset_right = -28.0
+offset_bottom = -18.0
+scale = Vector2(0.1, 0.1)
+theme = SubResource("Theme_2w5on")
+text = "Spam Left Click to chop"
 
 [node name="Minigame 2" type="Node2D" parent="Lasagne" unique_id=664336338]
 script = ExtResource("7_jw32o")
@@ -726,6 +729,15 @@ texture = ExtResource("9_bmxlf")
 position = Vector2(1, 18)
 shape = SubResource("RectangleShape2D_bmxlf")
 
+[node name="Label" type="Label" parent="Lasagne/Minigame 2" unique_id=465526226]
+offset_left = -50.0
+offset_top = -30.0
+offset_right = 37.0
+offset_bottom = 15.0
+scale = Vector2(0.1, 0.1)
+theme = SubResource("Theme_2w5on")
+text = "Press Space when the arrow is near the green"
+
 [node name="Minigame 3" type="Node2D" parent="Lasagne" unique_id=1728431537]
 script = ExtResource("10_grg3l")
 
@@ -747,6 +759,15 @@ shape = SubResource("RectangleShape2D_2w5on")
 [node name="Minigame Over" type="Timer" parent="Lasagne/Minigame 3" unique_id=1998200558]
 wait_time = 10.0
 one_shot = true
+
+[node name="Label" type="Label" parent="Lasagne/Minigame 3" unique_id=2036219407]
+offset_left = -50.0
+offset_top = -30.0
+offset_right = -28.0
+offset_bottom = -18.0
+scale = Vector2(0.1, 0.1)
+theme = SubResource("Theme_2w5on")
+text = "Track the white box with your mouse to stir"
 
 [node name="Minigame 4" type="Node2D" parent="Lasagne" unique_id=918677780]
 script = ExtResource("13_frkhe")
@@ -830,17 +851,6 @@ shape = SubResource("RectangleShape2D_2w5on")
 wait_time = 10.0
 one_shot = true
 
-[node name="Minigame 2" type="Node2D" parent="Pizza" unique_id=1172153889]
-
-[node name="Area2D" type="Area2D" parent="Pizza/Minigame 2" unique_id=1206736011]
-script = ExtResource("21_hwpts")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Pizza/Minigame 2/Area2D" unique_id=1434034770]
-shape = SubResource("CircleShape2D_3tgeq")
-
-[node name="Sprite2D" type="Sprite2D" parent="Pizza/Minigame 2/Area2D/CollisionShape2D" unique_id=568973302]
-texture = ExtResource("22_jyqft")
-
 [connection signal="area_entered" from="Lasagne/Minigame 2/Bar/Green" to="Lasagne/Minigame 2" method="_on_green_area_entered"]
 [connection signal="area_exited" from="Lasagne/Minigame 2/Bar/Green" to="Lasagne/Minigame 2" method="_on_green_area_exited"]
 [connection signal="area_entered" from="Lasagne/Minigame 2/Bar/Yellow" to="Lasagne/Minigame 2" method="_on_yellow_area_entered"]
@@ -864,5 +874,3 @@ texture = ExtResource("22_jyqft")
 [connection signal="mouse_entered" from="Pizza/Minigame 1/Pivot/Area2D" to="Pizza/Minigame 1" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Pizza/Minigame 1/Pivot/Area2D" to="Pizza/Minigame 1" method="_on_area_2d_mouse_exited"]
 [connection signal="timeout" from="Pizza/Minigame 1/Minigame Over" to="Pizza/Minigame 1" method="_on_minigame_over_timeout"]
-[connection signal="mouse_entered" from="Pizza/Minigame 2/Area2D" to="Pizza/Minigame 2/Area2D" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Pizza/Minigame 2/Area2D" to="Pizza/Minigame 2/Area2D" method="_on_mouse_exited"]

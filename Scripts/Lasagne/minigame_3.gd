@@ -15,7 +15,6 @@ func _process(delta: float) -> void:
 			Globals.gorefield_appeasment += 0.02
 		if mouse_in == false:
 			Globals.gorefield_appeasment -= 0.07
-		print(Globals.gorefield_appeasment)
 
 func _on_area_2d_mouse_entered() -> void:
 	if Globals.minigame == 3 and Globals.current_recipie == "Lasagne":
