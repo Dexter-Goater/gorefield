@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5i2f88dqppbr"
-path="res://.godot/imported/GoreField talking-Sheet.png-dab5ea410d3a951b05522052647540b8.ctex"
+uid="uid://4mho2ahdh4gx"
+path="res://.godot/imported/gorefield front view-Sheet.png-76a7de6389933dd59841e94d50b8c69d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/2D/New folder/GoreField talking-Sheet.png"
-dest_files=["res://.godot/imported/GoreField talking-Sheet.png-dab5ea410d3a951b05522052647540b8.ctex"]
+source_file="res://Art/2D/Background/gorefield front view-Sheet.png"
+dest_files=["res://.godot/imported/gorefield front view-Sheet.png-76a7de6389933dd59841e94d50b8c69d.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhxcy5bb16rti"
-path="res://.godot/imported/Gorefield front view turning-Sheet.png-6ffbcff845b8074d6f57123e2b69d6c1.ctex"
+uid="uid://bibl24lta2dwu"
+path="res://.godot/imported/cutting board mini game - carrot-Sheet.png-a1a3e698d91e401ce3e7b6a5793eb18d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/2D/New folder/Gorefield front view turning-Sheet.png"
-dest_files=["res://.godot/imported/Gorefield front view turning-Sheet.png-6ffbcff845b8074d6f57123e2b69d6c1.ctex"]
+source_file="res://Art/2D/Background/cutting board mini game - carrot-Sheet.png"
+dest_files=["res://.godot/imported/cutting board mini game - carrot-Sheet.png-a1a3e698d91e401ce3e7b6a5793eb18d.ctex"]
 
 [params]
 

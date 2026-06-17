@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlssr8hiq65u2"
-path="res://.godot/imported/GoreField time is running out animation-Sheet.png-dc604878290dea88e62bc7682b60a14a.ctex"
+uid="uid://ci8q70eoq5cp3"
+path="res://.godot/imported/GoreField idle animation.png-7935e01b179fa16d86911759a4e901e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/2D/New folder/GoreField time is running out animation-Sheet.png"
-dest_files=["res://.godot/imported/GoreField time is running out animation-Sheet.png-dc604878290dea88e62bc7682b60a14a.ctex"]
+source_file="res://Art/2D/Background/GoreField idle animation.png"
+dest_files=["res://.godot/imported/GoreField idle animation.png-7935e01b179fa16d86911759a4e901e4.ctex"]
 
 [params]
 
