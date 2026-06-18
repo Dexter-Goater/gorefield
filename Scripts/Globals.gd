@@ -1,5 +1,5 @@
 extends Node
-var minigame = 1
+var minigame = 2
 var gorefield_appeasment = 5
 var recipies = ["Lasagne","Pizza"]
 var current_recipie

@@ -898,7 +898,6 @@ text = "Temp"
 script = ExtResource("17_0sclb")
 
 [node name="Minigame 1" type="Node2D" parent="Pizza" unique_id=2054242857]
-visible = false
 scale = Vector2(4, 4)
 script = ExtResource("20_sxkr1")
 
@@ -935,7 +934,41 @@ position = Vector2(19.25, 0.25)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("23_aht7i")
 
+[node name="Label" type="Label" parent="Pizza/Minigame 2" unique_id=157357293]
+offset_left = -37.5
+offset_top = -22.5
+offset_right = 49.5
+offset_bottom = 22.5
+scale = Vector2(0.1, 0.1)
+theme = SubResource("Theme_2w5on")
+text = "Temp"
+
+[node name="Minigame 3" type="Node2D" parent="Pizza" unique_id=442232733]
+scale = Vector2(4, 4)
+
+[node name="Crust" type="Sprite2D" parent="Pizza/Minigame 3" unique_id=1238980254]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("22_c4ay3")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Pizza/Minigame 3" unique_id=1773995200]
+offset_left = -62.5
+offset_top = -35.5
+offset_right = 63.75
+offset_bottom = 36.5
+
+[node name="SubViewport" type="SubViewport" parent="Pizza/Minigame 3/SubViewportContainer" unique_id=340646636]
+handle_input_locally = false
+size = Vector2i(96, 96)
+render_target_update_mode = 4
+
+[node name="Node2D" type="Node2D" parent="Pizza/Minigame 3/SubViewportContainer/SubViewport" unique_id=1559805140]
+position = Vector2(-49, -49)
+scale = Vector2(4, 4)
+
+[node name="Sauce layer" type="Sprite2D" parent="Pizza/Minigame 3" unique_id=1760076478]
+
 [node name="Background" type="AnimatedSprite2D" parent="." unique_id=900090352]
+visible = false
 z_index = -10
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_othpo")
