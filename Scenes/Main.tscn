@@ -24,6 +24,11 @@
 [ext_resource type="Texture2D" uid="uid://c8d6jp1nrg5c6" path="res://Art/2D/Background/background-Sheet.png" id="21_fq0cl"]
 [ext_resource type="Texture2D" uid="uid://nyhvwn6aicab" path="res://Art/2D/Pizza/Minigame 2/pizza.png" id="22_c4ay3"]
 [ext_resource type="Texture2D" uid="uid://u40v05yamt1t" path="res://Art/2D/Pizza/Minigame 2/arrow.png" id="23_aht7i"]
+[ext_resource type="Script" uid="uid://m6csq8k5jjy5" path="res://Scripts/Pizza/minigame_3.gd" id="24_aht7i"]
+[ext_resource type="Texture2D" uid="uid://ccm52wpm86u6g" path="res://Art/2D/Pizza/Minigame 3/sauced pizza.png" id="25_5jffn"]
+[ext_resource type="Script" uid="uid://br7lhufvhca86" path="res://Scripts/Pizza/minigame_4.gd" id="26_5jffn"]
+[ext_resource type="Script" uid="uid://bcintqrybvalm" path="res://Scripts/Pizza/knob_1.gd" id="27_4n42c"]
+[ext_resource type="Texture2D" uid="uid://ctj03osco1ewh" path="res://icon.svg" id="28_c5snn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4kpch"]
 atlas = ExtResource("4_50glp")
@@ -373,7 +378,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4yxf6")
 }],
-"loop": false,
+"loop": 0,
 "name": &"Veg 1",
 "speed": 0.0
 }, {
@@ -447,7 +452,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_vvjo1")
 }],
-"loop": false,
+"loop": 0,
 "name": &"Veg 2",
 "speed": 0.0
 }, {
@@ -521,7 +526,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_x5wht")
 }],
-"loop": false,
+"loop": 0,
 "name": &"Veg 3",
 "speed": 0.0
 }]
@@ -584,7 +589,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_tbeql")
 }],
-"loop": false,
+"loop": 0,
 "name": &"Bechamel",
 "speed": 0.0
 }, {
@@ -592,7 +597,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_c5nnb")
 }],
-"loop": false,
+"loop": 0,
 "name": &"Blank",
 "speed": 0.0
 }, {
@@ -600,7 +605,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_fsd2l")
 }],
-"loop": false,
+"loop": 0,
 "name": &"Pasta",
 "speed": 0.0
 }, {
@@ -608,7 +613,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8kgcr")
 }],
-"loop": false,
+"loop": 0,
 "name": &"Ragu",
 "speed": 0.0
 }]
@@ -624,6 +629,9 @@ size = Vector2(16, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fq6d3"]
 size = Vector2(14, 8)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
+radius = 9.003471
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_52a0j"]
 atlas = ExtResource("21_fq0cl")
@@ -677,7 +685,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_478hk")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }]
@@ -898,6 +906,7 @@ text = "Temp"
 script = ExtResource("17_0sclb")
 
 [node name="Minigame 1" type="Node2D" parent="Pizza" unique_id=2054242857]
+visible = false
 scale = Vector2(4, 4)
 script = ExtResource("20_sxkr1")
 
@@ -921,6 +930,7 @@ wait_time = 10.0
 one_shot = true
 
 [node name="Minigame 2" type="Node2D" parent="Pizza" unique_id=1356050981]
+visible = false
 scale = Vector2(4, 4)
 script = ExtResource("21_3tgeq")
 
@@ -944,28 +954,49 @@ theme = SubResource("Theme_2w5on")
 text = "Temp"
 
 [node name="Minigame 3" type="Node2D" parent="Pizza" unique_id=442232733]
-scale = Vector2(4, 4)
+visible = false
+scale = Vector2(6, 6)
+script = ExtResource("24_aht7i")
 
-[node name="Crust" type="Sprite2D" parent="Pizza/Minigame 3" unique_id=1238980254]
-scale = Vector2(1.5, 1.5)
+[node name="Area2D" type="Area2D" parent="Pizza/Minigame 3" unique_id=1206819186]
+
+[node name="PizzaBase" type="Sprite2D" parent="Pizza/Minigame 3/Area2D" unique_id=1211676870]
+z_index = -1
 texture = ExtResource("22_c4ay3")
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="Pizza/Minigame 3" unique_id=1773995200]
-offset_left = -62.5
-offset_top = -35.5
-offset_right = 63.75
-offset_bottom = 36.5
+[node name="Sauced" type="Sprite2D" parent="Pizza/Minigame 3/Area2D" unique_id=769224978]
+position = Vector2(1, 1)
+texture = ExtResource("25_5jffn")
 
-[node name="SubViewport" type="SubViewport" parent="Pizza/Minigame 3/SubViewportContainer" unique_id=340646636]
-handle_input_locally = false
-size = Vector2i(96, 96)
-render_target_update_mode = 4
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pizza/Minigame 3/Area2D" unique_id=62228677]
+shape = SubResource("CircleShape2D_g4v7s")
 
-[node name="Node2D" type="Node2D" parent="Pizza/Minigame 3/SubViewportContainer/SubViewport" unique_id=1559805140]
-position = Vector2(-49, -49)
-scale = Vector2(4, 4)
+[node name="Minigame 4" type="Node2D" parent="Pizza" unique_id=1291360360]
+script = ExtResource("26_5jffn")
 
-[node name="Sauce layer" type="Sprite2D" parent="Pizza/Minigame 3" unique_id=1760076478]
+[node name="Knob 1" type="Node2D" parent="Pizza/Minigame 4" unique_id=612083833]
+script = ExtResource("27_4n42c")
+
+[node name="Back" type="Sprite2D" parent="Pizza/Minigame 4/Knob 1" unique_id=1635419116]
+texture = ExtResource("28_c5snn")
+
+[node name="Knob" type="Marker2D" parent="Pizza/Minigame 4/Knob 1" unique_id=557591029]
+
+[node name="Knob" type="Sprite2D" parent="Pizza/Minigame 4/Knob 1/Knob" unique_id=324096791]
+position = Vector2(0, -30.000002)
+scale = Vector2(0.0625, 0.37109375)
+texture = ExtResource("28_c5snn")
+
+[node name="KnobPoint" type="Marker2D" parent="Pizza/Minigame 4/Knob 1/Knob" unique_id=1770857533]
+position = Vector2(0, -51)
+
+[node name="MiddlePoint" type="Marker2D" parent="Pizza/Minigame 4/Knob 1/Knob" unique_id=1655813382]
+position = Vector2(0, -64)
+
+[node name="Goal" type="Sprite2D" parent="Pizza/Minigame 4/Knob 1" unique_id=1153017807]
+position = Vector2(-131.99998, 0.5000005)
+scale = Vector2(0.8984375, 0.2734375)
+texture = ExtResource("28_c5snn")
 
 [node name="Background" type="AnimatedSprite2D" parent="." unique_id=900090352]
 visible = false
@@ -997,3 +1028,5 @@ metadata/_edit_lock_ = true
 [connection signal="mouse_entered" from="Pizza/Minigame 1/Pivot/Area2D" to="Pizza/Minigame 1" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Pizza/Minigame 1/Pivot/Area2D" to="Pizza/Minigame 1" method="_on_area_2d_mouse_exited"]
 [connection signal="timeout" from="Pizza/Minigame 1/Minigame Over" to="Pizza/Minigame 1" method="_on_minigame_over_timeout"]
+[connection signal="mouse_entered" from="Pizza/Minigame 3/Area2D" to="Pizza/Minigame 3" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Pizza/Minigame 3/Area2D" to="Pizza/Minigame 3" method="_on_area_2d_mouse_exited"]
