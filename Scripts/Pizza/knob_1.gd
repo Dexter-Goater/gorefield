@@ -1,7 +1,7 @@
 extends Node2D
-
+signal knob1
 var following := false
-var MAX_DIST := 7000
+var MAX_DIST := 5000
 
 
 var SENSITIVITY := 0.7
@@ -45,4 +45,4 @@ func _process(delta: float) -> void:
 
 			var ang := knob_angle
 			if ang >= 4.45 and ang <= 4.85:
-				print("in right area")
+				knob1.emit()

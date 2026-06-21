@@ -1,309 +1,310 @@
 [gd_scene format=3 uid="uid://p4ectxskesqu"]
 
-[ext_resource type="Script" uid="uid://bo020on3tihdr" path="res://Scripts/Lasagne/Minigame 1.gd" id="1_kln2b"]
-[ext_resource type="Script" uid="uid://bvnefw1bmvsff" path="res://Scripts/CookingMain.gd" id="1_v1gob"]
-[ext_resource type="Script" uid="uid://cho1vr7yrhukw" path="res://Scripts/Lasagne/lasagne.gd" id="2_346fj"]
-[ext_resource type="Texture2D" uid="uid://n0p5gn8whaag" path="res://Art/2D/Lasagne/Minigame 1/chopping board.png" id="3_jw32o"]
-[ext_resource type="Texture2D" uid="uid://bkckcppbdyisw" path="res://Art/2D/Lasagne/Minigame 1/carrot_sheet.png" id="4_50glp"]
-[ext_resource type="Texture2D" uid="uid://bqt7ehmg3hcvc" path="res://Art/2D/Lasagne/Minigame 1/onion_sheet.png" id="5_vy5pj"]
-[ext_resource type="Texture2D" uid="uid://5fxuhenkogr8" path="res://Art/2D/Lasagne/Minigame 1/celery_sheet.png" id="6_bmxlf"]
-[ext_resource type="Script" uid="uid://8ocq5krur27u" path="res://Scripts/Lasagne/minigame_2.gd" id="7_jw32o"]
-[ext_resource type="Texture2D" uid="uid://cdjgaqo8emydl" path="res://Art/2D/Lasagne/Minigame 2/Drop bar.png" id="8_vy5pj"]
-[ext_resource type="Texture2D" uid="uid://klc2hsgof2lg" path="res://Art/2D/Lasagne/Minigame 2/arrow.png" id="9_bmxlf"]
-[ext_resource type="Script" uid="uid://cw6pqlml5vpoj" path="res://Scripts/Lasagne/minigame_3.gd" id="10_grg3l"]
-[ext_resource type="Texture2D" uid="uid://jo1l8tcvqndb" path="res://Art/2D/Lasagne/Minigame 3/Circle.png" id="11_frkhe"]
-[ext_resource type="Texture2D" uid="uid://derkegth2p2d2" path="res://Art/2D/Lasagne/Minigame 3/dot.png" id="12_1p5hy"]
-[ext_resource type="Script" uid="uid://cbbco6t3nsu4s" path="res://Scripts/Lasagne/minigame_4.gd" id="13_frkhe"]
-[ext_resource type="Texture2D" uid="uid://bfp15kwxn1ee3" path="res://Art/2D/Lasagne/Minigame 4/lasagne tray.png" id="14_2w5on"]
-[ext_resource type="Texture2D" uid="uid://b3ebsfptdvo64" path="res://Art/2D/Lasagne/Minigame 4/Ragu.png" id="15_erwvk"]
-[ext_resource type="Texture2D" uid="uid://mxuw1svlvebb" path="res://Art/2D/Lasagne/Minigame 4/Bechamel_Sauce.png" id="16_2w5on"]
-[ext_resource type="Script" uid="uid://qjvdesopfj6r" path="res://Scripts/Pizza/pizza.gd" id="17_0sclb"]
-[ext_resource type="Texture2D" uid="uid://cb025orqs7ctm" path="res://Art/2D/Lasagne/Minigame 4/Pasta.png" id="17_346fj"]
-[ext_resource type="Script" uid="uid://bc0xif3vtfhq5" path="res://Scripts/Pizza/minigame_1.gd" id="20_sxkr1"]
-[ext_resource type="Script" uid="uid://blanc45a5bifp" path="res://Scripts/Pizza/minigame_2.gd" id="21_3tgeq"]
-[ext_resource type="Texture2D" uid="uid://c8d6jp1nrg5c6" path="res://Art/2D/Background/background-Sheet.png" id="21_fq0cl"]
-[ext_resource type="Texture2D" uid="uid://nyhvwn6aicab" path="res://Art/2D/Pizza/Minigame 2/pizza.png" id="22_c4ay3"]
-[ext_resource type="Texture2D" uid="uid://u40v05yamt1t" path="res://Art/2D/Pizza/Minigame 2/arrow.png" id="23_aht7i"]
-[ext_resource type="Script" uid="uid://m6csq8k5jjy5" path="res://Scripts/Pizza/minigame_3.gd" id="24_aht7i"]
-[ext_resource type="Texture2D" uid="uid://ccm52wpm86u6g" path="res://Art/2D/Pizza/Minigame 3/sauced pizza.png" id="25_5jffn"]
-[ext_resource type="Script" uid="uid://br7lhufvhca86" path="res://Scripts/Pizza/minigame_4.gd" id="26_5jffn"]
-[ext_resource type="Script" uid="uid://bcintqrybvalm" path="res://Scripts/Pizza/knob_1.gd" id="27_4n42c"]
-[ext_resource type="Texture2D" uid="uid://ctj03osco1ewh" path="res://icon.svg" id="28_c5snn"]
+[ext_resource type="Script" uid="uid://bvnefw1bmvsff" path="res://Scripts/CookingMain.gd" id="1_0evub"]
+[ext_resource type="Script" uid="uid://cho1vr7yrhukw" path="res://Scripts/Lasagne/lasagne.gd" id="2_3qnm5"]
+[ext_resource type="Script" uid="uid://bo020on3tihdr" path="res://Scripts/Lasagne/Minigame 1.gd" id="3_iww83"]
+[ext_resource type="Texture2D" uid="uid://n0p5gn8whaag" path="res://Art/2D/Lasagne/Minigame 1/chopping board.png" id="4_ac6ki"]
+[ext_resource type="Texture2D" uid="uid://bkckcppbdyisw" path="res://Art/2D/Lasagne/Minigame 1/carrot_sheet.png" id="5_5y6rq"]
+[ext_resource type="Texture2D" uid="uid://bqt7ehmg3hcvc" path="res://Art/2D/Lasagne/Minigame 1/onion_sheet.png" id="6_pitq4"]
+[ext_resource type="Texture2D" uid="uid://5fxuhenkogr8" path="res://Art/2D/Lasagne/Minigame 1/celery_sheet.png" id="7_aks50"]
+[ext_resource type="Script" uid="uid://8ocq5krur27u" path="res://Scripts/Lasagne/minigame_2.gd" id="8_dnlh1"]
+[ext_resource type="Texture2D" uid="uid://cdjgaqo8emydl" path="res://Art/2D/Lasagne/Minigame 2/Drop bar.png" id="9_yduox"]
+[ext_resource type="Texture2D" uid="uid://klc2hsgof2lg" path="res://Art/2D/Lasagne/Minigame 2/arrow.png" id="10_wgwka"]
+[ext_resource type="Script" uid="uid://cw6pqlml5vpoj" path="res://Scripts/Lasagne/minigame_3.gd" id="11_hpx6l"]
+[ext_resource type="Texture2D" uid="uid://jo1l8tcvqndb" path="res://Art/2D/Lasagne/Minigame 3/Circle.png" id="12_mv0i5"]
+[ext_resource type="Texture2D" uid="uid://derkegth2p2d2" path="res://Art/2D/Lasagne/Minigame 3/dot.png" id="13_fxxwj"]
+[ext_resource type="Script" uid="uid://cbbco6t3nsu4s" path="res://Scripts/Lasagne/minigame_4.gd" id="14_m7s8x"]
+[ext_resource type="Texture2D" uid="uid://bfp15kwxn1ee3" path="res://Art/2D/Lasagne/Minigame 4/lasagne tray.png" id="15_op8d8"]
+[ext_resource type="Texture2D" uid="uid://b3ebsfptdvo64" path="res://Art/2D/Lasagne/Minigame 4/Ragu.png" id="16_n1gyr"]
+[ext_resource type="Texture2D" uid="uid://mxuw1svlvebb" path="res://Art/2D/Lasagne/Minigame 4/Bechamel_Sauce.png" id="17_del5i"]
+[ext_resource type="Texture2D" uid="uid://cb025orqs7ctm" path="res://Art/2D/Lasagne/Minigame 4/Pasta.png" id="18_6qfv3"]
+[ext_resource type="Script" uid="uid://qjvdesopfj6r" path="res://Scripts/Pizza/pizza.gd" id="19_msp3q"]
+[ext_resource type="Script" uid="uid://bc0xif3vtfhq5" path="res://Scripts/Pizza/minigame_1.gd" id="20_8g7ue"]
+[ext_resource type="Script" uid="uid://blanc45a5bifp" path="res://Scripts/Pizza/minigame_2.gd" id="21_pocwo"]
+[ext_resource type="Texture2D" uid="uid://nyhvwn6aicab" path="res://Art/2D/Pizza/Minigame 2/pizza.png" id="22_e10xp"]
+[ext_resource type="Texture2D" uid="uid://u40v05yamt1t" path="res://Art/2D/Pizza/Minigame 2/arrow.png" id="23_ix0gt"]
+[ext_resource type="Script" uid="uid://m6csq8k5jjy5" path="res://Scripts/Pizza/minigame_3.gd" id="24_41s4g"]
+[ext_resource type="Texture2D" uid="uid://ccm52wpm86u6g" path="res://Art/2D/Pizza/Minigame 3/sauced pizza.png" id="25_thw3e"]
+[ext_resource type="Script" uid="uid://br7lhufvhca86" path="res://Scripts/Pizza/minigame_4.gd" id="26_01qm0"]
+[ext_resource type="Script" uid="uid://bcintqrybvalm" path="res://Scripts/Pizza/knob_1.gd" id="27_if3pv"]
+[ext_resource type="Texture2D" uid="uid://ctj03osco1ewh" path="res://icon.svg" id="28_s60kf"]
+[ext_resource type="Script" uid="uid://d3kxex8shcerv" path="res://Scripts/Pizza/knob_2.gd" id="29_if55n"]
+[ext_resource type="Texture2D" uid="uid://c8d6jp1nrg5c6" path="res://Art/2D/Background/background-Sheet.png" id="30_5itsu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4kpch"]
-atlas = ExtResource("4_50glp")
+atlas = ExtResource("5_5y6rq")
 region = Rect2(0, 0, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_grg3l"]
-atlas = ExtResource("4_50glp")
+atlas = ExtResource("5_5y6rq")
 region = Rect2(64, 0, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_frkhe"]
-atlas = ExtResource("4_50glp")
+atlas = ExtResource("5_5y6rq")
 region = Rect2(128, 0, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1p5hy"]
-atlas = ExtResource("4_50glp")
+atlas = ExtResource("5_5y6rq")
 region = Rect2(0, 32, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h1m7h"]
-atlas = ExtResource("4_50glp")
+atlas = ExtResource("5_5y6rq")
 region = Rect2(64, 32, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_erwvk"]
-atlas = ExtResource("4_50glp")
+atlas = ExtResource("5_5y6rq")
 region = Rect2(128, 32, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2w5on"]
-atlas = ExtResource("4_50glp")
+atlas = ExtResource("5_5y6rq")
 region = Rect2(0, 64, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_346fj"]
-atlas = ExtResource("4_50glp")
+atlas = ExtResource("5_5y6rq")
 region = Rect2(64, 64, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0sclb"]
-atlas = ExtResource("4_50glp")
+atlas = ExtResource("5_5y6rq")
 region = Rect2(128, 64, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sxkr1"]
-atlas = ExtResource("4_50glp")
+atlas = ExtResource("5_5y6rq")
 region = Rect2(0, 96, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fq0cl"]
-atlas = ExtResource("4_50glp")
+atlas = ExtResource("5_5y6rq")
 region = Rect2(64, 96, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hwpts"]
-atlas = ExtResource("4_50glp")
+atlas = ExtResource("5_5y6rq")
 region = Rect2(128, 96, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jyqft"]
-atlas = ExtResource("4_50glp")
+atlas = ExtResource("5_5y6rq")
 region = Rect2(0, 128, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3tgeq"]
-atlas = ExtResource("4_50glp")
+atlas = ExtResource("5_5y6rq")
 region = Rect2(64, 128, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c4ay3"]
-atlas = ExtResource("4_50glp")
+atlas = ExtResource("5_5y6rq")
 region = Rect2(128, 128, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aht7i"]
-atlas = ExtResource("4_50glp")
+atlas = ExtResource("5_5y6rq")
 region = Rect2(0, 160, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5jffn"]
-atlas = ExtResource("4_50glp")
+atlas = ExtResource("5_5y6rq")
 region = Rect2(64, 160, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kpo4j"]
-atlas = ExtResource("4_50glp")
+atlas = ExtResource("5_5y6rq")
 region = Rect2(128, 160, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4n42c"]
-atlas = ExtResource("4_50glp")
+atlas = ExtResource("5_5y6rq")
 region = Rect2(0, 192, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c5snn"]
-atlas = ExtResource("4_50glp")
+atlas = ExtResource("5_5y6rq")
 region = Rect2(64, 192, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xvtyr"]
-atlas = ExtResource("4_50glp")
+atlas = ExtResource("5_5y6rq")
 region = Rect2(128, 192, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u7mjy"]
-atlas = ExtResource("4_50glp")
+atlas = ExtResource("5_5y6rq")
 region = Rect2(0, 224, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4yxf6"]
-atlas = ExtResource("4_50glp")
+atlas = ExtResource("5_5y6rq")
 region = Rect2(64, 224, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qta6b"]
-atlas = ExtResource("5_vy5pj")
+atlas = ExtResource("6_pitq4")
 region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x3rx7"]
-atlas = ExtResource("5_vy5pj")
+atlas = ExtResource("6_pitq4")
 region = Rect2(64, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6heos"]
-atlas = ExtResource("5_vy5pj")
+atlas = ExtResource("6_pitq4")
 region = Rect2(128, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vvnwx"]
-atlas = ExtResource("5_vy5pj")
+atlas = ExtResource("6_pitq4")
 region = Rect2(192, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_btbly"]
-atlas = ExtResource("5_vy5pj")
+atlas = ExtResource("6_pitq4")
 region = Rect2(256, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vs04g"]
-atlas = ExtResource("5_vy5pj")
+atlas = ExtResource("6_pitq4")
 region = Rect2(0, 64, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6ehlx"]
-atlas = ExtResource("5_vy5pj")
+atlas = ExtResource("6_pitq4")
 region = Rect2(64, 64, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_utia5"]
-atlas = ExtResource("5_vy5pj")
+atlas = ExtResource("6_pitq4")
 region = Rect2(128, 64, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f7hdo"]
-atlas = ExtResource("5_vy5pj")
+atlas = ExtResource("6_pitq4")
 region = Rect2(192, 64, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_clvyn"]
-atlas = ExtResource("5_vy5pj")
+atlas = ExtResource("6_pitq4")
 region = Rect2(256, 64, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d8m2u"]
-atlas = ExtResource("5_vy5pj")
+atlas = ExtResource("6_pitq4")
 region = Rect2(0, 128, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5psol"]
-atlas = ExtResource("5_vy5pj")
+atlas = ExtResource("6_pitq4")
 region = Rect2(64, 128, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m4llh"]
-atlas = ExtResource("5_vy5pj")
+atlas = ExtResource("6_pitq4")
 region = Rect2(128, 128, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lac6x"]
-atlas = ExtResource("5_vy5pj")
+atlas = ExtResource("6_pitq4")
 region = Rect2(192, 128, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hpjjw"]
-atlas = ExtResource("5_vy5pj")
+atlas = ExtResource("6_pitq4")
 region = Rect2(256, 128, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_off7b"]
-atlas = ExtResource("5_vy5pj")
+atlas = ExtResource("6_pitq4")
 region = Rect2(0, 192, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lfh1j"]
-atlas = ExtResource("5_vy5pj")
+atlas = ExtResource("6_pitq4")
 region = Rect2(64, 192, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7sj7i"]
-atlas = ExtResource("5_vy5pj")
+atlas = ExtResource("6_pitq4")
 region = Rect2(128, 192, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_semxg"]
-atlas = ExtResource("5_vy5pj")
+atlas = ExtResource("6_pitq4")
 region = Rect2(192, 192, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ep8v8"]
-atlas = ExtResource("5_vy5pj")
+atlas = ExtResource("6_pitq4")
 region = Rect2(256, 192, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3133c"]
-atlas = ExtResource("5_vy5pj")
+atlas = ExtResource("6_pitq4")
 region = Rect2(0, 256, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_js5gh"]
-atlas = ExtResource("5_vy5pj")
+atlas = ExtResource("6_pitq4")
 region = Rect2(64, 256, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vvjo1"]
-atlas = ExtResource("5_vy5pj")
+atlas = ExtResource("6_pitq4")
 region = Rect2(128, 256, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yisvs"]
-atlas = ExtResource("6_bmxlf")
+atlas = ExtResource("7_aks50")
 region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rgw24"]
-atlas = ExtResource("6_bmxlf")
+atlas = ExtResource("7_aks50")
 region = Rect2(64, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5gwyn"]
-atlas = ExtResource("6_bmxlf")
+atlas = ExtResource("7_aks50")
 region = Rect2(128, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r6gtk"]
-atlas = ExtResource("6_bmxlf")
+atlas = ExtResource("7_aks50")
 region = Rect2(192, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_81ldr"]
-atlas = ExtResource("6_bmxlf")
+atlas = ExtResource("7_aks50")
 region = Rect2(256, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eywpa"]
-atlas = ExtResource("6_bmxlf")
+atlas = ExtResource("7_aks50")
 region = Rect2(0, 64, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j7e3e"]
-atlas = ExtResource("6_bmxlf")
+atlas = ExtResource("7_aks50")
 region = Rect2(64, 64, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y2ulj"]
-atlas = ExtResource("6_bmxlf")
+atlas = ExtResource("7_aks50")
 region = Rect2(128, 64, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t3x2a"]
-atlas = ExtResource("6_bmxlf")
+atlas = ExtResource("7_aks50")
 region = Rect2(192, 64, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1bbis"]
-atlas = ExtResource("6_bmxlf")
+atlas = ExtResource("7_aks50")
 region = Rect2(256, 64, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yn2g2"]
-atlas = ExtResource("6_bmxlf")
+atlas = ExtResource("7_aks50")
 region = Rect2(0, 128, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yic5e"]
-atlas = ExtResource("6_bmxlf")
+atlas = ExtResource("7_aks50")
 region = Rect2(64, 128, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ex7s8"]
-atlas = ExtResource("6_bmxlf")
+atlas = ExtResource("7_aks50")
 region = Rect2(128, 128, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4clwk"]
-atlas = ExtResource("6_bmxlf")
+atlas = ExtResource("7_aks50")
 region = Rect2(192, 128, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h2tpa"]
-atlas = ExtResource("6_bmxlf")
+atlas = ExtResource("7_aks50")
 region = Rect2(256, 128, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nkjwg"]
-atlas = ExtResource("6_bmxlf")
+atlas = ExtResource("7_aks50")
 region = Rect2(0, 192, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8n4h5"]
-atlas = ExtResource("6_bmxlf")
+atlas = ExtResource("7_aks50")
 region = Rect2(64, 192, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_as1io"]
-atlas = ExtResource("6_bmxlf")
+atlas = ExtResource("7_aks50")
 region = Rect2(128, 192, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xd5mi"]
-atlas = ExtResource("6_bmxlf")
+atlas = ExtResource("7_aks50")
 region = Rect2(192, 192, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tt1x2"]
-atlas = ExtResource("6_bmxlf")
+atlas = ExtResource("7_aks50")
 region = Rect2(256, 192, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2wrh7"]
-atlas = ExtResource("6_bmxlf")
+atlas = ExtResource("7_aks50")
 region = Rect2(0, 256, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_atu2d"]
-atlas = ExtResource("6_bmxlf")
+atlas = ExtResource("7_aks50")
 region = Rect2(64, 256, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x5wht"]
-atlas = ExtResource("6_bmxlf")
+atlas = ExtResource("7_aks50")
 region = Rect2(128, 256, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_erwvk"]
@@ -568,19 +569,19 @@ size = Vector2(1.9999981, 20)
 size = Vector2(2, 2)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tbeql"]
-atlas = ExtResource("14_2w5on")
+atlas = ExtResource("15_op8d8")
 region = Rect2(0, 64, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c5nnb"]
-atlas = ExtResource("14_2w5on")
+atlas = ExtResource("15_op8d8")
 region = Rect2(64, 64, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fsd2l"]
-atlas = ExtResource("14_2w5on")
+atlas = ExtResource("15_op8d8")
 region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8kgcr"]
-atlas = ExtResource("14_2w5on")
+atlas = ExtResource("15_op8d8")
 region = Rect2(64, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_52a0j"]
@@ -633,32 +634,35 @@ size = Vector2(14, 8)
 [sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
 radius = 9.003471
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5vgkp"]
+size = Vector2(128.33508, 128)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_52a0j"]
-atlas = ExtResource("21_fq0cl")
+atlas = ExtResource("30_5itsu")
 region = Rect2(0, 0, 500, 500)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mx20r"]
-atlas = ExtResource("21_fq0cl")
+atlas = ExtResource("30_5itsu")
 region = Rect2(500, 0, 500, 500)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rpc3w"]
-atlas = ExtResource("21_fq0cl")
+atlas = ExtResource("30_5itsu")
 region = Rect2(1000, 0, 500, 500)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3k6d1"]
-atlas = ExtResource("21_fq0cl")
+atlas = ExtResource("30_5itsu")
 region = Rect2(1500, 0, 500, 500)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fq6d3"]
-atlas = ExtResource("21_fq0cl")
+atlas = ExtResource("30_5itsu")
 region = Rect2(2000, 0, 500, 500)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_he124"]
-atlas = ExtResource("21_fq0cl")
+atlas = ExtResource("30_5itsu")
 region = Rect2(2500, 0, 500, 500)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_478hk"]
-atlas = ExtResource("21_fq0cl")
+atlas = ExtResource("30_5itsu")
 region = Rect2(3000, 0, 500, 500)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_othpo"]
@@ -691,21 +695,20 @@ animations = [{
 }]
 
 [node name="Main" type="Node2D" unique_id=1107761980]
-script = ExtResource("1_v1gob")
+script = ExtResource("1_0evub")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1346206867]
 zoom = Vector2(2.3, 2.3)
 
 [node name="Lasagne" type="Node2D" parent="." unique_id=537758055]
-visible = false
-script = ExtResource("2_346fj")
+script = ExtResource("2_3qnm5")
 
 [node name="Minigame 1" type="Node2D" parent="Lasagne" unique_id=102660986]
-script = ExtResource("1_kln2b")
+script = ExtResource("3_iww83")
 
 [node name="Sprite2D" type="Sprite2D" parent="Lasagne/Minigame 1" unique_id=323531969]
 scale = Vector2(2, 2)
-texture = ExtResource("3_jw32o")
+texture = ExtResource("4_ac6ki")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Lasagne/Minigame 1" unique_id=841010811]
 position = Vector2(16, 0)
@@ -728,12 +731,12 @@ theme = SubResource("Theme_2w5on")
 text = "Spam Left Click to chop"
 
 [node name="Minigame 2" type="Node2D" parent="Lasagne" unique_id=664336338]
-script = ExtResource("7_jw32o")
+script = ExtResource("8_dnlh1")
 
 [node name="Bar" type="Sprite2D" parent="Lasagne/Minigame 2" unique_id=448214026]
 position = Vector2(0, -5.0000005)
 scale = Vector2(1.8, 1.8)
-texture = ExtResource("8_vy5pj")
+texture = ExtResource("9_yduox")
 
 [node name="Green" type="Area2D" parent="Lasagne/Minigame 2/Bar" unique_id=851047872]
 position = Vector2(0, 19.999998)
@@ -795,7 +798,7 @@ rotates = false
 [node name="Arrow" type="Sprite2D" parent="Lasagne/Minigame 2/Path2D/PathFollow2D" unique_id=539250224]
 position = Vector2(0, -1)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("9_bmxlf")
+texture = ExtResource("10_wgwka")
 
 [node name="Arrow" type="Area2D" parent="Lasagne/Minigame 2/Path2D/PathFollow2D/Arrow" unique_id=1054064364]
 
@@ -814,16 +817,16 @@ text = "Press Space when the arrow is near the green"
 
 [node name="Minigame 3" type="Node2D" parent="Lasagne" unique_id=1728431537]
 scale = Vector2(4, 4)
-script = ExtResource("10_grg3l")
+script = ExtResource("11_hpx6l")
 
 [node name="Sprite2D" type="Sprite2D" parent="Lasagne/Minigame 3" unique_id=919015525]
-texture = ExtResource("11_frkhe")
+texture = ExtResource("12_mv0i5")
 
 [node name="Pivot" type="Node2D" parent="Lasagne/Minigame 3" unique_id=101972404]
 
 [node name="Dot" type="Sprite2D" parent="Lasagne/Minigame 3/Pivot" unique_id=1579355427]
 position = Vector2(0, -9)
-texture = ExtResource("12_1p5hy")
+texture = ExtResource("13_fxxwj")
 
 [node name="Area2D" type="Area2D" parent="Lasagne/Minigame 3/Pivot" unique_id=367565696]
 
@@ -846,7 +849,7 @@ text = "Track the white box with your mouse to stir"
 
 [node name="Minigame 4" type="Node2D" parent="Lasagne" unique_id=918677780]
 scale = Vector2(3, 3)
-script = ExtResource("13_frkhe")
+script = ExtResource("14_m7s8x")
 
 [node name="Tray" type="Area2D" parent="Lasagne/Minigame 4" unique_id=1397393123]
 
@@ -868,7 +871,7 @@ shape = SubResource("RectangleShape2D_rpc3w")
 metadata/_edit_lock_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Lasagne/Minigame 4/Ragu" unique_id=1743045704]
-texture = ExtResource("15_erwvk")
+texture = ExtResource("16_n1gyr")
 metadata/_edit_lock_ = true
 
 [node name="Bechamel Sauce" type="Area2D" parent="Lasagne/Minigame 4" unique_id=1852503570]
@@ -879,14 +882,14 @@ shape = SubResource("RectangleShape2D_3k6d1")
 metadata/_edit_lock_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Lasagne/Minigame 4/Bechamel Sauce" unique_id=1810634057]
-texture = ExtResource("16_2w5on")
+texture = ExtResource("17_del5i")
 metadata/_edit_lock_ = true
 
 [node name="Pasta" type="Area2D" parent="Lasagne/Minigame 4" unique_id=1370308223]
 position = Vector2(0, -21)
 
 [node name="Sprite2D" type="Sprite2D" parent="Lasagne/Minigame 4/Pasta" unique_id=660995091]
-texture = ExtResource("17_346fj")
+texture = ExtResource("18_6qfv3")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lasagne/Minigame 4/Pasta" unique_id=1044275532]
@@ -903,21 +906,20 @@ theme = SubResource("Theme_2w5on")
 text = "Temp"
 
 [node name="Pizza" type="Node2D" parent="." unique_id=615501577]
-script = ExtResource("17_0sclb")
+script = ExtResource("19_msp3q")
 
 [node name="Minigame 1" type="Node2D" parent="Pizza" unique_id=2054242857]
-visible = false
 scale = Vector2(4, 4)
-script = ExtResource("20_sxkr1")
+script = ExtResource("20_8g7ue")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pizza/Minigame 1" unique_id=257893768]
-texture = ExtResource("11_frkhe")
+texture = ExtResource("12_mv0i5")
 
 [node name="Pivot" type="Node2D" parent="Pizza/Minigame 1" unique_id=1551350395]
 
 [node name="Dot" type="Sprite2D" parent="Pizza/Minigame 1/Pivot" unique_id=439451347]
 position = Vector2(0, -9)
-texture = ExtResource("12_1p5hy")
+texture = ExtResource("13_fxxwj")
 
 [node name="Area2D" type="Area2D" parent="Pizza/Minigame 1/Pivot" unique_id=305034480]
 
@@ -930,19 +932,18 @@ wait_time = 10.0
 one_shot = true
 
 [node name="Minigame 2" type="Node2D" parent="Pizza" unique_id=1356050981]
-visible = false
 scale = Vector2(4, 4)
-script = ExtResource("21_3tgeq")
+script = ExtResource("21_pocwo")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pizza/Minigame 2" unique_id=1727512889]
-texture = ExtResource("22_c4ay3")
+texture = ExtResource("22_e10xp")
 
 [node name="Arrow" type="Node2D" parent="Pizza/Minigame 2" unique_id=335770906]
 
 [node name="Sprite2D" type="Sprite2D" parent="Pizza/Minigame 2/Arrow" unique_id=2029706490]
 position = Vector2(19.25, 0.25)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("23_aht7i")
+texture = ExtResource("23_ix0gt")
 
 [node name="Label" type="Label" parent="Pizza/Minigame 2" unique_id=157357293]
 offset_left = -37.5
@@ -954,38 +955,40 @@ theme = SubResource("Theme_2w5on")
 text = "Temp"
 
 [node name="Minigame 3" type="Node2D" parent="Pizza" unique_id=442232733]
-visible = false
 scale = Vector2(6, 6)
-script = ExtResource("24_aht7i")
+script = ExtResource("24_41s4g")
 
 [node name="Area2D" type="Area2D" parent="Pizza/Minigame 3" unique_id=1206819186]
 
 [node name="PizzaBase" type="Sprite2D" parent="Pizza/Minigame 3/Area2D" unique_id=1211676870]
 z_index = -1
-texture = ExtResource("22_c4ay3")
+texture = ExtResource("22_e10xp")
 
 [node name="Sauced" type="Sprite2D" parent="Pizza/Minigame 3/Area2D" unique_id=769224978]
 position = Vector2(1, 1)
-texture = ExtResource("25_5jffn")
+texture = ExtResource("25_thw3e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pizza/Minigame 3/Area2D" unique_id=62228677]
 shape = SubResource("CircleShape2D_g4v7s")
 
 [node name="Minigame 4" type="Node2D" parent="Pizza" unique_id=1291360360]
-script = ExtResource("26_5jffn")
+scale = Vector2(0.5, 0.5)
+script = ExtResource("26_01qm0")
 
 [node name="Knob 1" type="Node2D" parent="Pizza/Minigame 4" unique_id=612083833]
-script = ExtResource("27_4n42c")
+position = Vector2(-100, -110)
+script = ExtResource("27_if3pv")
+metadata/_edit_group_ = true
 
 [node name="Back" type="Sprite2D" parent="Pizza/Minigame 4/Knob 1" unique_id=1635419116]
-texture = ExtResource("28_c5snn")
+texture = ExtResource("28_s60kf")
 
 [node name="Knob" type="Marker2D" parent="Pizza/Minigame 4/Knob 1" unique_id=557591029]
 
 [node name="Knob" type="Sprite2D" parent="Pizza/Minigame 4/Knob 1/Knob" unique_id=324096791]
 position = Vector2(0, -30.000002)
 scale = Vector2(0.0625, 0.37109375)
-texture = ExtResource("28_c5snn")
+texture = ExtResource("28_s60kf")
 
 [node name="KnobPoint" type="Marker2D" parent="Pizza/Minigame 4/Knob 1/Knob" unique_id=1770857533]
 position = Vector2(0, -51)
@@ -993,13 +996,39 @@ position = Vector2(0, -51)
 [node name="MiddlePoint" type="Marker2D" parent="Pizza/Minigame 4/Knob 1/Knob" unique_id=1655813382]
 position = Vector2(0, -64)
 
-[node name="Goal" type="Sprite2D" parent="Pizza/Minigame 4/Knob 1" unique_id=1153017807]
-position = Vector2(-131.99998, 0.5000005)
-scale = Vector2(0.8984375, 0.2734375)
-texture = ExtResource("28_c5snn")
+[node name="Knob 2" type="Node2D" parent="Pizza/Minigame 4" unique_id=2019344627]
+position = Vector2(100, -110)
+script = ExtResource("29_if55n")
+metadata/_edit_group_ = true
+
+[node name="Back" type="Sprite2D" parent="Pizza/Minigame 4/Knob 2" unique_id=1527692042]
+texture = ExtResource("28_s60kf")
+
+[node name="Knob" type="Marker2D" parent="Pizza/Minigame 4/Knob 2" unique_id=2108409718]
+
+[node name="Knob" type="Sprite2D" parent="Pizza/Minigame 4/Knob 2/Knob" unique_id=639263097]
+position = Vector2(0, -30.000002)
+scale = Vector2(0.0625, 0.37109375)
+texture = ExtResource("28_s60kf")
+
+[node name="KnobPoint" type="Marker2D" parent="Pizza/Minigame 4/Knob 2/Knob" unique_id=775708740]
+position = Vector2(0, -51)
+
+[node name="MiddlePoint" type="Marker2D" parent="Pizza/Minigame 4/Knob 2/Knob" unique_id=539325184]
+position = Vector2(0, -64)
+
+[node name="Oven" type="Sprite2D" parent="Pizza/Minigame 4" unique_id=1550868312]
+position = Vector2(3.8146973e-06, 138)
+scale = Vector2(5.96875, 2)
+texture = ExtResource("28_s60kf")
+
+[node name="Area2D" type="Area2D" parent="Pizza/Minigame 4/Oven" unique_id=740928162]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pizza/Minigame 4/Oven/Area2D" unique_id=768963841]
+position = Vector2(-0.16754247, -1)
+shape = SubResource("RectangleShape2D_5vgkp")
 
 [node name="Background" type="AnimatedSprite2D" parent="." unique_id=900090352]
-visible = false
 z_index = -10
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_othpo")
@@ -1030,3 +1059,7 @@ metadata/_edit_lock_ = true
 [connection signal="timeout" from="Pizza/Minigame 1/Minigame Over" to="Pizza/Minigame 1" method="_on_minigame_over_timeout"]
 [connection signal="mouse_entered" from="Pizza/Minigame 3/Area2D" to="Pizza/Minigame 3" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Pizza/Minigame 3/Area2D" to="Pizza/Minigame 3" method="_on_area_2d_mouse_exited"]
+[connection signal="knob1" from="Pizza/Minigame 4/Knob 1" to="Pizza/Minigame 4" method="_on_knob_1_knob_1"]
+[connection signal="knob2" from="Pizza/Minigame 4/Knob 2" to="Pizza/Minigame 4" method="_on_knob_2_knob_2"]
+[connection signal="mouse_entered" from="Pizza/Minigame 4/Oven/Area2D" to="Pizza/Minigame 4" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Pizza/Minigame 4/Oven/Area2D" to="Pizza/Minigame 4" method="_on_area_2d_mouse_exited"]
