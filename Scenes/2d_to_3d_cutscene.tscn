@@ -1,11 +1,53 @@
 [gd_scene format=3 uid="uid://dbn8saxufndr3"]
 
+[ext_resource type="Script" uid="uid://dmno5dl7ivfxc" path="res://Scripts/2d_to_3d_cutscene.gd" id="1_p8cbk"]
+
+[sub_resource type="Animation" id="Animation_blg83"]
+resource_name = "2d_to_3d"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(346, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_e5t4h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oxonr"]
+_data = {
+&"2d_to_3d": SubResource("Animation_blg83"),
+&"RESET": SubResource("Animation_e5t4h")
+}
+
 [node name="2D to 3D cutscene" type="Node2D" unique_id=1525341654]
+script = ExtResource("1_p8cbk")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=510556755]
+libraries/ = SubResource("AnimationLibrary_oxonr")
 
 [node name="Label" type="Label" parent="." unique_id=1220534978]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_right = 167.0
+offset_bottom = 49.0
 text = "Wow it changed to 3d
 (You lost)"
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

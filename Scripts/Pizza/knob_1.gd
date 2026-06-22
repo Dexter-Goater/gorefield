@@ -1,7 +1,7 @@
 extends Node2D
 signal knob1
 var following := false
-var MAX_DIST := 5000
+var MAX_DIST := 2000
 
 
 var SENSITIVITY := 0.7

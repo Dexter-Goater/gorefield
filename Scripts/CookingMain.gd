@@ -9,7 +9,8 @@ func _ready() -> void:
 			Globals.current_recipie = Globals.recipies.pick_random()
 			print(Globals.current_recipie)
 	print(Globals.current_recipie)
-	
+	if Globals.old_recipies.size() >= 2:
+		print("win")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

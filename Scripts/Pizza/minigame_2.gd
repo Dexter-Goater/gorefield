@@ -24,10 +24,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		var correct_action = ""
 		
 		match current_target:
-			"W": correct_action = "W"
-			"A": correct_action = "A"
-			"D": correct_action = "D"
-			"S": correct_action = "S"
+			"UP": correct_action = "forward"
+			"LEFT": correct_action = "left"
+			"RIGHT": correct_action = "right"
+			"DOWN": correct_action = "backward"
 			"END": return
 
 		if event.is_action_pressed(correct_action):

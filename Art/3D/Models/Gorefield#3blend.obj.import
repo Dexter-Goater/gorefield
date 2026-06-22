@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cdokxu2yxy5r5"
+path="res://.godot/imported/Gorefield#3blend.obj-5b3ba247946c928d778e313a16bbfdd1.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Gorefield#3blend.obj-5b3ba247946c928d778e313a16bbfdd1.mesh"]
+
+source_file="res://Art/3D/Models/Gorefield#3blend.obj"
+dest_files=["res://.godot/imported/Gorefield#3blend.obj-5b3ba247946c928d778e313a16bbfdd1.mesh", "res://.godot/imported/Gorefield#3blend.obj-5b3ba247946c928d778e313a16bbfdd1.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
