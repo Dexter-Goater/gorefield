@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://3gnsls7jtuxo"]
 
-[ext_resource type="Script" uid="uid://bqqi6elxhlg1" path="res://entities/FPS_Controller/player.gd" id="1_vhbvx"]
-[ext_resource type="Script" uid="uid://b8ts8uc3gchd5" path="res://entities/FPS_Controller/components/movement_controller.gd" id="2_5ow1q"]
+[ext_resource type="Script" uid="uid://bqqi6elxhlg1" path="res://player.gd" id="1_vhbvx"]
+[ext_resource type="Script" uid="uid://b8ts8uc3gchd5" path="res://components/movement_controller.gd" id="2_5ow1q"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wqxis"]
 
@@ -41,6 +41,13 @@ unique_name_in_owner = true
 [node name="Camera3D" type="Camera3D" parent="Yaw/Pitch" unique_id=419518238]
 unique_name_in_owner = true
 current = true
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Yaw/Pitch/Camera3D" unique_id=1632578534]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.1600728)
+light_energy = 2.0
+spot_range = 1000.0
+spot_attenuation = 2.0
+spot_angle = 20.0
 
 [node name="MovementController" type="Node" parent="." unique_id=370495041]
 unique_name_in_owner = true
