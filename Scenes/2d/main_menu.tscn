@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://u51k5u2bgaj1"]
 
 [ext_resource type="Texture2D" uid="uid://ujtmmfq57bo8" path="res://Art/2D/title-Sheet.png" id="1_rlv7p"]
+[ext_resource type="Script" uid="uid://cd8g1hgrnhhx" path="res://Scripts/main_menu.gd" id="1_vmhfb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vmhfb"]
 atlas = ExtResource("1_rlv7p")
@@ -73,11 +74,17 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5vgkp"]
+size = Vector2(74, 20)
+
 [node name="Main Menu" type="Node2D" unique_id=256854684]
+script = ExtResource("1_vmhfb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1881677787]
 sprite_frames = SubResource("SpriteFrames_5vgkp")
-frame_progress = 0.18298134
+frame = 8
+frame_progress = 1.0
+metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1358881153]
 zoom = Vector2(5, 5)
@@ -89,3 +96,18 @@ offset_top = -83.0
 offset_right = 127.0
 offset_bottom = 74.0
 color = Color(0.34901962, 0.3372549, 0.32156864, 1)
+metadata/_edit_lock_ = true
+
+[node name="Play" type="Area2D" parent="." unique_id=1320266176]
+position = Vector2(-27, -21)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Play" unique_id=1201420670]
+shape = SubResource("RectangleShape2D_5vgkp")
+
+[node name="Quit" type="Area2D" parent="." unique_id=1064687008]
+position = Vector2(-28, 25)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Quit" unique_id=247152420]
+shape = SubResource("RectangleShape2D_5vgkp")
