@@ -5,7 +5,7 @@ extends Node3D
 func _ready() -> void:
 	Globals.threed = true
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if Globals.gens_active == 3:
+		print("all active")

@@ -26,6 +26,73 @@ data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5vgkp"]
 
+[sub_resource type="GDScript" id="GDScript_5vgkp"]
+script/source = "extends Area3D
+var playeringen = false
+var genactivated = false
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	if playeringen and not genactivated:
+		$Label3D.show()
+		if Input.is_action_just_pressed(\"E\"):
+			genactivated = true
+			Globals.gens_active += 1
+	else:
+		$Label3D.hide()
+	
+
+
+
+
+func _on_body_entered(body: Node3D) -> void:
+	if body.name == \"FpsController\":
+		playeringen = true
+
+func _on_body_exited(body: Node3D) -> void:
+	if body.name == \"FpsController\":
+		playeringen = false
+"
+
+[sub_resource type="GDScript" id="GDScript_02ewe"]
+script/source = "extends Area3D
+
+var playeringen = false
+var genactivated = false
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	if playeringen and not genactivated:
+		$Label3D.show()
+		if Input.is_action_just_pressed(\"E\"):
+			genactivated = true
+			Globals.gens_active += 1
+	else:
+		$Label3D.hide()
+	
+
+
+
+
+func _on_body_entered(body: Node3D) -> void:
+	if body.name == \"FpsController\":
+		playeringen = true
+
+func _on_body_exited(body: Node3D) -> void:
+	if body.name == \"FpsController\":
+		playeringen = false
+"
+
 [node name="Main3d" type="Node3D" unique_id=2020185486]
 script = ExtResource("1_0geue")
 
@@ -34,12 +101,6 @@ environment = ExtResource("2_5rtkh")
 
 [node name="FpsController" parent="." unique_id=583847357 instance=ExtResource("2_0geue")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.333, 1.4112253, 27.116693)
-
-[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=86891674]
-transform = Transform3D(1, 0, 0, 0, -0.0084926495, 0.99996394, 0, -0.99996394, -0.0084926495, -0.8262248, 12.709, 17.41455)
-light_volumetric_fog_energy = 0.0
-spot_range = 30.0
-spot_angle = 46.508976
 
 [node name="Timer" type="Timer" parent="." unique_id=250900866]
 wait_time = 4.0
@@ -67,7 +128,7 @@ mesh = ExtResource("6_5rtkh")
 shape = SubResource("ConcavePolygonShape3D_5rtkh")
 
 [node name="Generator" type="Area3D" parent="." unique_id=1933454295]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4909172, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.276012, 0.44065523, 39.496296)
 script = ExtResource("7_6fwme")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Generator" unique_id=2064065837]
@@ -85,10 +146,74 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0.7571106, 0)
 shape = SubResource("BoxShape3D_5vgkp")
 
 [node name="Label3D" type="Label3D" parent="Generator" unique_id=486628236]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.30139375, 0)
 billboard = 2
 no_depth_test = true
 text = "E"
 font_size = 128
 
+[node name="Generator2" type="Area3D" parent="." unique_id=1845957760]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.60041, 0.4406476, 17.449875)
+script = SubResource("GDScript_5vgkp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Generator2" unique_id=792725053]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.012354851, 0)
+mesh = SubResource("BoxMesh_5vgkp")
+surface_material_override/0 = SubResource("StandardMaterial3D_8x8bc")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Generator2/MeshInstance3D" unique_id=1219305126]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Generator2/MeshInstance3D/StaticBody3D" unique_id=247802547]
+shape = SubResource("ConcavePolygonShape3D_fkd8t")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Generator2" unique_id=1532885748]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0.7571106, 0)
+shape = SubResource("BoxShape3D_5vgkp")
+
+[node name="Label3D" type="Label3D" parent="Generator2" unique_id=1236036461]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.30139375, 0)
+billboard = 2
+no_depth_test = true
+text = "E"
+font_size = 128
+
+[node name="Generator3" type="Area3D" parent="." unique_id=787031471]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.921291, 0.44066286, 20.288338)
+script = SubResource("GDScript_02ewe")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Generator3" unique_id=709650703]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.012354851, 0)
+mesh = SubResource("BoxMesh_5vgkp")
+surface_material_override/0 = SubResource("StandardMaterial3D_8x8bc")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Generator3/MeshInstance3D" unique_id=1707543937]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Generator3/MeshInstance3D/StaticBody3D" unique_id=65707802]
+shape = SubResource("ConcavePolygonShape3D_fkd8t")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Generator3" unique_id=995392248]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0.7571106, 0)
+shape = SubResource("BoxShape3D_5vgkp")
+
+[node name="Label3D" type="Label3D" parent="Generator3" unique_id=794652044]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.30139375, 0)
+billboard = 2
+no_depth_test = true
+text = "E"
+font_size = 128
+
+[node name="Lights" type="Node3D" parent="." unique_id=2006099024]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Lights" unique_id=86891674]
+transform = Transform3D(1, 0, 0, 0, -0.0084926495, 0.99996394, 0, -0.99996394, -0.0084926495, -0.8262248, 12.709, 17.41455)
+light_volumetric_fog_energy = 0.0
+spot_range = 30.0
+spot_angle = 46.508976
+
 [connection signal="timeout" from="Timer" to="Enemy" method="_on_timer_timeout"]
+[connection signal="body_entered" from="Generator" to="Generator" method="_on_body_entered"]
+[connection signal="body_exited" from="Generator" to="Generator" method="_on_body_exited"]
+[connection signal="body_entered" from="Generator2" to="Generator2" method="_on_body_entered"]
+[connection signal="body_exited" from="Generator2" to="Generator2" method="_on_body_exited"]
+[connection signal="body_entered" from="Generator3" to="Generator3" method="_on_body_entered"]
+[connection signal="body_exited" from="Generator3" to="Generator3" method="_on_body_exited"]

@@ -9,35 +9,19 @@ region = Rect2(0, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8akv7"]
 atlas = ExtResource("1_rlv7p")
-region = Rect2(128, 0, 128, 128)
+region = Rect2(256, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3hyxc"]
 atlas = ExtResource("1_rlv7p")
-region = Rect2(256, 0, 128, 128)
+region = Rect2(384, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lv008"]
 atlas = ExtResource("1_rlv7p")
-region = Rect2(384, 0, 128, 128)
+region = Rect2(512, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_errag"]
 atlas = ExtResource("1_rlv7p")
-region = Rect2(512, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5ans7"]
-atlas = ExtResource("1_rlv7p")
 region = Rect2(640, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_afxvf"]
-atlas = ExtResource("1_rlv7p")
-region = Rect2(768, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qpwwo"]
-atlas = ExtResource("1_rlv7p")
-region = Rect2(896, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_p32ad"]
-atlas = ExtResource("1_rlv7p")
-region = Rect2(1024, 0, 128, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5vgkp"]
 animations = [{
@@ -56,21 +40,24 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_errag")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5ans7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_afxvf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qpwwo")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_p32ad")
 }],
 "loop": 0,
-"name": &"default",
+"name": &"Default",
+"speed": 1.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"Hovering_Play",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"Hovering_Quit",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"Play_pressed",
 "speed": 5.0
 }]
 
@@ -82,8 +69,7 @@ script = ExtResource("1_vmhfb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1881677787]
 sprite_frames = SubResource("SpriteFrames_5vgkp")
-frame = 8
-frame_progress = 1.0
+animation = &"Play_pressed"
 metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1358881153]
@@ -111,3 +97,8 @@ metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Quit" unique_id=247152420]
 shape = SubResource("RectangleShape2D_5vgkp")
+
+[connection signal="mouse_entered" from="Play" to="." method="_on_play_mouse_entered"]
+[connection signal="mouse_exited" from="Play" to="." method="_on_play_mouse_exited"]
+[connection signal="mouse_entered" from="Quit" to="." method="_on_quit_mouse_entered"]
+[connection signal="mouse_exited" from="Quit" to="." method="_on_quit_mouse_exited"]

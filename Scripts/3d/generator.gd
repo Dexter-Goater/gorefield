@@ -1,5 +1,6 @@
 extends Area3D
-
+var playeringen = false
+var genactivated = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -8,4 +9,22 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if playeringen and not genactivated:
+		$Label3D.show()
+		if Input.is_action_just_pressed("E"):
+			genactivated = true
+			Globals.gens_active += 1
+	else:
+		$Label3D.hide()
+	
+
+
+
+
+func _on_body_entered(body: Node3D) -> void:
+	if body.name == "FpsController":
+		playeringen = true
+
+func _on_body_exited(body: Node3D) -> void:
+	if body.name == "FpsController":
+		playeringen = false
