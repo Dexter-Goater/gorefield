@@ -17,11 +17,11 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	match  state:
 		State.IDLE:
-			print("idle")
+			_on_idle()
 		State.WAITING_TO_MOVE:
-			print("Waiting")
+			_on_waiting_to_move()
 		State.MOVE:
-			print("move")
+			_on_move()
 	
 	look_at($"../FpsController".global_position)
 	rotation.x = 0
@@ -33,6 +33,21 @@ func _process(delta: float) -> void:
 		dir.y = 0
 		velocity = dir * 1
 	move_and_slide()
+
+func _on_idle():
+	velocity = Vector3.ZERO
+	idle_timer_count = idle_wait_time
+	state = State.WAITING_TO_MOVE
+
+func _on_waiting_to_move(delta: float):
+	idle_timer_count -= delta
+	
+	if idle_timer_count <= 0.0:
+		print(:"time to move!")
+
+func _on_move():
+	print("move")
+
 
 
 func _on_timer_timeout() -> void:
