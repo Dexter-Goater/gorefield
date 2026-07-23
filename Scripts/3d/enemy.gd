@@ -3,6 +3,7 @@ var direction = Vector3.ZERO
 var moving = false
 enum State {IDLE, WAITING_TO_MOVE, MOVE}
 var state : State = State.IDLE
+const SPEED = 1.0
 
 var idle_wait_time: float = 1.5
 var idle_timer_count: float = 0
@@ -19,19 +20,14 @@ func _process(delta: float) -> void:
 		State.IDLE:
 			_on_idle()
 		State.WAITING_TO_MOVE:
-			_on_waiting_to_move()
+			_on_waiting_to_move(delta)
 		State.MOVE:
 			_on_move()
 	
-	look_at($"../FpsController".global_position)
 	rotation.x = 0
 	rotation.z = 0
 	if !is_on_floor():
 		velocity.y -= 7
-	if moving == true:
-		var dir = (($"../FpsController".global_position) - (global_position)).normalized()
-		dir.y = 0
-		velocity = dir * 1
 	move_and_slide()
 
 func _on_idle():
@@ -41,15 +37,28 @@ func _on_idle():
 
 func _on_waiting_to_move(delta: float):
 	idle_timer_count -= delta
-	
 	if idle_timer_count <= 0.0:
-		print(:"time to move!")
+		var target = get_new_target_location()
+		navigation_agent_3d.target_position = target
+		state = State.MOVE
 
+func get_new_target_location():
+	var offset_x = randf_range(0.5,1.5) * (-1 if randf() < 0.5 else 1)
+	var offset_z = randf_range(0.5,1.5) * (-1 if randf() < 0.5 else 1)
+	return global_transform.origin + Vector3(offset_x, 0, offset_z)
+	
 func _on_move():
-	print("move")
+	var current_position = global_transform.origin
+	var next_position = navigation_agent_3d.get_next_path_position()
+	var direction = (next_position - current_position).normalized()
+	velocity = direction * SPEED
 
 
 
 func _on_timer_timeout() -> void:
 	moving = true
 	print("timer done")
+
+
+func _on_navigation_agent_3d_target_reached() -> void:
+	print("target reached")

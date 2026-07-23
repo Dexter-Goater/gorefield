@@ -223,6 +223,7 @@ spot_range = 30.0
 spot_angle = 46.508976
 
 [connection signal="timeout" from="Timer" to="Enemy" method="_on_timer_timeout"]
+[connection signal="target_reached" from="Enemy/NavigationAgent3D" to="Enemy" method="_on_navigation_agent_3d_target_reached"]
 [connection signal="body_entered" from="Generator" to="Generator" method="_on_body_entered"]
 [connection signal="body_exited" from="Generator" to="Generator" method="_on_body_exited"]
 [connection signal="body_entered" from="Generator2" to="Generator2" method="_on_body_entered"]
