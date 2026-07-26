@@ -12,6 +12,8 @@ height = 1.1
 
 [node name="FpsController" type="CharacterBody3D" unique_id=583847357]
 script = ExtResource("1_vhbvx")
+can_debug = null
+input_mouse_mode = null
 forward = &"forward"
 backward = &"backward"
 left = &"left"
@@ -19,6 +21,12 @@ right = &"right"
 sprint = &"sprint"
 crouch = &"crouch"
 jump = &"jump"
+walk_speed = null
+sprint_speed = null
+crouch_speed = null
+jump_velocity = null
+sprint_jump_velocity = null
+camera_sensitivity = null
 metadata/_custom_type_script = "uid://bqqi6elxhlg1"
 
 [node name="StandingCollisionShape" type="CollisionShape3D" parent="." unique_id=504792037]

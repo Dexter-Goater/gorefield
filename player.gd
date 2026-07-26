@@ -28,7 +28,7 @@ const CAM_HEIGHT_CROUCH : float = 0.0
 ## Character's sprint speed.
 ## This controls how fast the character
 ## sprints.
-@export var sprint_speed  : float = 8.0
+@export var sprint_speed  : float = 20.0
 ## Character's crouch speed.
 ## This controls how fast the character
 ## moves while crouched.
@@ -45,6 +45,18 @@ const CAM_HEIGHT_CROUCH : float = 0.0
 @export_category("Camera Settings")
 ## Affects camera sensitivity. Ranges from 0.0 to 10.0.
 @export_range(0.0, 10.0, 0.1) var camera_sensitivity : float = 5.0
+
+@export_category("Footstep Noise")
+## Base interval (seconds) between footstep noise emissions while walking.
+@export var footstep_interval_walk : float = 0.5
+@export var footstep_interval_sprint : float = 0.32
+@export var footstep_interval_crouch : float = 0.75
+@export var footstep_radius_walk : float = 20.0
+@export var footstep_radius_sprint : float = 30.0
+@export var footstep_radius_crouch : float = 10.0
+@export var footstep_min_speed : float = 0.5
+
+var _footstep_timer : float = 0.0
 
 @onready var yaw    : Node3D   = %Yaw
 @onready var pitch  : Node3D   = %Pitch
@@ -81,12 +93,13 @@ func _unhandled_input(event: InputEvent) -> void:
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	__camera_input(event)
 
-func _physics_process(_delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	__player_movement()
+	__footsteps(delta)
 
 func _process(_delta: float) -> void:
 	__camera_movement()
-	pass
+
 
 func __camera_input(event : InputEvent) -> void:
 	if event is not InputEventMouseMotion:
@@ -104,3 +117,26 @@ func __player_movement() -> void:
 	_input_direction = Input.get_vector(left, right, forward, backward)
 	_direction = (yaw.transform.basis * Vector3(_input_direction.x, 0, _input_direction.y)).normalized()
 	move_and_slide()
+
+func __footsteps(delta: float) -> void:
+	if not is_on_floor():
+		_footstep_timer = 0.0
+		return
+	var horizontal_speed = Vector3(velocity.x, 0, velocity.z).length()
+	if horizontal_speed < footstep_min_speed:
+		_footstep_timer = 0.0
+		return
+	var is_sprinting = Input.is_action_pressed(sprint)
+	var is_crouching = Input.is_action_pressed(crouch)
+	var interval : float = footstep_interval_walk
+	var radius : float = footstep_radius_walk
+	if is_crouching:
+		interval = footstep_interval_crouch
+		radius = footstep_radius_crouch
+	elif is_sprinting:
+		interval = footstep_interval_sprint
+		radius = footstep_radius_sprint
+	_footstep_timer += delta
+	if _footstep_timer >= interval:
+		_footstep_timer = 0.0
+		NoiseManager.emit_noise(global_transform.origin, radius)
