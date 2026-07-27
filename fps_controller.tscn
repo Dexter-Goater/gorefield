@@ -12,8 +12,6 @@ height = 1.1
 
 [node name="FpsController" type="CharacterBody3D" unique_id=583847357]
 script = ExtResource("1_vhbvx")
-can_debug = null
-input_mouse_mode = null
 forward = &"forward"
 backward = &"backward"
 left = &"left"
@@ -21,12 +19,6 @@ right = &"right"
 sprint = &"sprint"
 crouch = &"crouch"
 jump = &"jump"
-walk_speed = null
-sprint_speed = null
-crouch_speed = null
-jump_velocity = null
-sprint_jump_velocity = null
-camera_sensitivity = null
 metadata/_custom_type_script = "uid://bqqi6elxhlg1"
 
 [node name="StandingCollisionShape" type="CollisionShape3D" parent="." unique_id=504792037]
@@ -52,8 +44,8 @@ current = true
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Yaw/Pitch/Camera3D" unique_id=1632578534]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.299, 1.0515409)
-light_energy = 10.0
-spot_range = 50.0
+light_energy = 100.0
+spot_range = 100.0
 spot_attenuation = 2.0
 spot_angle = 20.0
 

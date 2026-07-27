@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://c35nt75wwp21b"]
+
+[ext_resource type="Script" uid="uid://dtfvp7ecgqfaq" path="res://Scripts/3d/enemy.gd" id="1_r4m2x"]
+[ext_resource type="ArrayMesh" uid="uid://cdokxu2yxy5r5" path="res://Art/3D/Models/Gorefield#3blend.obj" id="2_1st1f"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_02ewe"]
+albedo_color = Color(7.941574e-07, 0.54533774, 0.2023764, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_02ewe"]
+size = Vector3(0.85307086, 0.7136259, 0.835022)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nwrtk"]
+size = Vector3(18.25293, 54.423706, 2.334)
+
+[node name="Enemy" type="CharacterBody3D" unique_id=1162910194]
+script = ExtResource("1_r4m2x")
+body_radius = 7.1
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=139064289]
+target_desired_distance = 3.0
+debug_enabled = true
+
+[node name="Gorefield#3Blend" type="MeshInstance3D" parent="." unique_id=498264919]
+mesh = ExtResource("2_1st1f")
+surface_material_override/0 = SubResource("StandardMaterial3D_02ewe")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=970983918]
+transform = Transform3D(3.67, 0, 0, 0, 5.604, 0, 0, 0, 8.962, -0.071000576, 1.9995189, 0)
+shape = SubResource("BoxShape3D_02ewe")
+
+[node name="VisionArea" type="Area3D" parent="." unique_id=724465746]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9111109, 2.7523556)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="VisionArea" unique_id=1394331503]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.53271484, -1.8044078, 26.629961)
+shape = SubResource("BoxShape3D_nwrtk")
+
+[connection signal="target_reached" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_target_reached"]

@@ -51,9 +51,9 @@ const CAM_HEIGHT_CROUCH : float = 0.0
 @export var footstep_interval_walk : float = 0.5
 @export var footstep_interval_sprint : float = 0.32
 @export var footstep_interval_crouch : float = 0.75
-@export var footstep_radius_walk : float = 20.0
-@export var footstep_radius_sprint : float = 30.0
-@export var footstep_radius_crouch : float = 10.0
+@export var footstep_radius_walk : float = 100.0
+@export var footstep_radius_sprint : float = 200.0
+@export var footstep_radius_crouch : float = 50.0
 @export var footstep_min_speed : float = 0.5
 
 var _footstep_timer : float = 0.0

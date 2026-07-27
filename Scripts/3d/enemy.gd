@@ -84,7 +84,6 @@ func _process(delta: float) -> void:
 		velocity.y -= 7
 	move_and_slide()
 
-# ---------- Vision ----------
 
 func _on_vision_area_body_entered(body: Node3D) -> void:
 	if body == player:
@@ -117,17 +116,16 @@ func _update_vision() -> void:
 			state = State.CHASE
 	elif can_see_player:
 		can_see_player = false
-		state = State.IDLE # lost sight, resume normal wandering; only noise triggers investigation now
+		state = State.IDLE
 
-# ---------- Hearing ----------
 
 func _on_noise_heard(noise_position: Vector3, radius: float, loudness: float) -> void:
 	if can_see_player:
-		return # already chasing by sight, ignore noise
+		return
 
 	var distance = global_transform.origin.distance_to(noise_position)
 	if distance > radius:
-		return # out of hearing range
+		return
 
 	if not _has_line_of_hearing(noise_position):
 		return
@@ -142,8 +140,6 @@ func _has_line_of_hearing(noise_position: Vector3) -> bool:
 	query.exclude = [self]
 	var result = _space_state.intersect_ray(query)
 	return result.is_empty()
-
-# ---------- Investigate / Search ----------
 
 func _start_investigate() -> void:
 	var safe_target = NavigationServer3D.map_get_closest_point(_nav_map, last_known_position)
@@ -161,8 +157,6 @@ func _generate_search_points() -> void:
 	search_points.clear()
 	search_point_index = 0
 
-	# Fan out continuing in the direction of travel (where the player likely kept going),
-	# not back toward where the enemy itself approached from
 	var search_direction = last_move_direction
 
 	var angles = [0.0, deg_to_rad(70), deg_to_rad(-70)]
@@ -172,7 +166,6 @@ func _generate_search_points() -> void:
 		var safe_point = NavigationServer3D.map_get_closest_point(_nav_map, raw_point)
 		search_points.append(safe_point)
 
-# ---------- Wander ----------
 
 func _on_idle():
 	velocity = Vector3.ZERO
@@ -198,11 +191,9 @@ func _set_new_target():
 	last_check_position = global_transform.origin
 
 func get_new_target_location():
-	var offset_x = randf_range(10,1000) * (-1 if randf() < 0.5 else 1)
-	var offset_z = randf_range(10,1000) * (-1 if randf() < 0.5 else 1)
+	var offset_x = randf_range(100,1000) * (-1 if randf() < 0.5 else 1)
+	var offset_z = randf_range(100,1000) * (-1 if randf() < 0.5 else 1)
 	return global_transform.origin + Vector3(offset_x, 0, offset_z)
-
-# ---------- Shared movement ----------
 
 func _get_corner_avoidance(move_dir: Vector3) -> Vector3:
 	var origin = global_transform.origin + Vector3(0, 0.5, 0)
@@ -318,4 +309,4 @@ func _on_navigation_agent_3d_target_reached() -> void:
 			if search_points.size() > 0:
 				navigation_agent_3d.target_position = search_points[0]
 		State.SEARCHING:
-			pass # handled in _on_searching via is_navigation_finished + timer
+			pass

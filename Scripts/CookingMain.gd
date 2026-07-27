@@ -18,4 +18,4 @@ func _process(delta: float) -> void:
 	if Globals.gorefield_appeasment <= 0.0:
 		get_tree().change_scene_to_file("res://Scenes/2d_to_3d_cutscene.tscn")
 	if Globals.minigame_over == true:
-			get_tree().change_scene_to_file("res://Scenes/Win_screen.tscn")
+			get_tree().change_scene_to_file("res://Scenes/2d/Win_screen.tscn")
