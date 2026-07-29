@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dlar0bxtonrsf"
-path="res://.godot/imported/Gorefield Thumb nail.png-33ef396be2082530ecf7fa778482d8e9.ctex"
+path="res://.godot/imported/Gorefield Thumb nail.png-c5b29b72df2b7df537101df01b4f46df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Gorefield Thumb nail.png"
-dest_files=["res://.godot/imported/Gorefield Thumb nail.png-33ef396be2082530ecf7fa778482d8e9.ctex"]
+source_file="res://Art/2D/Global/Gorefield Thumb nail.png"
+dest_files=["res://.godot/imported/Gorefield Thumb nail.png-c5b29b72df2b7df537101df01b4f46df.ctex"]
 
 [params]
 

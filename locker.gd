@@ -7,14 +7,18 @@ extends Node3D
 var is_occupied: bool = false
 var player_ref: CharacterBody3D = null # Use KinematicBody3D in Godot 3
 
+func _ready() -> void:
+	$Label3D.hide()
 
 func _on_body_entered(body):
-	if body.is_in_group("Player"):
+	if body.is_in_group("player"):
 		player_ref = body
+		$Label3D.show()
 
 func _on_body_exited(body):
 	if body == player_ref:
 		player_ref = null
+		$Label3D.hide()
 
 func _unhandled_input(event):
 	if event.is_action_pressed("E"):

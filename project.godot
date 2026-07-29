@@ -19,7 +19,6 @@ config/icon="res://icon.svg"
 
 Globals="*uid://dftjio7vuwohg"
 Signals="*uid://ss2jhlxkgcca"
-NoiseManager="*uid://dr18emb8ivnr3"
 
 [display]
 

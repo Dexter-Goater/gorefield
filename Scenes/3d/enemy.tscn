@@ -6,8 +6,9 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_02ewe"]
 albedo_color = Color(7.941574e-07, 0.54533774, 0.2023764, 1)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_02ewe"]
-size = Vector3(0.85307086, 0.7136259, 0.835022)
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_t84r4"]
+radius = 0.4487915
+height = 0.897583
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nwrtk"]
 size = Vector3(18.25293, 54.423706, 2.334)
@@ -24,8 +25,8 @@ mesh = ExtResource("2_1st1f")
 surface_material_override/0 = SubResource("StandardMaterial3D_02ewe")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=970983918]
-transform = Transform3D(3.67, 0, 0, 0, 5.604, 0, 0, 0, 8.962, -0.071000576, 1.9995189, 0)
-shape = SubResource("BoxShape3D_02ewe")
+transform = Transform3D(3.67, 0, 0, 0, 5.604, 0, 0, 0, 8.962, -0.071000576, 2.5085258, -1.3582215)
+shape = SubResource("CapsuleShape3D_t84r4")
 
 [node name="VisionArea" type="Area3D" parent="." unique_id=724465746]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9111109, 2.7523556)
