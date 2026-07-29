@@ -3,7 +3,7 @@ class_name Player
 
 const CAM_HEIGHT_STAND  : float = 0.5
 const CAM_HEIGHT_CROUCH : float = 0.0
-
+@export var is_hidden: bool = false
 @export var can_debug : bool = false
 @export_category("To Assign")
 ## Set action to change Input.mouse_mode to Input.MOUSE_MODE_VISIBLE. 

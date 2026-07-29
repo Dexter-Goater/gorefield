@@ -14,10 +14,9 @@ size = Vector3(18.25293, 54.423706, 2.334)
 
 [node name="Enemy" type="CharacterBody3D" unique_id=1162910194]
 script = ExtResource("1_r4m2x")
-body_radius = 7.1
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=139064289]
-target_desired_distance = 3.0
+target_desired_distance = 7.0
 debug_enabled = true
 
 [node name="Gorefield#3Blend" type="MeshInstance3D" parent="." unique_id=498264919]

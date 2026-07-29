@@ -25,6 +25,10 @@ NoiseManager="*uid://dr18emb8ivnr3"
 
 window/stretch/mode="canvas_items"
 
+[filesystem]
+
+import/blender/enabled=false
+
 [input]
 
 "Left Click"={

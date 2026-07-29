@@ -16,9 +16,6 @@ func _process(delta: float) -> void:
 			Globals.gens_active += 1
 	else:
 		$Label3D.hide()
-	
-
-
 
 
 func _on_body_entered(body: Node3D) -> void:

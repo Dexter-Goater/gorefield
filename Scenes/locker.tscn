@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cbkbugxw62elh"]
+
+[ext_resource type="Script" uid="uid://ovmdyhms47xf" path="res://locker.gd" id="1_woy3j"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o21aq"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_p4wf5"]
+size = Vector3(1, 2.4629517, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_1tffm"]
+data = PackedVector3Array(-0.5, 1.2314999, 0.5, 0.5, 1.2314999, 0.5, -0.5, -1.2314999, 0.5, 0.5, 1.2314999, 0.5, 0.5, -1.2314999, 0.5, -0.5, -1.2314999, 0.5, 0.5, 1.2314999, -0.5, -0.5, 1.2314999, -0.5, 0.5, -1.2314999, -0.5, -0.5, 1.2314999, -0.5, -0.5, -1.2314999, -0.5, 0.5, -1.2314999, -0.5, 0.5, 1.2314999, 0.5, 0.5, 1.2314999, -0.5, 0.5, -1.2314999, 0.5, 0.5, 1.2314999, -0.5, 0.5, -1.2314999, -0.5, 0.5, -1.2314999, 0.5, -0.5, 1.2314999, -0.5, -0.5, 1.2314999, 0.5, -0.5, -1.2314999, -0.5, -0.5, 1.2314999, 0.5, -0.5, -1.2314999, 0.5, -0.5, -1.2314999, -0.5, 0.5, 1.2314999, 0.5, -0.5, 1.2314999, 0.5, 0.5, 1.2314999, -0.5, -0.5, 1.2314999, 0.5, -0.5, 1.2314999, -0.5, 0.5, 1.2314999, -0.5, -0.5, -1.2314999, 0.5, 0.5, -1.2314999, 0.5, -0.5, -1.2314999, -0.5, 0.5, -1.2314999, 0.5, 0.5, -1.2314999, -0.5, -0.5, -1.2314999, -0.5)
+
+[node name="Locker" type="Area3D" unique_id=1697958646]
+script = ExtResource("1_woy3j")
+
+[node name="Interaction_area" type="CollisionShape3D" parent="." unique_id=93845371]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 1.8257532, 0)
+shape = SubResource("BoxShape3D_o21aq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=173516262]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.73147583, 0)
+mesh = SubResource("BoxMesh_p4wf5")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=388886773]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=1691317162]
+shape = SubResource("ConcavePolygonShape3D_1tffm")
+
+[node name="Label3D" type="Label3D" parent="." unique_id=264277699]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.3130639, 0)
+billboard = 2
+no_depth_test = true
+text = "E"
+font_size = 128
+
+[node name="ExitPosition" type="Marker3D" parent="." unique_id=144597748]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4372387, 0, 0)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
