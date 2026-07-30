@@ -1,6 +1,8 @@
 extends CharacterBody3D
 class_name Player
 
+static var camera : Camera3D
+
 const CAM_HEIGHT_STAND  : float = 0.5
 const CAM_HEIGHT_CROUCH : float = 0.0
 @export var is_hidden: bool = false
@@ -50,7 +52,6 @@ var _footstep_timer : float = 0.0
 
 @onready var yaw    : Node3D   = %Yaw
 @onready var pitch  : Node3D   = %Pitch
-@onready var camera : Camera3D = %Camera3D
 
 @onready var collision_crouched   : CollisionShape3D = %CrouchedCollisionShape
 @onready var collision_standing   : CollisionShape3D = %StandingCollisionShape
@@ -62,10 +63,12 @@ var _input_direction := Vector2.ZERO
 var _direction : Vector3
 var _mouse_delta := Vector2.ZERO
 
+@onready var camera_3d: Camera3D = %Camera3D
 
 # Engine virtuals
 
 func _ready() -> void:
+	camera = camera_3d
 	# Redundancy checks to avoid mistakes
 	assert(self is CharacterBody3D, "This script only works within a CharacterBody3D")
 	assert(camera.get_parent() == pitch, "Camera needs to be a child of pitch")

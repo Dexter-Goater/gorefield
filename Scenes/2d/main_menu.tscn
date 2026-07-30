@@ -86,7 +86,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"Play_pressed",
-"speed": 3.0
+"speed": 3.5
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5vgkp"]
@@ -109,19 +109,20 @@ offset_left = -136.0
 offset_top = -83.0
 offset_right = 127.0
 offset_bottom = 74.0
+mouse_filter = 2
 color = Color(0.34901962, 0.3372549, 0.32156864, 1)
 metadata/_edit_lock_ = true
 
 [node name="Play" type="Area2D" parent="." unique_id=1320266176]
+z_index = 1
 position = Vector2(-27, -21)
-metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Play" unique_id=1201420670]
 shape = SubResource("RectangleShape2D_5vgkp")
 
 [node name="Quit" type="Area2D" parent="." unique_id=1064687008]
+z_index = 1
 position = Vector2(-28, 25)
-metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Quit" unique_id=247152420]
 shape = SubResource("RectangleShape2D_5vgkp")

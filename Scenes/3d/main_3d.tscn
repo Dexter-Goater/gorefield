@@ -59,5 +59,11 @@ light_volumetric_fog_energy = 0.0
 spot_range = 30.0
 spot_angle = 46.508976
 
+[node name="SpotLight3D2" type="SpotLight3D" parent="Lights" unique_id=868261849]
+transform = Transform3D(1, 0, 0, 0, -0.0084926495, 0.99996394, 0, -0.99996394, -0.0084926495, 17.124767, 12.709, 28.873232)
+light_volumetric_fog_energy = 0.0
+spot_range = 30.0
+spot_angle = 46.508976
+
 [node name="Locker" parent="." unique_id=1697958646 instance=ExtResource("7_fkd8t")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.575085, 0.14055836, 27.32475)

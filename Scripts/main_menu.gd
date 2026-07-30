@@ -23,12 +23,15 @@ func _process(_delta: float) -> void:
 
 func _on_play_mouse_entered() -> void:
 	inplay = true
+	print("inplay")
 
 func _on_play_mouse_exited() -> void:
 	inplay = false
-
+	print("notplay")
 func _on_quit_mouse_entered() -> void:
 	inquit = true
+	print("inquit")
 
 func _on_quit_mouse_exited() -> void:
 	inquit = false
+	print("notquit")
