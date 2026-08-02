@@ -100,5 +100,29 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.800255, 20.59798, 202.09428
 [node name="Light14" parent="Lights" unique_id=197669132 instance=ExtResource("8_afhpv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.873177, 20.598, 237.98923)
 
+[node name="Light15" parent="Lights" unique_id=61354025 instance=ExtResource("8_afhpv")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6.439659, 20.598, 41.135223)
+
+[node name="Light16" parent="Lights" unique_id=589964760 instance=ExtResource("8_afhpv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80.25695, 20.597984, 88.46221)
+
+[node name="Light17" parent="Lights" unique_id=1283479076 instance=ExtResource("8_afhpv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 79.103386, 20.597984, 130.12984)
+
+[node name="Light18" parent="Lights" unique_id=966335213 instance=ExtResource("8_afhpv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -81.57677, 20.598, 81.583)
+
+[node name="Light19" parent="Lights" unique_id=1192082189 instance=ExtResource("8_afhpv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.49523, 20.598, 157.9867)
+
+[node name="Light20" parent="Lights" unique_id=1161996300 instance=ExtResource("8_afhpv")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -113.31163, 20.598, 199.13353)
+
+[node name="Light21" parent="Lights" unique_id=729067220 instance=ExtResource("8_afhpv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -142.25299, 20.598, 236.27884)
+
+[node name="Light22" parent="Lights" unique_id=766299531 instance=ExtResource("8_afhpv")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -94.379135, 20.598007, 301.1542)
+
 [node name="Locker" parent="." unique_id=1697958646 instance=ExtResource("7_fkd8t")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 50.359425, 0.14055836, 26.56565)
