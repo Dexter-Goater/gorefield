@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://cl5t4bl6ndi0t"]
+
+[ext_resource type="ArrayMesh" uid="uid://dijekgfbrcv23" path="res://Art/3D/Models/light.obj" id="1_tldv2"]
+[ext_resource type="Script" uid="uid://dvg5ut2fgucc6" path="res://Scripts/3d/light.gd" id="2_glito"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u4mtu"]
+albedo_color = Color(0.21329013, 0.20992085, 0.18629852, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i6ubb"]
+emission_enabled = true
+emission = Color(0.95686275, 1, 0.98039216, 1)
+emission_energy_multiplier = 0.2
+
+[node name="Light" type="MeshInstance3D" unique_id=1853226669]
+layers = 2
+mesh = ExtResource("1_tldv2")
+surface_material_override/0 = SubResource("StandardMaterial3D_u4mtu")
+surface_material_override/1 = SubResource("StandardMaterial3D_i6ubb")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1131746670]
+transform = Transform3D(1, 0, 0, 0, -0.0084926495, 0.99996394, 0, -0.99996394, -0.0084926495, 0, -0.5751227, -5.3922005)
+light_color = Color(0.95686275, 1, 0.98039216, 1)
+light_energy = 2.0
+light_volumetric_fog_energy = 0.0
+light_cull_mask = 4293918721
+spot_range = 30.0
+spot_angle = 30.0
+spot_angle_attenuation = 2.0
+script = ExtResource("2_glito")
+
+[node name="Timer" type="Timer" parent="SpotLight3D" unique_id=670874688]
+wait_time = 0.1
+autostart = true
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=725438701]
+transform = Transform3D(1, 0, 0, 0, -0.0084926495, 0.99996394, 0, -0.99996394, -0.0084926495, 0, -0.575, 7.375)
+light_color = Color(0.95686275, 1, 0.98039216, 1)
+light_energy = 2.0
+light_volumetric_fog_energy = 0.0
+light_cull_mask = 4293918721
+spot_range = 30.0
+spot_angle = 30.0
+spot_angle_attenuation = 2.0
+script = ExtResource("2_glito")
+
+[node name="Timer" type="Timer" parent="SpotLight3D2" unique_id=1567996670]
+wait_time = 0.1
+autostart = true

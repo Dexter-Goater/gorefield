@@ -8,8 +8,6 @@ const CAM_HEIGHT_CROUCH : float = 0.0
 @export var is_hidden: bool = false
 @export var can_debug : bool = false
 @export_category("To Assign")
-## Set action to change Input.mouse_mode to Input.MOUSE_MODE_VISIBLE. 
-## Default is "ui_cancel", set to the Escape key.
 @export_custom(PROPERTY_HINT_INPUT_NAME, "show_builtin") var input_mouse_mode  : StringName = "ui_cancel"
 @export_group("Movement Actions")
 @export_subgroup("Movement Keys")
@@ -23,13 +21,7 @@ const CAM_HEIGHT_CROUCH : float = 0.0
 @export_custom(PROPERTY_HINT_INPUT_NAME, "") var jump     : StringName
 @export_group("")
 @export_category("Character Settings")
-## Character's walk speed.
-## This controls how fast the character
-## walks.
 @export var walk_speed    : float = 5.0
-## Character's sprint speed.
-## This controls how fast the character
-## sprints.
 @export var sprint_speed  : float = 20.0
 ## Character's crouch speed.
 ## This controls how fast the character

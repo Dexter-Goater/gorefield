@@ -14,10 +14,10 @@ var state: State = State.PATROL_GENERATOR
 
 @export_category("Stuck Settings")
 @export var max_stuck_seconds: int = 3
-@export var min_distance_per_second: float = 2.0 # If moving slower than 2m in a full second, count as stuck
+@export var min_distance_per_second: float = 2.0 
 
 @export_category("Model Settings")
-@export var flip_model_facing: bool = true # Toggle if enemy walks backward
+@export var flip_model_facing: bool = true
 
 var player: Node3D = null
 var current_generator: Node3D = null
@@ -27,42 +27,50 @@ var wait_timer: float = 0.0
 var vision_check_interval: float = 0.05
 var vision_check_timer: float = 0.0
 
-# Stuck detection variables
+
 var stuck_interval_timer: float = 0.0
 var stuck_seconds_count: int = 0
 var last_check_position: Vector3 = Vector3.ZERO
 
-# Path refresh timer
+
 var path_update_timer: float = 0.0
-var path_update_interval: float = 0.1 # 10 updates per second
+var path_update_interval: float = 0.1 
 
 @onready var navigation_agent_3d: NavigationAgent3D = $NavigationAgent3D
 @onready var vision_area: Area3D = $VisionArea
 
 var _space_state: PhysicsDirectSpaceState3D
 
+@onready var chase_audio_player = $ChaseAudioPlayer 
+@export var chase_sounds: Array[AudioStream] = [
+	preload("res://Audio/3D/ChaseMusic/Chase1.mp3"),
+	preload("res://Audio/3D/ChaseMusic/Chase2.mp3"),
+	preload("res://Audio/3D/ChaseMusic/Chase3.mp3"),
+	preload("res://Audio/3D/ChaseMusic/Chase4.mp3"),
+	preload("res://Audio/3D/ChaseMusic/Chase5.mp3"),
+	preload("res://Audio/3D/ChaseMusic/Chase6.mp3"),
+]
+@export var min_db := -40.0 
+@export var max_db := 0.0     
+var is_playing_chase_audio := false
+
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("player")
 	vision_area.body_entered.connect(_on_vision_area_body_entered)
 	vision_area.body_exited.connect(_on_vision_area_body_exited)
 	_space_state = get_world_3d().direct_space_state
-	
 	last_check_position = global_position
-	
-	# Wait for navigation map sync
 	await get_tree().physics_frame
 	_pick_random_generator()
+	chase_audio_player.finished.connect(_on_chase_audio_finished)
 
 func _process(delta: float) -> void:
-	# Check vision periodically
+	Globals.distancetoplayer = navigation_agent_3d.distance_to_target()
 	vision_check_timer += delta
 	if vision_check_timer >= vision_check_interval:
 		vision_check_timer = 0.0
 		_check_vision()
-
-	# Monitor if enemy is stuck/sliding along walls
 	_check_stuck(delta)
-
 	match state:
 		State.PATROL_GENERATOR:
 			_on_patrol_generator(delta)
@@ -70,32 +78,30 @@ func _process(delta: float) -> void:
 			_on_wait_at_generator(delta)
 		State.CHASE:
 			_on_chase(delta)
-
-	# Keep enemy upright and apply gravity
 	rotation.x = 0.0
 	rotation.z = 0.0
 	if not is_on_floor():
 		velocity.y -= 20.0 * delta
-
 	move_and_slide()
+	if Globals.chasingplayer and Globals.distancetoplayer < Globals.Chase_Indicator_max_distance:
+		if not is_playing_chase_audio:
+			_start_chase_audio()
 
-# --- Interval-Based Stuck Detection ---
+		var t = clamp(Globals.distancetoplayer / Globals.Chase_Indicator_max_distance, 0.0, 1.0)
+		chase_audio_player.volume_db = lerp(max_db, min_db, t)
+	else:
+		if is_playing_chase_audio:
+			_stop_chase_audio()
 
 func _check_stuck(delta: float) -> void:
-	# Don't check stuck status while intentionally waiting
 	if state == State.WAIT_AT_GENERATOR:
 		_reset_stuck_tracker()
 		return
-
 	stuck_interval_timer += delta
-	
-	# Check distance moved once every 1.0 second
 	if stuck_interval_timer >= 1.0:
 		stuck_interval_timer = 0.0
 		var dist_moved = global_position.distance_to(last_check_position)
 		last_check_position = global_position
-
-		# If enemy moved less than min_distance_per_second in a full second:
 		if dist_moved < min_distance_per_second:
 			stuck_seconds_count += 1
 			if stuck_seconds_count >= max_stuck_seconds:
@@ -103,24 +109,19 @@ func _check_stuck(delta: float) -> void:
 				_pick_nearest_generator()
 		else:
 			stuck_seconds_count = 0
-
 func _reset_stuck_tracker() -> void:
 	stuck_interval_timer = 0.0
 	stuck_seconds_count = 0
 	last_check_position = global_position
-
-# --- Generator Patrol Logic ---
 
 func _pick_random_generator() -> void:
 	var generators = get_tree().get_nodes_in_group(generator_group)
 	if generators.is_empty():
 		push_error("Enemy AI Error: No nodes found in group '%s'!" % generator_group)
 		return
-
 	var valid_generators = generators.duplicate()
 	if current_generator in valid_generators and valid_generators.size() > 1:
 		valid_generators.erase(current_generator)
-
 	current_generator = valid_generators.pick_random()
 	navigation_agent_3d.target_position = current_generator.global_position
 	state = State.PATROL_GENERATOR
@@ -131,16 +132,13 @@ func _pick_nearest_generator() -> void:
 	if generators.is_empty():
 		push_error("Enemy AI Error: No nodes found in group '%s'!" % generator_group)
 		return
-
 	var nearest: Node3D = null
 	var nearest_dist: float = INF
-
 	for gen in generators:
 		var dist = global_position.distance_squared_to(gen.global_position)
 		if dist < nearest_dist:
 			nearest_dist = dist
 			nearest = gen
-
 	if nearest != null:
 		current_generator = nearest
 		navigation_agent_3d.target_position = current_generator.global_position
@@ -149,7 +147,6 @@ func _pick_nearest_generator() -> void:
 
 func _on_patrol_generator(delta: float) -> void:
 	_move_towards_target(delta, speed_patrol)
-
 	if navigation_agent_3d.is_navigation_finished():
 		state = State.WAIT_AT_GENERATOR
 		wait_timer = wait_at_generator_time
@@ -163,22 +160,18 @@ func _on_wait_at_generator(delta: float) -> void:
 	if wait_timer <= 0.0:
 		_pick_random_generator()
 
-# --- Chase Logic ---
-
 func _on_chase(delta: float) -> void:
 	if player == null or _is_player_in_locker():
 		_pick_nearest_generator()
+		Globals.chasingplayer = false
 		return
-
-	# Update navigation path 10 times per second to prevent pathing jitter
+	Globals.chasingplayer = true
+	Globals.distancetoplayer = navigation_agent_3d.distance_to_target()
 	path_update_timer += delta
 	if path_update_timer >= path_update_interval:
 		path_update_timer = 0.0
 		navigation_agent_3d.target_position = player.global_position
-
 	_move_towards_target(delta, speed_chase)
-
-# --- Vision & Locker Detection ---
 
 func _on_vision_area_body_entered(body: Node3D) -> void:
 	if body == player:
@@ -191,7 +184,6 @@ func _on_vision_area_body_exited(body: Node3D) -> void:
 func _check_vision() -> void:
 	if state == State.CHASE or player == null:
 		return
-
 	if player_in_vision_area and not _is_player_in_locker() and _has_line_of_sight():
 		state = State.CHASE
 		_reset_stuck_tracker()
@@ -199,12 +191,10 @@ func _check_vision() -> void:
 func _has_line_of_sight() -> bool:
 	if player == null:
 		return false
-		
 	var from = global_position + Vector3(0, 1.0, 0)
 	var to = player.global_position + Vector3(0, 1.0, 0)
 	var query = PhysicsRayQueryParameters3D.create(from, to)
 	query.exclude = [self]
-	
 	var result = _space_state.intersect_ray(query)
 	if result.is_empty():
 		return true
@@ -213,7 +203,6 @@ func _has_line_of_sight() -> bool:
 func _is_player_in_locker() -> bool:
 	if player == null:
 		return false
-	
 	if "is_in_locker" in player and player.is_in_locker:
 		return true
 	if "is_hidden" in player and player.is_hidden:
@@ -222,13 +211,10 @@ func _is_player_in_locker() -> bool:
 		return true
 	return false
 
-# --- Navigation & Turning ---
-
 func _move_towards_target(delta: float, move_speed: float) -> void:
 	var next_position = navigation_agent_3d.get_next_path_position()
 	var move_dir = (next_position - global_position)
 	move_dir.y = 0.0
-
 	if move_dir.length() > 0.01:
 		move_dir = move_dir.normalized()
 		velocity.x = move_dir.x * move_speed
@@ -245,7 +231,19 @@ func _turn_towards(move_dir: Vector3, delta: float) -> void:
 	var current_quat = global_transform.basis.get_rotation_quaternion()
 	var target_quat = target_transform.basis.get_rotation_quaternion()
 	var angle_to = current_quat.angle_to(target_quat)
-
 	if angle_to > 0.001:
 		var weight = clampf(max_angle / angle_to, 0.0, 1.0)
 		global_transform.basis = Basis(current_quat.slerp(target_quat, weight))
+
+func _start_chase_audio():
+	chase_audio_player.stream = chase_sounds[randi() % chase_sounds.size()]
+	chase_audio_player.play()
+	is_playing_chase_audio = true
+
+func _stop_chase_audio():
+	chase_audio_player.stop()
+	is_playing_chase_audio = false
+
+func _on_chase_audio_finished():
+	if is_playing_chase_audio:
+		_start_chase_audio()

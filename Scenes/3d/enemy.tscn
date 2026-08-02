@@ -7,8 +7,8 @@
 albedo_color = Color(7.941574e-07, 0.54533774, 0.2023764, 1)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_t84r4"]
-radius = 0.4487915
-height = 0.897583
+radius = 2.850586
+height = 9.510742
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nwrtk"]
 size = Vector3(18.25293, 54.423706, 2.334)
@@ -25,7 +25,7 @@ mesh = ExtResource("2_1st1f")
 surface_material_override/0 = SubResource("StandardMaterial3D_02ewe")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=970983918]
-transform = Transform3D(3.67, 0, 0, 0, 5.604, 0, 0, 0, 8.962, -0.071000576, 2.5085258, -1.3582215)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.071000576, 2.8488579, -1.3971009)
 shape = SubResource("CapsuleShape3D_t84r4")
 
 [node name="VisionArea" type="Area3D" parent="." unique_id=724465746]
@@ -34,5 +34,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9111109, 2.7523556)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="VisionArea" unique_id=1394331503]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.53271484, -1.8044078, 26.629961)
 shape = SubResource("BoxShape3D_nwrtk")
+
+[node name="ChaseAudioPlayer" type="AudioStreamPlayer" parent="." unique_id=1675366686]
 
 [connection signal="target_reached" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_target_reached"]
