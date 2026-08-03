@@ -8,8 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://bqt7ehmg3hcvc" path="res://Art/2D/Lasagne/Minigame 1/onion_sheet.png" id="6_pitq4"]
 [ext_resource type="Texture2D" uid="uid://5fxuhenkogr8" path="res://Art/2D/Lasagne/Minigame 1/celery_sheet.png" id="7_aks50"]
 [ext_resource type="Script" uid="uid://8ocq5krur27u" path="res://Scripts/Lasagne/minigame_2.gd" id="8_dnlh1"]
-[ext_resource type="Texture2D" uid="uid://cdjgaqo8emydl" path="res://Art/2D/Lasagne/Minigame 2/Drop bar.png" id="9_yduox"]
-[ext_resource type="Texture2D" uid="uid://klc2hsgof2lg" path="res://Art/2D/Lasagne/Minigame 2/arrow.png" id="10_wgwka"]
+[ext_resource type="Texture2D" uid="uid://ds2c86uvgaig5" path="res://Art/2D/Lasagne/Minigame 2/bar arrow mini game-Sheet.png" id="9_ac6ki"]
+[ext_resource type="Texture2D" uid="uid://cpyktjea38id7" path="res://Art/2D/Lasagne/Minigame 2/arrow-Sheet.png" id="10_5y6rq"]
 [ext_resource type="Script" uid="uid://cw6pqlml5vpoj" path="res://Scripts/Lasagne/minigame_3.gd" id="11_hpx6l"]
 [ext_resource type="Texture2D" uid="uid://jo1l8tcvqndb" path="res://Art/2D/Lasagne/Minigame 3/Circle.png" id="12_mv0i5"]
 [ext_resource type="Texture2D" uid="uid://derkegth2p2d2" path="res://Art/2D/Lasagne/Minigame 3/dot.png" id="13_fxxwj"]
@@ -536,28 +536,28 @@ animations = [{
 }]
 
 [sub_resource type="Theme" id="Theme_2w5on"]
-default_font_size = 32
+default_font_size = 64
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4kpch"]
-size = Vector2(3.1347966, 10.000004)
+size = Vector2(8.359459, 11.966218)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_grg3l"]
-size = Vector2(6.930703, 9.999999)
+size = Vector2(8.745885, 11.966217)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_frkhe"]
-size = Vector2(7.9207945, 9.999999)
+size = Vector2(9.240929, 11.966215)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1p5hy"]
-size = Vector2(15.090002, 12.612331)
+size = Vector2(10.888891, 15.673983)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h1m7h"]
-size = Vector2(16.099998, 12.5)
+size = Vector2(11.161108, 15.093465)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vy5pj"]
-size = Vector2(5.3935757, 12.61233)
+size = Vector2(4.9382696, 15.013933)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_erwvk"]
-size = Vector2(4.62963, 13.061649)
+size = Vector2(4.9560776, 15.093468)
 
 [sub_resource type="Curve2D" id="Curve2D_vy5pj"]
 _data = {
@@ -565,8 +565,71 @@ _data = {
 }
 point_count = 3
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_if55n"]
+atlas = ExtResource("10_5y6rq")
+region = Rect2(128, 0, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5itsu"]
+atlas = ExtResource("10_5y6rq")
+region = Rect2(0, 0, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_spn7d"]
+atlas = ExtResource("10_5y6rq")
+region = Rect2(384, 0, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bbnso"]
+atlas = ExtResource("10_5y6rq")
+region = Rect2(512, 0, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qr2ek"]
+atlas = ExtResource("10_5y6rq")
+region = Rect2(256, 0, 128, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_02ewe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_if55n")
+}],
+"loop": 0,
+"name": &"Green",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5itsu")
+}],
+"loop": 0,
+"name": &"Moving",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_spn7d")
+}],
+"loop": 0,
+"name": &"Orange",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bbnso")
+}],
+"loop": 0,
+"name": &"Red",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qr2ek")
+}],
+"loop": 0,
+"name": &"Yellow",
+"speed": 1.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bmxlf"]
-size = Vector2(1.9999981, 20)
+size = Vector2(2.1904745, 27.85714)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2w5on"]
 size = Vector2(2, 2)
@@ -893,7 +956,8 @@ zoom = Vector2(2.3, 2.3)
 script = ExtResource("2_3qnm5")
 
 [node name="Minigame 1" type="Node2D" parent="Lasagne" unique_id=102660986]
-visible = false
+position = Vector2(0, 50)
+scale = Vector2(2, 2)
 script = ExtResource("3_iww83")
 
 [node name="Sprite2D" type="Sprite2D" parent="Lasagne/Minigame 1" unique_id=323531969]
@@ -912,30 +976,31 @@ wait_time = 5.0
 one_shot = true
 
 [node name="Label" type="Label" parent="Lasagne/Minigame 1" unique_id=68766460]
-offset_left = -50.0
-offset_top = -30.0
-offset_right = -28.0
-offset_bottom = -18.0
+offset_left = -122.99999
+offset_top = -86.5
+offset_right = 597.0
+offset_bottom = 1.5
 scale = Vector2(0.1, 0.1)
 theme = SubResource("Theme_2w5on")
 text = "Spam Left Click to chop"
 
 [node name="Minigame 2" type="Node2D" parent="Lasagne" unique_id=664336338]
 visible = false
+scale = Vector2(2, 2)
 script = ExtResource("8_dnlh1")
 
 [node name="Bar" type="Sprite2D" parent="Lasagne/Minigame 2" unique_id=448214026]
-position = Vector2(0, -5.0000005)
-scale = Vector2(1.8, 1.8)
-texture = ExtResource("9_yduox")
+position = Vector2(0, 30)
+scale = Vector2(2, 2)
+texture = ExtResource("9_ac6ki")
 
 [node name="Green" type="Area2D" parent="Lasagne/Minigame 2/Bar" unique_id=851047872]
 position = Vector2(0, 19.999998)
 scale = Vector2(1.2499999, 1.2499999)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lasagne/Minigame 2/Bar/Green" unique_id=1764297339]
-position = Vector2(-0.49999997, -15.999996)
-scale = Vector2(0.9569999, 0.9569999)
+position = Vector2(2.384186e-07, -13.725833)
+scale = Vector2(0.95699984, 0.95699984)
 shape = SubResource("RectangleShape2D_4kpch")
 
 [node name="Yellow" type="Area2D" parent="Lasagne/Minigame 2/Bar" unique_id=959800643]
@@ -943,41 +1008,41 @@ position = Vector2(0, 19.999998)
 scale = Vector2(1.2499999, 1.2499999)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lasagne/Minigame 2/Bar/Yellow" unique_id=1876860374]
-position = Vector2(-6.0000005, -16)
+position = Vector2(-8.416667, -13.72583)
 scale = Vector2(1.009999, 0.95699954)
 shape = SubResource("RectangleShape2D_grg3l")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Lasagne/Minigame 2/Bar/Yellow" unique_id=813097584]
-position = Vector2(4.9999995, -15.999996)
-scale = Vector2(1.0099996, 0.95699984)
+position = Vector2(8.666666, -13.725832)
+scale = Vector2(1.0099995, 0.95699984)
 shape = SubResource("RectangleShape2D_frkhe")
 
 [node name="Red" type="Area2D" parent="Lasagne/Minigame 2/Bar" unique_id=57632672]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lasagne/Minigame 2/Bar/Red" unique_id=172950298]
-position = Vector2(-45.112495, 0)
+position = Vector2(-43.055557, 2.499999)
 scale = Vector2(2.4999998, 0.95699996)
 shape = SubResource("RectangleShape2D_1p5hy")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Lasagne/Minigame 2/Bar/Red" unique_id=1700659531]
-position = Vector2(43.87499, 0)
+position = Vector2(43.270847, 2.2222216)
 scale = Vector2(2.4999995, 0.95699984)
 shape = SubResource("RectangleShape2D_h1m7h")
 
 [node name="Orange" type="Area2D" parent="Lasagne/Minigame 2/Bar" unique_id=1185848865]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lasagne/Minigame 2/Bar/Orange" unique_id=1630594384]
-position = Vector2(-18.96867, 4.7683716e-07)
-scale = Vector2(2.6999998, 0.95699996)
+position = Vector2(-22.777779, 2.8158321)
+scale = Vector2(2.7000005, 0.95699996)
 shape = SubResource("RectangleShape2D_vy5pj")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Lasagne/Minigame 2/Bar/Orange" unique_id=1805970073]
-position = Vector2(17.499998, 9.536743e-07)
-scale = Vector2(2.6999993, 0.9569998)
+position = Vector2(23.001543, 2.7777774)
+scale = Vector2(2.55, 0.957)
 shape = SubResource("RectangleShape2D_erwvk")
 
 [node name="Path2D" type="Path2D" parent="Lasagne/Minigame 2" unique_id=1768610465]
-position = Vector2(0, 5.2)
+position = Vector2(0, 45)
 scale = Vector2(2.1, 2.1)
 curve = SubResource("Curve2D_vy5pj")
 
@@ -986,27 +1051,32 @@ position = Vector2(-26.652105, -13)
 progress = 23.349976
 rotates = false
 
-[node name="Arrow" type="Sprite2D" parent="Lasagne/Minigame 2/Path2D/PathFollow2D" unique_id=539250224]
-position = Vector2(0, -1)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("10_wgwka")
+[node name="Arrow" type="AnimatedSprite2D" parent="Lasagne/Minigame 2/Path2D/PathFollow2D" unique_id=87728914]
+position = Vector2(0, -8.048)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_02ewe")
+animation = &"Yellow"
+autoplay = "Moving"
 
 [node name="Arrow" type="Area2D" parent="Lasagne/Minigame 2/Path2D/PathFollow2D/Arrow" unique_id=1054064364]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lasagne/Minigame 2/Path2D/PathFollow2D/Arrow/Arrow" unique_id=1946436939]
-position = Vector2(1, 18)
+position = Vector2(0.09523773, 37.2619)
+scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_bmxlf")
 
 [node name="Label" type="Label" parent="Lasagne/Minigame 2" unique_id=465526226]
-offset_left = -50.0
-offset_top = -30.0
-offset_right = 37.0
-offset_bottom = 15.0
+offset_left = -124.5
+offset_top = -61.0
+offset_right = 1282.5
+offset_bottom = 27.0
 scale = Vector2(0.1, 0.1)
 theme = SubResource("Theme_2w5on")
 text = "Press Space when the arrow is near the green"
 
 [node name="Minigame 3" type="Node2D" parent="Lasagne" unique_id=1728431537]
+visible = false
+position = Vector2(0, 70)
 scale = Vector2(4, 4)
 script = ExtResource("11_hpx6l")
 
@@ -1030,11 +1100,11 @@ wait_time = 20.0
 one_shot = true
 
 [node name="Label" type="Label" parent="Lasagne/Minigame 3" unique_id=2036219407]
-offset_left = -50.0
-offset_top = -30.0
-offset_right = -28.0
-offset_bottom = -18.0
-scale = Vector2(0.1, 0.1)
+offset_left = -62.0
+offset_top = -48.0
+offset_right = 1283.0
+offset_bottom = 40.0
+scale = Vector2(0.05, 0.05)
 theme = SubResource("Theme_2w5on")
 text = "Track the white box with your mouse to stir"
 
@@ -1240,6 +1310,7 @@ metadata/_edit_lock_ = true
 [connection signal="area_exited" from="Lasagne/Minigame 2/Bar/Red" to="Lasagne/Minigame 2" method="_on_red_area_exited"]
 [connection signal="area_entered" from="Lasagne/Minigame 2/Bar/Orange" to="Lasagne/Minigame 2" method="_on_orange_area_entered"]
 [connection signal="area_exited" from="Lasagne/Minigame 2/Bar/Orange" to="Lasagne/Minigame 2" method="_on_orange_area_exited"]
+[connection signal="animation_finished" from="Lasagne/Minigame 2/Path2D/PathFollow2D/Arrow" to="Lasagne/Minigame 2" method="_on_arrow_animation_finished"]
 [connection signal="mouse_entered" from="Lasagne/Minigame 3/Pivot/Area2D" to="Lasagne/Minigame 3" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Lasagne/Minigame 3/Pivot/Area2D" to="Lasagne/Minigame 3" method="_on_area_2d_mouse_exited"]
 [connection signal="timeout" from="Lasagne/Minigame 3/Minigame Over" to="Lasagne/Minigame 3" method="_on_minigame_over_timeout"]

@@ -1,10 +1,7 @@
 [gd_scene format=3 uid="uid://c35nt75wwp21b"]
 
 [ext_resource type="Script" uid="uid://dtfvp7ecgqfaq" path="res://Scripts/3d/enemy.gd" id="1_r4m2x"]
-[ext_resource type="ArrayMesh" uid="uid://cdokxu2yxy5r5" path="res://Art/3D/Models/Gorefield#3blend.obj" id="2_1st1f"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_02ewe"]
-albedo_color = Color(7.941574e-07, 0.54533774, 0.2023764, 1)
+[ext_resource type="PackedScene" uid="uid://bwg6e2eihg3wh" path="res://Art/3D/Models/Gorefield#4blend.glb" id="2_r4m2x"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_t84r4"]
 radius = 2.850586
@@ -20,10 +17,6 @@ script = ExtResource("1_r4m2x")
 target_desired_distance = 7.0
 debug_enabled = true
 
-[node name="Gorefield#3Blend" type="MeshInstance3D" parent="." unique_id=498264919]
-mesh = ExtResource("2_1st1f")
-surface_material_override/0 = SubResource("StandardMaterial3D_02ewe")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=970983918]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.071000576, 2.8488579, -1.3971009)
 shape = SubResource("CapsuleShape3D_t84r4")
@@ -36,5 +29,8 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.53
 shape = SubResource("BoxShape3D_nwrtk")
 
 [node name="ChaseAudioPlayer" type="AudioStreamPlayer" parent="." unique_id=1675366686]
+
+[node name="Gorefield#4blend" parent="." unique_id=1173204948 instance=ExtResource("2_r4m2x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.77965236, -2.6639605, 1.9583098)
 
 [connection signal="target_reached" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_target_reached"]
