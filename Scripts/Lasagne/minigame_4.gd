@@ -15,15 +15,16 @@ func _process(delta: float) -> void:
 	if Globals.minigame == 4 and Globals.current_recipie == "Lasagne":
 		ingredient = order[0]
 		if ingredient == "end":
-			for recipie in Globals.old_recipies:
-				print(Globals.old_recipies)
-				if Globals.old_recipies.size() != Globals.recipies.size():
-					if Globals.current_recipie == recipie:
-						Globals.current_recipie = Globals.recipies.pick_random()
-					elif Globals.current_recipie != recipie:
-						Globals.minigame = 1
-				else:
-					Globals.minigame_over = true
+			Globals.minigame_over = true
+			#for recipie in Globals.old_recipies:
+				#print(Globals.old_recipies)
+				#if Globals.old_recipies.size() != Globals.recipies.size():
+					#if Globals.current_recipie == recipie:
+						#Globals.current_recipie = Globals.recipies.pick_random()
+					#elif Globals.current_recipie != recipie:
+						#Globals.minigame = 1
+				#else:
+					#Globals.minigame_over = true
 		else:
 			$Label.text = "Required ingredient = {ingredient}".format({"ingredient":ingredient})
 			if Input.is_action_just_pressed("Left Click"):

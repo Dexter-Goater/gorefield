@@ -191,12 +191,14 @@ _data = {
 &"ArmatureAction": ExtResource("3_w8mks")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
+size = Vector3(12.3107605, 3.8346863, 8.746674)
+
 [node name="Enemy" type="CharacterBody3D" unique_id=1162910194]
 script = ExtResource("1_r4m2x")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=139064289]
 target_desired_distance = 7.0
-debug_enabled = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=970983918]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.071000576, 2.8488579, -1.3971009)
@@ -405,4 +407,12 @@ libraries/ = SubResource("AnimationLibrary_4dej2")
 autoplay = &"ArmatureAction"
 speed_scale = 3.0
 
+[node name="Area3D" type="Area3D" parent="." unique_id=916299891]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=786311427]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19508362, 2.561029, -0.810318)
+shape = SubResource("BoxShape3D_g4v7s")
+
 [connection signal="target_reached" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_target_reached"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

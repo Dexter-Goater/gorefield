@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cmoyy2v0ce025" path="res://Art/2D/Lasagne/Minigame 1/updated chopping board.png" id="4_5y6rq"]
 [ext_resource type="Texture2D" uid="uid://b83mpv6pv7ko1" path="res://Art/2D/Lasagne/Minigame 1/carrot cutting board (By itself)-Sheet.png" id="5_5y6rq"]
 [ext_resource type="Texture2D" uid="uid://eusbntvwulr2" path="res://Art/2D/Lasagne/Minigame 1/Onion-Sheet_final.png" id="6_pitq4"]
-[ext_resource type="Texture2D" uid="uid://5fxuhenkogr8" path="res://Art/2D/Lasagne/Minigame 1/celery_sheet.png" id="7_aks50"]
+[ext_resource type="Texture2D" uid="uid://6w5kvv7dt3he" path="res://Art/2D/Lasagne/Minigame 1/vege stick-Sheet.png" id="7_iww83"]
 [ext_resource type="Script" uid="uid://8ocq5krur27u" path="res://Scripts/Lasagne/minigame_2.gd" id="8_dnlh1"]
 [ext_resource type="Texture2D" uid="uid://ctu44i0k2kovc" path="res://Art/2D/Lasagne/Minigame 1/putting carrot down.png" id="8_pitq4"]
 [ext_resource type="Texture2D" uid="uid://ds2c86uvgaig5" path="res://Art/2D/Lasagne/Minigame 2/bar arrow mini game-Sheet.png" id="9_ac6ki"]
@@ -18,13 +18,10 @@
 [ext_resource type="Texture2D" uid="uid://d18k47a80xs3c" path="res://Art/2D/Lasagne/Minigame 3/pot mini game-Sheet.png" id="14_iww83"]
 [ext_resource type="Script" uid="uid://cbbco6t3nsu4s" path="res://Scripts/Lasagne/minigame_4.gd" id="14_m7s8x"]
 [ext_resource type="Texture2D" uid="uid://iypjachh4iwj" path="res://Art/2D/Lasagne/Minigame 3/Pot mini game start-Sheet.png" id="15_ac6ki"]
-[ext_resource type="Texture2D" uid="uid://bfp15kwxn1ee3" path="res://Art/2D/Lasagne/Minigame 4/lasagne tray.png" id="15_op8d8"]
 [ext_resource type="Texture2D" uid="uid://c62ftr3pvtjg7" path="res://Art/2D/Lasagne/Minigame 3/pot mini game loop-Sheet.png" id="16_ac6ki"]
-[ext_resource type="Texture2D" uid="uid://b3ebsfptdvo64" path="res://Art/2D/Lasagne/Minigame 4/Ragu.png" id="16_n1gyr"]
-[ext_resource type="Texture2D" uid="uid://mxuw1svlvebb" path="res://Art/2D/Lasagne/Minigame 4/Bechamel_Sauce.png" id="17_del5i"]
-[ext_resource type="Texture2D" uid="uid://cb025orqs7ctm" path="res://Art/2D/Lasagne/Minigame 4/Pasta.png" id="18_6qfv3"]
 [ext_resource type="Script" uid="uid://qjvdesopfj6r" path="res://Scripts/Pizza/pizza.gd" id="19_msp3q"]
 [ext_resource type="Script" uid="uid://bc0xif3vtfhq5" path="res://Scripts/Pizza/minigame_1.gd" id="20_8g7ue"]
+[ext_resource type="Texture2D" uid="uid://3y4jllhl0ugy" path="res://Art/2D/Lasagne/Minigame 4/baking tray-Sheet.png" id="20_iww83"]
 [ext_resource type="Script" uid="uid://blanc45a5bifp" path="res://Scripts/Pizza/minigame_2.gd" id="21_pocwo"]
 [ext_resource type="Texture2D" uid="uid://nyhvwn6aicab" path="res://Art/2D/Pizza/Minigame 2/pizza.png" id="22_e10xp"]
 [ext_resource type="Texture2D" uid="uid://u40v05yamt1t" path="res://Art/2D/Pizza/Minigame 2/arrow.png" id="23_ix0gt"]
@@ -224,97 +221,97 @@ region = Rect2(1408, 0, 64, 64)
 atlas = ExtResource("6_pitq4")
 region = Rect2(1472, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yisvs"]
-atlas = ExtResource("7_aks50")
+[sub_resource type="AtlasTexture" id="AtlasTexture_x7h32"]
+atlas = ExtResource("7_iww83")
 region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rgw24"]
-atlas = ExtResource("7_aks50")
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8lxu"]
+atlas = ExtResource("7_iww83")
 region = Rect2(64, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5gwyn"]
-atlas = ExtResource("7_aks50")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ofi7p"]
+atlas = ExtResource("7_iww83")
 region = Rect2(128, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_r6gtk"]
-atlas = ExtResource("7_aks50")
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdqty"]
+atlas = ExtResource("7_iww83")
 region = Rect2(192, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_81ldr"]
-atlas = ExtResource("7_aks50")
+[sub_resource type="AtlasTexture" id="AtlasTexture_flar8"]
+atlas = ExtResource("7_iww83")
 region = Rect2(256, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_eywpa"]
-atlas = ExtResource("7_aks50")
-region = Rect2(0, 64, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_3alyw"]
+atlas = ExtResource("7_iww83")
+region = Rect2(320, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_j7e3e"]
-atlas = ExtResource("7_aks50")
-region = Rect2(64, 64, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_gf2ff"]
+atlas = ExtResource("7_iww83")
+region = Rect2(384, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_y2ulj"]
-atlas = ExtResource("7_aks50")
-region = Rect2(128, 64, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_mffur"]
+atlas = ExtResource("7_iww83")
+region = Rect2(448, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_t3x2a"]
-atlas = ExtResource("7_aks50")
-region = Rect2(192, 64, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_cla27"]
+atlas = ExtResource("7_iww83")
+region = Rect2(512, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1bbis"]
-atlas = ExtResource("7_aks50")
-region = Rect2(256, 64, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_s74js"]
+atlas = ExtResource("7_iww83")
+region = Rect2(576, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yn2g2"]
-atlas = ExtResource("7_aks50")
-region = Rect2(0, 128, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_op21f"]
+atlas = ExtResource("7_iww83")
+region = Rect2(640, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yic5e"]
-atlas = ExtResource("7_aks50")
-region = Rect2(64, 128, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_a5lls"]
+atlas = ExtResource("7_iww83")
+region = Rect2(704, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ex7s8"]
-atlas = ExtResource("7_aks50")
-region = Rect2(128, 128, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_dlgya"]
+atlas = ExtResource("7_iww83")
+region = Rect2(768, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4clwk"]
-atlas = ExtResource("7_aks50")
-region = Rect2(192, 128, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_e5084"]
+atlas = ExtResource("7_iww83")
+region = Rect2(832, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_h2tpa"]
-atlas = ExtResource("7_aks50")
-region = Rect2(256, 128, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_6vsos"]
+atlas = ExtResource("7_iww83")
+region = Rect2(896, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nkjwg"]
-atlas = ExtResource("7_aks50")
-region = Rect2(0, 192, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_1f7yx"]
+atlas = ExtResource("7_iww83")
+region = Rect2(960, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8n4h5"]
-atlas = ExtResource("7_aks50")
-region = Rect2(64, 192, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_4i62k"]
+atlas = ExtResource("7_iww83")
+region = Rect2(1024, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_as1io"]
-atlas = ExtResource("7_aks50")
-region = Rect2(128, 192, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_oq4ky"]
+atlas = ExtResource("7_iww83")
+region = Rect2(1088, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xd5mi"]
-atlas = ExtResource("7_aks50")
-region = Rect2(192, 192, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_1sl4d"]
+atlas = ExtResource("7_iww83")
+region = Rect2(1152, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tt1x2"]
-atlas = ExtResource("7_aks50")
-region = Rect2(256, 192, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ei04"]
+atlas = ExtResource("7_iww83")
+region = Rect2(1216, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2wrh7"]
-atlas = ExtResource("7_aks50")
-region = Rect2(0, 256, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_tiuk4"]
+atlas = ExtResource("7_iww83")
+region = Rect2(1280, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_atu2d"]
-atlas = ExtResource("7_aks50")
-region = Rect2(64, 256, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_31yj5"]
+atlas = ExtResource("7_iww83")
+region = Rect2(1344, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_x5wht"]
-atlas = ExtResource("7_aks50")
-region = Rect2(128, 256, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ppcth"]
+atlas = ExtResource("7_iww83")
+region = Rect2(1408, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_erwvk"]
 animations = [{
@@ -471,73 +468,73 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_yisvs")
+"texture": SubResource("AtlasTexture_x7h32")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rgw24")
+"texture": SubResource("AtlasTexture_h8lxu")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5gwyn")
+"texture": SubResource("AtlasTexture_ofi7p")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_r6gtk")
+"texture": SubResource("AtlasTexture_fdqty")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_81ldr")
+"texture": SubResource("AtlasTexture_flar8")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_eywpa")
+"texture": SubResource("AtlasTexture_3alyw")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_j7e3e")
+"texture": SubResource("AtlasTexture_gf2ff")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_y2ulj")
+"texture": SubResource("AtlasTexture_mffur")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_t3x2a")
+"texture": SubResource("AtlasTexture_cla27")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1bbis")
+"texture": SubResource("AtlasTexture_s74js")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_yn2g2")
+"texture": SubResource("AtlasTexture_op21f")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_yic5e")
+"texture": SubResource("AtlasTexture_a5lls")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ex7s8")
+"texture": SubResource("AtlasTexture_dlgya")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4clwk")
+"texture": SubResource("AtlasTexture_e5084")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_h2tpa")
+"texture": SubResource("AtlasTexture_6vsos")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_nkjwg")
+"texture": SubResource("AtlasTexture_1f7yx")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8n4h5")
+"texture": SubResource("AtlasTexture_4i62k")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_as1io")
+"texture": SubResource("AtlasTexture_oq4ky")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xd5mi")
+"texture": SubResource("AtlasTexture_1sl4d")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tt1x2")
+"texture": SubResource("AtlasTexture_3ei04")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2wrh7")
+"texture": SubResource("AtlasTexture_tiuk4")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_atu2d")
+"texture": SubResource("AtlasTexture_31yj5")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_x5wht")
+"texture": SubResource("AtlasTexture_ppcth")
 }],
 "loop": 0,
 "name": &"Veg 3",
@@ -920,27 +917,27 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tbeql"]
-atlas = ExtResource("15_op8d8")
-region = Rect2(0, 64, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ac6ki"]
+atlas = ExtResource("20_iww83")
+region = Rect2(384, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_c5nnb"]
-atlas = ExtResource("15_op8d8")
-region = Rect2(64, 64, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_r22iw"]
+atlas = ExtResource("20_iww83")
+region = Rect2(0, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fsd2l"]
-atlas = ExtResource("15_op8d8")
-region = Rect2(0, 0, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_wrqs5"]
+atlas = ExtResource("20_iww83")
+region = Rect2(128, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8kgcr"]
-atlas = ExtResource("15_op8d8")
-region = Rect2(64, 0, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_lkfed"]
+atlas = ExtResource("20_iww83")
+region = Rect2(256, 0, 128, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_52a0j"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tbeql")
+"texture": SubResource("AtlasTexture_ac6ki")
 }],
 "loop": 0,
 "name": &"Bechamel",
@@ -948,7 +945,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_c5nnb")
+"texture": SubResource("AtlasTexture_r22iw")
 }],
 "loop": 0,
 "name": &"Blank",
@@ -956,7 +953,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fsd2l")
+"texture": SubResource("AtlasTexture_wrqs5")
 }],
 "loop": 0,
 "name": &"Pasta",
@@ -964,7 +961,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8kgcr")
+"texture": SubResource("AtlasTexture_lkfed")
 }],
 "loop": 0,
 "name": &"Ragu",
@@ -972,16 +969,16 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mx20r"]
-size = Vector2(42, 20)
+size = Vector2(72.333336, 37.666668)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rpc3w"]
-size = Vector2(16, 16)
+size = Vector2(22, 19.166664)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3k6d1"]
-size = Vector2(16, 16)
+size = Vector2(22, 19.333336)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fq6d3"]
-size = Vector2(14, 8)
+size = Vector2(20.5, 32)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
 radius = 9.003471
@@ -1068,7 +1065,7 @@ texture = ExtResource("4_5y6rq")
 position = Vector2(19.5, 1)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_erwvk")
-animation = &"Veg 2"
+animation = &"Veg 3"
 autoplay = "Veg 1"
 
 [node name="Timer" type="Timer" parent="Lasagne/Minigame 1" unique_id=1173723208]
@@ -1231,10 +1228,12 @@ animation = &"Looping"
 
 [node name="Minigame 4" type="Node2D" parent="Lasagne" unique_id=918677780]
 visible = false
+position = Vector2(4, 106)
 scale = Vector2(3, 3)
 script = ExtResource("14_m7s8x")
 
 [node name="Tray" type="Area2D" parent="Lasagne/Minigame 4" unique_id=1397393123]
+metadata/_edit_lock_ = true
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="Lasagne/Minigame 4/Tray" unique_id=289578257]
 sprite_frames = SubResource("SpriteFrames_52a0j")
@@ -1243,6 +1242,7 @@ autoplay = "Blank"
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lasagne/Minigame 4/Tray" unique_id=1264834603]
+position = Vector2(0.16666794, -0.50000036)
 shape = SubResource("RectangleShape2D_mx20r")
 metadata/_edit_lock_ = true
 
@@ -1250,40 +1250,28 @@ metadata/_edit_lock_ = true
 position = Vector2(-41, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lasagne/Minigame 4/Ragu" unique_id=1298256556]
+position = Vector2(41, -33.416668)
 shape = SubResource("RectangleShape2D_rpc3w")
-metadata/_edit_lock_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Lasagne/Minigame 4/Ragu" unique_id=1743045704]
-texture = ExtResource("16_n1gyr")
-metadata/_edit_lock_ = true
 
 [node name="Bechamel Sauce" type="Area2D" parent="Lasagne/Minigame 4" unique_id=1852503570]
 position = Vector2(41, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lasagne/Minigame 4/Bechamel Sauce" unique_id=764125836]
+position = Vector2(-15, -33.666668)
 shape = SubResource("RectangleShape2D_3k6d1")
-metadata/_edit_lock_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Lasagne/Minigame 4/Bechamel Sauce" unique_id=1810634057]
-texture = ExtResource("17_del5i")
-metadata/_edit_lock_ = true
 
 [node name="Pasta" type="Area2D" parent="Lasagne/Minigame 4" unique_id=1370308223]
 position = Vector2(0, -21)
 
-[node name="Sprite2D" type="Sprite2D" parent="Lasagne/Minigame 4/Pasta" unique_id=660995091]
-texture = ExtResource("18_6qfv3")
-metadata/_edit_lock_ = true
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lasagne/Minigame 4/Pasta" unique_id=1044275532]
+position = Vector2(-23.583334, -15.333336)
 shape = SubResource("RectangleShape2D_fq6d3")
-metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="Lasagne/Minigame 4" unique_id=1380798231]
-offset_left = -82.333336
-offset_top = -40.666668
-offset_right = 91.666664
-offset_bottom = 47.333332
+offset_left = -83.66668
+offset_top = -76.0
+offset_right = 90.33332
+offset_bottom = 12.0
 scale = Vector2(0.07, 0.07)
 theme = SubResource("Theme_2w5on")
 text = "Temp"

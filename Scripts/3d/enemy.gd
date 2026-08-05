@@ -247,3 +247,8 @@ func _stop_chase_audio():
 func _on_chase_audio_finished():
 	if is_playing_chase_audio:
 		_start_chase_audio()
+
+
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	if body.name == "FpsController":
+		get_tree().change_scene_to_file("res://Scenes/3d/main_3d.tscn")

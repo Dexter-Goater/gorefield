@@ -29,11 +29,13 @@ func _process(delta: float) -> void:
 		$Veg.frame += 1
 		$Knife.position.x += 2.1
 		$Knife.play("Chop")
-		if $Veg.frame >= 22:
+		if $Veg.frame >= $Veg.sprite_frames.get_frame_count($Veg.animation) - 1:
 			veg += 1
 			Globals.gorefield_appeasment = $Timer.time_left
 			print(Globals.gorefield_appeasment)
-			$Veg.play("Veg {veg}".format({'veg':veg}))
+			$Veg.animation = "Veg {veg}".format({'veg':veg})
+			$Veg.frame = 0
+			$Veg.stop() 
 			$Timer.start()
 			$Knife.position.x = -41
 	if veg >= 4 and Globals.minigame < 2 and Globals.current_recipie == "Lasagne":

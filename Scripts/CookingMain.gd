@@ -9,8 +9,6 @@ func _ready() -> void:
 			Globals.current_recipie = Globals.recipies.pick_random()
 			print(Globals.current_recipie)
 	print(Globals.current_recipie)
-	if Globals.old_recipies.size() >= 2:
-		print("win")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -18,4 +16,5 @@ func _process(delta: float) -> void:
 	if Globals.gorefield_appeasment <= 0.0:
 		get_tree().change_scene_to_file("res://Scenes/2d_to_3d_cutscene.tscn")
 	if Globals.minigame_over == true:
-			get_tree().change_scene_to_file("res://Scenes/2d/Win_screen.tscn")
+			#get_tree().change_scene_to_file("res://Scenes/2d/Win_screen.tscn")
+			get_tree().change_scene_to_file("res://Scenes/3d/main_3d.tscn")
