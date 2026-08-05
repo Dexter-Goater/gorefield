@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://bwg6e2eihg3wh" path="res://Art/3D/Models/Gorefield#4blend.glb" id="1_aqtqe"]
 
-[node name="Gorefield#4blend" unique_id=804211467 instance=ExtResource("1_aqtqe")]
+[node name="Gorefield#4blend" unique_id=786316849 instance=ExtResource("1_aqtqe")]
 
-[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(1473872677) index="0" unique_id=120173336]
+[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(1077343165) index="0" unique_id=44981000]
 bones/6/rotation = Quaternion(0.3123865, -0.045202415, -0.12534185, 0.9405641)
 bones/9/rotation = Quaternion(0.27237272, -0.02648318, -0.09140466, 0.95747423)
 bones/12/rotation = Quaternion(0.35382727, 0.06264392, 0.17788883, 0.9160992)
@@ -13,6 +13,3 @@ bones/19/rotation = Quaternion(0.11246572, 0.032440905, 0.28633988, 0.9509514)
 bones/20/rotation = Quaternion(-0.46554703, -0.051962063, -0.20218205, 0.8600514)
 bones/22/rotation = Quaternion(0.09338916, -0.029491238, -0.26177266, 0.96014786)
 bones/23/rotation = Quaternion(-0.34962824, -0.10305752, 0.46905753, 0.80444044)
-
-[node name="AnimationPlayer" parent="." index="3" unique_id=225809369]
-autoplay = &"ArmatureAction"
