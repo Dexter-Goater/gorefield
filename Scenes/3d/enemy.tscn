@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dtfvp7ecgqfaq" path="res://Scripts/3d/enemy.gd" id="1_r4m2x"]
 [ext_resource type="Texture2D" uid="uid://d1xeier5k7q4h" path="res://Art/3D/Models/Gorefield#4blend_colormap.png" id="2_1st1f"]
-[ext_resource type="Animation" uid="uid://gcc7leftbxic" path="res://Scenes/3d/animation.anim" id="3_w8mks"]
+[ext_resource type="Animation" uid="uid://d1yu2tyq4cum0" path="res://Scenes/3d/animation.anim" id="3_w8mks"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_t84r4"]
 radius = 2.850586
@@ -413,6 +413,9 @@ collision_layer = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=786311427]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19508362, 2.561029, -0.810318)
 shape = SubResource("BoxShape3D_g4v7s")
+
+[node name="VoiceLinePlayer" type="AudioStreamPlayer3D" parent="." unique_id=1369582158]
+volume_db = 80.0
 
 [connection signal="target_reached" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_target_reached"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

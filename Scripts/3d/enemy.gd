@@ -27,11 +27,9 @@ var wait_timer: float = 0.0
 var vision_check_interval: float = 0.05
 var vision_check_timer: float = 0.0
 
-
 var stuck_interval_timer: float = 0.0
 var stuck_seconds_count: int = 0
 var last_check_position: Vector3 = Vector3.ZERO
-
 
 var path_update_timer: float = 0.0
 var path_update_interval: float = 0.1 
@@ -50,8 +48,14 @@ var _space_state: PhysicsDirectSpaceState3D
 	preload("res://Audio/3D/ChaseMusic/Chase5.mp3"),
 	preload("res://Audio/3D/ChaseMusic/Chase6.mp3"),
 ]
+@onready var voice_line_player: AudioStreamPlayer3D = $VoiceLinePlayer 
+const FOLDER_PATH: String = "res://Audio/3D/Gorfield/"
+var voice_lines: Array[AudioStream] = []
+var voice_line_timer: float = 0.0
+var next_line_interval: float = 0.0
+
 @export var min_db := -40.0 
-@export var max_db := 0.0     
+@export var max_db := 0.0      
 var is_playing_chase_audio := false
 
 func _ready() -> void:
@@ -63,14 +67,24 @@ func _ready() -> void:
 	await get_tree().physics_frame
 	_pick_random_generator()
 	chase_audio_player.finished.connect(_on_chase_audio_finished)
+	
+
+	_load_gorfield_voice_lines()
+	_reset_voice_line_timer()
 
 func _process(delta: float) -> void:
 	Globals.distancetoplayer = navigation_agent_3d.distance_to_target()
+	
+
+	_handle_voice_line_timer(delta)
+	
 	vision_check_timer += delta
 	if vision_check_timer >= vision_check_interval:
 		vision_check_timer = 0.0
 		_check_vision()
+		
 	_check_stuck(delta)
+	
 	match state:
 		State.PATROL_GENERATOR:
 			_on_patrol_generator(delta)
@@ -78,11 +92,13 @@ func _process(delta: float) -> void:
 			_on_wait_at_generator(delta)
 		State.CHASE:
 			_on_chase(delta)
+			
 	rotation.x = 0.0
 	rotation.z = 0.0
 	if not is_on_floor():
 		velocity.y -= 20.0 * delta
 	move_and_slide()
+	
 	if Globals.chasingplayer and Globals.distancetoplayer < Globals.Chase_Indicator_max_distance:
 		if not is_playing_chase_audio:
 			_start_chase_audio()
@@ -92,6 +108,41 @@ func _process(delta: float) -> void:
 	else:
 		if is_playing_chase_audio:
 			_stop_chase_audio()
+
+
+func _load_gorfield_voice_lines() -> void:
+	var files: PackedStringArray = DirAccess.get_files_at(FOLDER_PATH)
+	for file in files:
+		if file.ends_with(".import"):
+			continue
+		
+		if file.ends_with(".mp3") or file.ends_with(".wav") or file.ends_with(".ogg"):
+			var file_path = FOLDER_PATH.path_join(file)
+			var stream = load(file_path) as AudioStream
+			if stream:
+				voice_lines.append(stream)
+				
+	if voice_lines.is_empty():
+		push_warning("No valid audio files found in directory: " + FOLDER_PATH)
+
+func _handle_voice_line_timer(delta: float) -> void:
+	if voice_lines.is_empty():
+		return
+		
+	voice_line_timer += delta
+	if voice_line_timer >= next_line_interval:
+		_play_random_voice_line()
+		_reset_voice_line_timer()
+
+func _reset_voice_line_timer() -> void:
+	voice_line_timer = 0.0
+	next_line_interval = randf_range(10.0, 20.0)
+
+func _play_random_voice_line() -> void:
+	if voice_lines.size() > 0 and voice_line_player:
+		voice_line_player.stream = voice_lines.pick_random()
+		voice_line_player.play()
+		print("sound played")
 
 func _check_stuck(delta: float) -> void:
 	if state == State.WAIT_AT_GENERATOR:
@@ -109,6 +160,7 @@ func _check_stuck(delta: float) -> void:
 				_pick_nearest_generator()
 		else:
 			stuck_seconds_count = 0
+
 func _reset_stuck_tracker() -> void:
 	stuck_interval_timer = 0.0
 	stuck_seconds_count = 0
@@ -247,7 +299,6 @@ func _stop_chase_audio():
 func _on_chase_audio_finished():
 	if is_playing_chase_audio:
 		_start_chase_audio()
-
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.name == "FpsController":
