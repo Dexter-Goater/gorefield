@@ -2,7 +2,7 @@ extends Node2D
 
 var arrow_direction
 var current_index = 0
-var directions = ["UP","LEFT","RIGHT","DOWN","RIGHT","LEFT","DOWN","UP","DOWN","RIGHT","DOWN","RIGHT","DOWN","LEFT","RIGHT","LEFT","DOWN","DOWN","LEFT","END"]
+var directions = ["W","A","D","S","D","A","S","W","S","D","S","D","S","A","D","A","S","S","A","END"]
 
 func _ready() -> void:
 	Globals.gorefield_appeasment = 5
@@ -24,10 +24,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		var correct_action = ""
 		
 		match current_target:
-			"UP": correct_action = "forward"
-			"LEFT": correct_action = "left"
-			"RIGHT": correct_action = "right"
-			"DOWN": correct_action = "backward"
+			"W": correct_action = "forward"
+			"A": correct_action = "left"
+			"D": correct_action = "right"
+			"S": correct_action = "backward"
 			"END": return
 
 		if event.is_action_pressed(correct_action):
@@ -48,7 +48,7 @@ func update_arrow() -> void:
 		$Label.text = "Press = {arrow_direction}".format({"arrow_direction": arrow_direction})
 		
 		match arrow_direction:
-			"UP": $Arrow.rotation_degrees = 270
-			"LEFT": $Arrow.rotation_degrees = 180
-			"RIGHT": $Arrow.rotation_degrees = 0
-			"DOWN": $Arrow.rotation_degrees = 90
+			"W": $Arrow.rotation_degrees = 270
+			"A": $Arrow.rotation_degrees = 180
+			"D": $Arrow.rotation_degrees = 0
+			"S": $Arrow.rotation_degrees = 90

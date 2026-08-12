@@ -1098,7 +1098,6 @@ frame = 3
 frame_progress = 1.0
 
 [node name="Minigame 2" type="Node2D" parent="Lasagne" unique_id=664336338]
-visible = false
 scale = Vector2(2, 2)
 script = ExtResource("8_dnlh1")
 
@@ -1188,7 +1187,6 @@ theme = SubResource("Theme_2w5on")
 text = "Press Space when the arrow is near the green"
 
 [node name="Minigame 3" type="Node2D" parent="Lasagne" unique_id=1728431537]
-visible = false
 position = Vector2(0, 70)
 scale = Vector2(4, 4)
 script = ExtResource("11_hpx6l")
@@ -1227,7 +1225,6 @@ sprite_frames = SubResource("SpriteFrames_5vgkp")
 animation = &"Looping"
 
 [node name="Minigame 4" type="Node2D" parent="Lasagne" unique_id=918677780]
-visible = false
 position = Vector2(4, 106)
 scale = Vector2(3, 3)
 script = ExtResource("14_m7s8x")

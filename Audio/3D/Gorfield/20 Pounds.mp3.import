@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bp3g4y6utjkd7"
+path="res://.godot/imported/20 Pounds.mp3-4fd8e3933e44a37267200386722e3935.mp3str"
+
+[deps]
+
+source_file="res://Audio/3D/Gorfield/20 Pounds.mp3"
+dest_files=["res://.godot/imported/20 Pounds.mp3-4fd8e3933e44a37267200386722e3935.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
