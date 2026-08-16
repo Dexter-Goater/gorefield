@@ -42,10 +42,10 @@ shape = SubResource("ConcavePolygonShape3D_5rtkh")
 environment = ExtResource("2_5rtkh")
 
 [node name="FpsController" parent="." unique_id=583847357 groups=["player"] instance=ExtResource("2_0geue")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1426487, 1.4112253, 21.071661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1426487, 1.4112253, 4.3090324)
 
 [node name="Enemy" parent="." unique_id=1162910194 instance=ExtResource("5_5rtkh")]
-transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -31.614004, 4.8190994, 21.40949)
+transform = Transform3D(-0.99999994, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -0.99999994, -31.614004, 4.8190994, 44.427025)
 
 [node name="Generator" parent="." unique_id=2071026487 instance=ExtResource("6_6fwme")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 79.544, -0.45, 185.44)
@@ -126,3 +126,24 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -94.
 
 [node name="Locker" parent="." unique_id=1697958646 instance=ExtResource("7_fkd8t")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 50.359425, 0.14055836, 26.56565)
+
+[node name="Move Instruction" type="Label3D" parent="." unique_id=580276700]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.350892, 2.6094322, 11.047375)
+pixel_size = 0.01
+billboard = 2
+text = "W,A,S,D to move"
+
+[node name="Locker Instructions" type="Label3D" parent="." unique_id=990079291]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3114293, 2.6, 11.542731)
+pixel_size = 0.01
+billboard = 2
+text = "E to interact with
+ lockers and generators
+"
+
+[node name="Game Instructions" type="Label3D" parent="." unique_id=1679279918]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1388974, 1.5050712, 11.047375)
+pixel_size = 0.01
+billboard = 2
+text = "Activate 3 generators
+whilst avoiding him to win"
