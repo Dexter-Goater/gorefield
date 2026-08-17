@@ -11,7 +11,7 @@ func _ready() -> void:
 	$Label3D.hide()
 
 func _on_body_entered(body):
-	if body.is_in_group("player"):
+	if body.is_in_group("player") and Globals.gens_active != 3:
 		player_ref = body
 		$Label3D.show()
 

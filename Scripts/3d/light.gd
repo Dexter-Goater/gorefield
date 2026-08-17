@@ -7,7 +7,7 @@ func _ready():
 	timer.timeout.connect(_on_timer_timeout)
 
 func _on_timer_timeout():
-	if Globals.chasingplayer == true and Globals.distancetoplayer < Globals.Chase_Indicator_max_distance:
+	if (Globals.chasingplayer == true and Globals.distancetoplayer < Globals.Chase_Indicator_max_distance) or Globals.gens_active == 3:
 		light_energy = randf_range(0, 2.0)
 		var dist = clamp(Globals.distancetoplayer, Globals.Chase_Indicator_min_distance, Globals.Chase_Indicator_max_distance)
 		var t = (dist - Globals.Chase_Indicator_min_distance) / (Globals.Chase_Indicator_max_distance - Globals.Chase_Indicator_min_distance)
@@ -16,3 +16,9 @@ func _on_timer_timeout():
 	else:
 		light_energy = 2
 		timer.start(flicker_range_max)
+
+func _process(delta: float) -> void:
+	if Globals.gens_active == 3:
+		light_color = Color.RED
+		var mat = $"..".get_surface_override_material(1) as StandardMaterial3D
+		mat.emission = Color(1, 0, 0)

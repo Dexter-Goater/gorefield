@@ -73,6 +73,8 @@ func _ready() -> void:
 	_reset_voice_line_timer()
 
 func _process(delta: float) -> void:
+	if Globals.gens_active == 3:
+		state = State.CHASE
 	Globals.distancetoplayer = navigation_agent_3d.distance_to_target()
 	
 

@@ -14,6 +14,7 @@ func _process(delta: float) -> void:
 		if Input.is_action_just_pressed("E"):
 			genactivated = true
 			Globals.gens_active += 1
+			$AudioStreamPlayer3D.play()
 	else:
 		$Label3D.hide()
 

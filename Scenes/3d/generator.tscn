@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://eexlfgwnojlf" path="res://Scripts/3d/generator.gd" id="1_iwh04"]
 [ext_resource type="ArrayMesh" uid="uid://bayh5hwki16cl" path="res://Art/3D/Models/generator.obj" id="2_84oj5"]
+[ext_resource type="AudioStream" uid="uid://bu803kjr27fkg" path="res://Audio/3D/generator.mp3" id="3_gcmc6"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5vgkp"]
 
@@ -42,6 +43,10 @@ surface_material_override/1 = SubResource("StandardMaterial3D_fkd8t")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Generator/StaticBody3D" unique_id=1072501556]
 shape = SubResource("ConcavePolygonShape3D_84oj5")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1553795062]
+stream = ExtResource("3_gcmc6")
+parameters/looping = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
