@@ -5,6 +5,7 @@ extends Node3D
 func _ready() -> void:
 	Globals.threed = true
 	Globals.gens_active = 0
+	$WorldEnvironment.environment.background_color = Color(1, 1, 1)
 
 func _process(delta: float) -> void:
 	if Globals.gens_active == 3:

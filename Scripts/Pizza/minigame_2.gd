@@ -2,16 +2,16 @@ extends Node2D
 
 var arrow_direction
 var current_index = 0
-var directions = ["W","A","D","S","D","A","S","W","S","D","S","D","S","A","D","A","S","S","A","END"]
+var directions = ["D","W","D","S","D","A","S","W","S","D","S","D","S","A","D","A","S","S","A","END"]
 
 func _ready() -> void:
 	Globals.gorefield_appeasment = 5
 	update_arrow()
+	update_animation()
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Globals.minigame == 2 and Globals.current_recipie == "Pizza":
 		if directions[current_index] == "END":
-			print($Sprite2D.scale)
 			Globals.minigame += 1
 			set_process(false)
 
@@ -40,7 +40,7 @@ func _unhandled_input(event: InputEvent) -> void:
 func advance_sequence() -> void:
 	current_index += 1
 	update_arrow()
-	$Sprite2D.scale *= 1.01
+	update_animation()
 
 func update_arrow() -> void:
 	arrow_direction = directions[current_index]
@@ -52,3 +52,18 @@ func update_arrow() -> void:
 			"A": $Arrow.rotation_degrees = 180
 			"D": $Arrow.rotation_degrees = 0
 			"S": $Arrow.rotation_degrees = 90
+
+func update_animation() -> void:
+	match current_index:
+		0:
+			$Sprite2D.play("Pre_Roll")
+		1:
+			$Sprite2D.play("Init1")
+		2:
+			$Sprite2D.play("Init2")
+		3:
+			$Sprite2D.play("Init3")
+		_:
+			var current_dir = directions[current_index]
+			if current_dir != "END":
+				$Sprite2D.play(current_dir)

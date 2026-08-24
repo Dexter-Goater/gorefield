@@ -1,53 +1,139 @@
 [gd_scene format=3 uid="uid://dbn8saxufndr3"]
 
 [ext_resource type="Script" uid="uid://dmno5dl7ivfxc" path="res://Scripts/2d_to_3d_cutscene.gd" id="1_p8cbk"]
+[ext_resource type="Texture2D" uid="uid://hbe0kxxce7ax" path="res://Art/2D/Background/gorefield transforming animation-Sheet.png" id="2_blg83"]
 
-[sub_resource type="Animation" id="Animation_blg83"]
-resource_name = "2d_to_3d"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Label:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(346, 0)]
-}
+[sub_resource type="AtlasTexture" id="AtlasTexture_e5t4h"]
+atlas = ExtResource("2_blg83")
+region = Rect2(0, 0, 128, 128)
 
-[sub_resource type="Animation" id="Animation_e5t4h"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Label:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
+[sub_resource type="AtlasTexture" id="AtlasTexture_oxonr"]
+atlas = ExtResource("2_blg83")
+region = Rect2(128, 0, 128, 128)
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_oxonr"]
-_data = {
-&"2d_to_3d": SubResource("Animation_blg83"),
-&"RESET": SubResource("Animation_e5t4h")
-}
+[sub_resource type="AtlasTexture" id="AtlasTexture_hgj5b"]
+atlas = ExtResource("2_blg83")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dtp5f"]
+atlas = ExtResource("2_blg83")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8hos7"]
+atlas = ExtResource("2_blg83")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_00wcc"]
+atlas = ExtResource("2_blg83")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k5kmg"]
+atlas = ExtResource("2_blg83")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rc5yk"]
+atlas = ExtResource("2_blg83")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pke7b"]
+atlas = ExtResource("2_blg83")
+region = Rect2(1024, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h37yn"]
+atlas = ExtResource("2_blg83")
+region = Rect2(1152, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_535ln"]
+atlas = ExtResource("2_blg83")
+region = Rect2(1280, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g0ywv"]
+atlas = ExtResource("2_blg83")
+region = Rect2(1408, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fajh4"]
+atlas = ExtResource("2_blg83")
+region = Rect2(1536, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rsjiv"]
+atlas = ExtResource("2_blg83")
+region = Rect2(1664, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f8ifc"]
+atlas = ExtResource("2_blg83")
+region = Rect2(1792, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4wods"]
+atlas = ExtResource("2_blg83")
+region = Rect2(1920, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5vgkp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e5t4h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oxonr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hgj5b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dtp5f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8hos7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_00wcc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k5kmg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rc5yk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pke7b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h37yn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_535ln")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g0ywv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fajh4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rsjiv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f8ifc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4wods")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 8.0
+}]
 
 [node name="2D to 3D cutscene" type="Node2D" unique_id=1525341654]
 script = ExtResource("1_p8cbk")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=510556755]
-libraries/ = SubResource("AnimationLibrary_oxonr")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=252085615]
+position = Vector2(0, 8)
+sprite_frames = SubResource("SpriteFrames_5vgkp")
+autoplay = "default"
 
-[node name="Label" type="Label" parent="." unique_id=1220534978]
-offset_right = 167.0
-offset_bottom = 49.0
-text = "Wow it changed to 3d
-(You lost)"
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=51596261]
 
-[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1760357575]
+zoom = Vector2(4.5, 4.5)
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
