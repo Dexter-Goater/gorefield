@@ -23,16 +23,15 @@
 [ext_resource type="Script" uid="uid://bc0xif3vtfhq5" path="res://Scripts/Pizza/minigame_1.gd" id="20_8g7ue"]
 [ext_resource type="Texture2D" uid="uid://3y4jllhl0ugy" path="res://Art/2D/Lasagne/Minigame 4/baking tray-Sheet.png" id="20_iww83"]
 [ext_resource type="Script" uid="uid://blanc45a5bifp" path="res://Scripts/Pizza/minigame_2.gd" id="21_pocwo"]
-[ext_resource type="Texture2D" uid="uid://nyhvwn6aicab" path="res://Art/2D/Pizza/Minigame 2/pizza.png" id="22_e10xp"]
 [ext_resource type="Texture2D" uid="uid://u40v05yamt1t" path="res://Art/2D/Pizza/Minigame 2/arrow.png" id="23_ix0gt"]
 [ext_resource type="Script" uid="uid://m6csq8k5jjy5" path="res://Scripts/Pizza/minigame_3.gd" id="24_41s4g"]
 [ext_resource type="Texture2D" uid="uid://c58vb4p4nt4du" path="res://Art/2D/Pizza/Minigame 2/Pizza mini game loop-Sheet.png" id="24_pitq4"]
 [ext_resource type="Texture2D" uid="uid://d20fenah7o2qo" path="res://Art/2D/Pizza/Minigame 2/pre loop.png" id="25_aks50"]
-[ext_resource type="Texture2D" uid="uid://ccm52wpm86u6g" path="res://Art/2D/Pizza/Minigame 3/sauced pizza.png" id="25_thw3e"]
 [ext_resource type="Script" uid="uid://br7lhufvhca86" path="res://Scripts/Pizza/minigame_4.gd" id="26_01qm0"]
 [ext_resource type="Texture2D" uid="uid://7j6pslbxluvb" path="res://Art/2D/Pizza/Minigame 2/pizza mini game begin(rolling).png" id="26_dnlh1"]
 [ext_resource type="Script" uid="uid://bcintqrybvalm" path="res://Scripts/Pizza/knob_1.gd" id="27_if3pv"]
 [ext_resource type="Texture2D" uid="uid://ctj03osco1ewh" path="res://icon.svg" id="28_s60kf"]
+[ext_resource type="Texture2D" uid="uid://bjebx45ok2m8h" path="res://Art/2D/Pizza/Minigame 3/pizza with sauce and without-Sheet.png" id="29_5y6rq"]
 [ext_resource type="Script" uid="uid://d3kxex8shcerv" path="res://Scripts/Pizza/knob_2.gd" id="29_if55n"]
 [ext_resource type="Texture2D" uid="uid://c8d6jp1nrg5c6" path="res://Art/2D/Background/background-Sheet.png" id="30_5itsu"]
 
@@ -1373,6 +1372,36 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_yk141"]
+atlas = ExtResource("29_5y6rq")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u7lju"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yk141")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c2r4b"]
+atlas = ExtResource("29_5y6rq")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g3cs6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c2r4b")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
 radius = 9.003471
 
@@ -1695,6 +1724,7 @@ wait_time = 10.0
 one_shot = true
 
 [node name="Minigame 2" type="Node2D" parent="Pizza" unique_id=1356050981]
+visible = false
 scale = Vector2(4, 4)
 script = ExtResource("21_pocwo")
 
@@ -1702,7 +1732,7 @@ script = ExtResource("21_pocwo")
 position = Vector2(0, -3)
 scale = Vector2(0.9, 0.9)
 sprite_frames = SubResource("SpriteFrames_gwmvc")
-animation = &"A"
+animation = &"Init1"
 
 [node name="Arrow" type="Node2D" parent="Pizza/Minigame 2" unique_id=335770906]
 position = Vector2(-1, 8)
@@ -1722,19 +1752,19 @@ theme = SubResource("Theme_2w5on")
 text = "Temp"
 
 [node name="Minigame 3" type="Node2D" parent="Pizza" unique_id=442232733]
-visible = false
 scale = Vector2(6, 6)
 script = ExtResource("24_41s4g")
 
 [node name="Area2D" type="Area2D" parent="Pizza/Minigame 3" unique_id=1206819186]
 
-[node name="PizzaBase" type="Sprite2D" parent="Pizza/Minigame 3/Area2D" unique_id=1211676870]
+[node name="PizzaBase" type="AnimatedSprite2D" parent="Pizza/Minigame 3/Area2D" unique_id=34123648]
 z_index = -1
-texture = ExtResource("22_e10xp")
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_u7lju")
 
-[node name="Sauced" type="Sprite2D" parent="Pizza/Minigame 3/Area2D" unique_id=769224978]
-position = Vector2(1, 1)
-texture = ExtResource("25_thw3e")
+[node name="Sauced" type="AnimatedSprite2D" parent="Pizza/Minigame 3/Area2D" unique_id=800693650]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_g3cs6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pizza/Minigame 3/Area2D" unique_id=62228677]
 shape = SubResource("CircleShape2D_g4v7s")
