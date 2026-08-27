@@ -34,6 +34,7 @@
 [ext_resource type="Texture2D" uid="uid://bjebx45ok2m8h" path="res://Art/2D/Pizza/Minigame 3/pizza with sauce and without-Sheet.png" id="29_5y6rq"]
 [ext_resource type="Script" uid="uid://d3kxex8shcerv" path="res://Scripts/Pizza/knob_2.gd" id="29_if55n"]
 [ext_resource type="Texture2D" uid="uid://c8d6jp1nrg5c6" path="res://Art/2D/Background/background-Sheet.png" id="30_5itsu"]
+[ext_resource type="Texture2D" uid="uid://b1cyfjgeventc" path="res://Art/2D/Pizza/Minigame 3/Lattle cursor.png" id="30_pitq4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ybe6u"]
 atlas = ExtResource("5_5y6rq")
@@ -1405,6 +1406,33 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
 radius = 9.003471
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_3wois"]
+atlas = ExtResource("30_pitq4")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hphm1"]
+atlas = ExtResource("30_pitq4")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iqy8o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3wois")
+}],
+"loop": 0,
+"name": &"Default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hphm1")
+}],
+"loop": 0,
+"name": &"Sauced",
+"speed": 5.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5vgkp"]
 size = Vector2(128.33508, 128)
 
@@ -1768,6 +1796,12 @@ sprite_frames = SubResource("SpriteFrames_g3cs6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pizza/Minigame 3/Area2D" unique_id=62228677]
 shape = SubResource("CircleShape2D_g4v7s")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Pizza/Minigame 3" unique_id=441540675]
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_iqy8o")
+animation = &"Default"
+autoplay = "Default"
 
 [node name="Minigame 4" type="Node2D" parent="Pizza" unique_id=1291360360]
 visible = false
