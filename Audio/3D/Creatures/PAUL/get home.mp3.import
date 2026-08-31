@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cei6tbh4oc5ly"
+path="res://.godot/imported/get home.mp3-7eb530f03537f557106cbd3ce01cc6a3.mp3str"
+
+[deps]
+
+source_file="res://Audio/3D/Creatures/PAUL/get home.mp3"
+dest_files=["res://.godot/imported/get home.mp3-7eb530f03537f557106cbd3ce01cc6a3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

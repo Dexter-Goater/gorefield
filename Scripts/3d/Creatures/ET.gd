@@ -1,6 +1,5 @@
 extends AudioStreamPlayer3D
 
-const FOLDER_PATH: String = "res://Audio/3D/Creatures/ET/"
 var voice_lines: Array[AudioStream] = []
 var voice_line_timer: float = 0.0
 var next_line_interval: float = 0.0
@@ -13,6 +12,7 @@ func _process(delta: float) -> void:
 	_handle_voice_line_timer(delta)
 
 func _load_voice_lines() -> void:
+	var FOLDER_PATH: String = "res://Audio/3D/Creatures/".path_join(name)
 	var files: PackedStringArray = DirAccess.get_files_at(FOLDER_PATH)
 	
 	for file in files:
@@ -39,10 +39,9 @@ func _handle_voice_line_timer(delta: float) -> void:
 
 func _reset_voice_line_timer() -> void:
 	voice_line_timer = 0.0
-	next_line_interval = randf_range(1.0, 2.0)
+	next_line_interval = randf_range(10.0, 20.0)
 
 func _play_random_voice_line() -> void:
 	if not voice_lines.is_empty():
 		stream = voice_lines.pick_random()
 		play()
-		print("sound played")

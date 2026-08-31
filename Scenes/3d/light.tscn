@@ -12,6 +12,7 @@ emission = Color(0.95686275, 1, 0.98039216, 1)
 emission_energy_multiplier = 0.2
 
 [node name="Light" type="MeshInstance3D" unique_id=1853226669]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 layers = 2
 mesh = ExtResource("1_tldv2")
 surface_material_override/0 = SubResource("StandardMaterial3D_u4mtu")

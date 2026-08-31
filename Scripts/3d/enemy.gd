@@ -285,9 +285,11 @@ func _turn_towards(move_dir: Vector3, delta: float) -> void:
 	var current_quat = global_transform.basis.get_rotation_quaternion()
 	var target_quat = target_transform.basis.get_rotation_quaternion()
 	var angle_to = current_quat.angle_to(target_quat)
+	
 	if angle_to > 0.001:
 		var weight = clampf(max_angle / angle_to, 0.0, 1.0)
-		global_transform.basis = Basis(current_quat.slerp(target_quat, weight))
+		var current_scale = global_transform.basis.get_scale() # Save scale
+		global_transform.basis = Basis(current_quat.slerp(target_quat, weight)).scaled(current_scale)
 
 func _start_chase_audio():
 	chase_audio_player.stream = chase_sounds[randi() % chase_sounds.size()]
