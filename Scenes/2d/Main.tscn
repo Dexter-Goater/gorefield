@@ -33,8 +33,8 @@
 [ext_resource type="Texture2D" uid="uid://ctj03osco1ewh" path="res://icon.svg" id="28_s60kf"]
 [ext_resource type="Texture2D" uid="uid://bjebx45ok2m8h" path="res://Art/2D/Pizza/Minigame 3/pizza with sauce and without-Sheet.png" id="29_5y6rq"]
 [ext_resource type="Script" uid="uid://d3kxex8shcerv" path="res://Scripts/Pizza/knob_2.gd" id="29_if55n"]
-[ext_resource type="Texture2D" uid="uid://c8d6jp1nrg5c6" path="res://Art/2D/Background/background-Sheet.png" id="30_5itsu"]
 [ext_resource type="Texture2D" uid="uid://b1cyfjgeventc" path="res://Art/2D/Pizza/Minigame 3/Lattle cursor.png" id="30_pitq4"]
+[ext_resource type="Texture2D" uid="uid://c18w0cbtn4vkp" path="res://Art/2D/Background/Background with the oven knibs and updated oven.png" id="35_pitq4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ybe6u"]
 atlas = ExtResource("5_5y6rq")
@@ -1436,57 +1436,57 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5vgkp"]
 size = Vector2(128.33508, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_52a0j"]
-atlas = ExtResource("30_5itsu")
+[sub_resource type="AtlasTexture" id="AtlasTexture_hj35d"]
+atlas = ExtResource("35_pitq4")
 region = Rect2(0, 0, 500, 500)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mx20r"]
-atlas = ExtResource("30_5itsu")
+[sub_resource type="AtlasTexture" id="AtlasTexture_rpyss"]
+atlas = ExtResource("35_pitq4")
 region = Rect2(500, 0, 500, 500)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rpc3w"]
-atlas = ExtResource("30_5itsu")
+[sub_resource type="AtlasTexture" id="AtlasTexture_jryu5"]
+atlas = ExtResource("35_pitq4")
 region = Rect2(1000, 0, 500, 500)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3k6d1"]
-atlas = ExtResource("30_5itsu")
+[sub_resource type="AtlasTexture" id="AtlasTexture_3o85p"]
+atlas = ExtResource("35_pitq4")
 region = Rect2(1500, 0, 500, 500)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fq6d3"]
-atlas = ExtResource("30_5itsu")
+[sub_resource type="AtlasTexture" id="AtlasTexture_4o1yx"]
+atlas = ExtResource("35_pitq4")
 region = Rect2(2000, 0, 500, 500)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_he124"]
-atlas = ExtResource("30_5itsu")
+[sub_resource type="AtlasTexture" id="AtlasTexture_iuw0u"]
+atlas = ExtResource("35_pitq4")
 region = Rect2(2500, 0, 500, 500)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_478hk"]
-atlas = ExtResource("30_5itsu")
+[sub_resource type="AtlasTexture" id="AtlasTexture_hyo1t"]
+atlas = ExtResource("35_pitq4")
 region = Rect2(3000, 0, 500, 500)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_othpo"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_52a0j")
+"texture": SubResource("AtlasTexture_hj35d")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_mx20r")
+"texture": SubResource("AtlasTexture_rpyss")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rpc3w")
+"texture": SubResource("AtlasTexture_jryu5")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3k6d1")
+"texture": SubResource("AtlasTexture_3o85p")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fq6d3")
+"texture": SubResource("AtlasTexture_4o1yx")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_he124")
+"texture": SubResource("AtlasTexture_iuw0u")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_478hk")
+"texture": SubResource("AtlasTexture_hyo1t")
 }],
 "loop": 1,
 "name": &"default",
@@ -1780,6 +1780,7 @@ theme = SubResource("Theme_2w5on")
 text = "Temp"
 
 [node name="Minigame 3" type="Node2D" parent="Pizza" unique_id=442232733]
+visible = false
 scale = Vector2(6, 6)
 script = ExtResource("24_41s4g")
 
@@ -1804,7 +1805,6 @@ animation = &"Default"
 autoplay = "Default"
 
 [node name="Minigame 4" type="Node2D" parent="Pizza" unique_id=1291360360]
-visible = false
 scale = Vector2(0.5, 0.5)
 script = ExtResource("26_01qm0")
 
@@ -1862,12 +1862,11 @@ position = Vector2(-0.16754247, -1)
 shape = SubResource("RectangleShape2D_5vgkp")
 
 [node name="Background" type="AnimatedSprite2D" parent="." unique_id=900090352]
+visible = false
 z_index = -10
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_othpo")
-frame = 1
 frame_progress = 0.055025067
-metadata/_edit_lock_ = true
 
 [connection signal="animation_finished" from="Lasagne/Minigame 1/FirstDown" to="Lasagne/Minigame 1" method="_on_first_down_animation_finished"]
 [connection signal="area_entered" from="Lasagne/Minigame 2/Bar/Green" to="Lasagne/Minigame 2" method="_on_green_area_entered"]
