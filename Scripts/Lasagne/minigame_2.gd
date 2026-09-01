@@ -1,40 +1,49 @@
 extends Node2D
-
 var speed = 0.3
 var in_green = false
 var in_yellow = false
 var in_red = false
 var in_orange = false
 var ingredients = 6
+var book_shown_for_step = false
+var minigame_started = false
 @onready var arrow = $Path2D/PathFollow2D/Arrow
-# Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Globals.minigame == 2 and Globals.current_recipie == "Lasagne":
-		$Path2D/PathFollow2D.progress_ratio += delta * speed
-		if ingredients <= 0:
-			Globals.minigame += 1
-		if in_green and Input.is_action_just_pressed("Space"):
-			Globals.gorefield_appeasment += 2
-			ingredients -= 1
-			arrow.play("Green")
-			
-		if in_yellow and Input.is_action_just_pressed("Space"):
-			Globals.gorefield_appeasment += 1
-			ingredients -= 1
-			arrow.play("Yellow")
-		if in_orange and Input.is_action_just_pressed("Space"):
-			Globals.gorefield_appeasment -= 1
-			ingredients -= 1
-			arrow.play("Orange")
-		if in_red and Input.is_action_just_pressed("Space"):
-			Globals.gorefield_appeasment -= 2
-			ingredients -= 1
-			arrow.play("Red")
+		if not book_shown_for_step:
+			Globals.showbook()
+			book_shown_for_step = true
+
+		if not minigame_started and Globals.countdownfin:
+			minigame_started = true
+
+		if minigame_started:
+			$Path2D/PathFollow2D.progress_ratio += delta * speed
+			if ingredients <= 0:
+				Globals.minigame += 1
+				Globals.countdownfin = false
+			if in_green and Input.is_action_just_pressed("Space"):
+				Globals.gorefield_appeasment += 2
+				ingredients -= 1
+				arrow.play("Green")
+
+			if in_yellow and Input.is_action_just_pressed("Space"):
+				Globals.gorefield_appeasment += 1
+				ingredients -= 1
+				arrow.play("Yellow")
+			if in_orange and Input.is_action_just_pressed("Space"):
+				Globals.gorefield_appeasment -= 1
+				ingredients -= 1
+				arrow.play("Orange")
+			if in_red and Input.is_action_just_pressed("Space"):
+				Globals.gorefield_appeasment -= 2
+				ingredients -= 1
+				arrow.play("Red")
+
 func _on_green_area_entered(area: Area2D) -> void:
 	if Globals.minigame == 2 and Globals.current_recipie == "Lasagne":
 		in_green = true

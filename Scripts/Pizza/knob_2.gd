@@ -44,5 +44,5 @@ func _process(delta: float) -> void:
 			$Knob.rotation = knob_angle
 
 			var ang := knob_angle
-			if ang >= 2.9 and ang <= 3.3:
+			if ang >= 0.5 and ang <= 0.6:
 				knob2.emit()

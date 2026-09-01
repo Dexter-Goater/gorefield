@@ -30,11 +30,14 @@
 [ext_resource type="Script" uid="uid://br7lhufvhca86" path="res://Scripts/Pizza/minigame_4.gd" id="26_01qm0"]
 [ext_resource type="Texture2D" uid="uid://7j6pslbxluvb" path="res://Art/2D/Pizza/Minigame 2/pizza mini game begin(rolling).png" id="26_dnlh1"]
 [ext_resource type="Script" uid="uid://bcintqrybvalm" path="res://Scripts/Pizza/knob_1.gd" id="27_if3pv"]
-[ext_resource type="Texture2D" uid="uid://ctj03osco1ewh" path="res://icon.svg" id="28_s60kf"]
 [ext_resource type="Texture2D" uid="uid://bjebx45ok2m8h" path="res://Art/2D/Pizza/Minigame 3/pizza with sauce and without-Sheet.png" id="29_5y6rq"]
 [ext_resource type="Script" uid="uid://d3kxex8shcerv" path="res://Scripts/Pizza/knob_2.gd" id="29_if55n"]
 [ext_resource type="Texture2D" uid="uid://b1cyfjgeventc" path="res://Art/2D/Pizza/Minigame 3/Lattle cursor.png" id="30_pitq4"]
+[ext_resource type="Texture2D" uid="uid://f7usqavv1lm0" path="res://Art/2D/Pizza/Minigame 4/Oven switch.png" id="33_yduox"]
 [ext_resource type="Texture2D" uid="uid://c18w0cbtn4vkp" path="res://Art/2D/Background/Background with the oven knibs and updated oven.png" id="35_pitq4"]
+[ext_resource type="Texture2D" uid="uid://cxfgw37vymvn" path="res://Art/2D/Global/count down-Sheet.png" id="36_aks50"]
+[ext_resource type="Texture2D" uid="uid://cn8mk4qj5gche" path="res://Art/2D/Global/booktemp.png" id="37_dnlh1"]
+[ext_resource type="Texture2D" uid="uid://d1qghm6jltqql" path="res://Art/2D/Global/cross.png" id="38_yduox"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ybe6u"]
 atlas = ExtResource("5_5y6rq")
@@ -1434,27 +1437,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5vgkp"]
-size = Vector2(128.33508, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hj35d"]
-atlas = ExtResource("35_pitq4")
-region = Rect2(0, 0, 500, 500)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rpyss"]
-atlas = ExtResource("35_pitq4")
-region = Rect2(500, 0, 500, 500)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jryu5"]
-atlas = ExtResource("35_pitq4")
-region = Rect2(1000, 0, 500, 500)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3o85p"]
-atlas = ExtResource("35_pitq4")
-region = Rect2(1500, 0, 500, 500)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4o1yx"]
-atlas = ExtResource("35_pitq4")
-region = Rect2(2000, 0, 500, 500)
+size = Vector2(113.926704, 72)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iuw0u"]
 atlas = ExtResource("35_pitq4")
@@ -1468,6 +1451,65 @@ region = Rect2(3000, 0, 500, 500)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_iuw0u")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hyo1t")
+}],
+"loop": 1,
+"name": &"oven",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hj35d"]
+atlas = ExtResource("36_aks50")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rpyss"]
+atlas = ExtResource("36_aks50")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jryu5"]
+atlas = ExtResource("36_aks50")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3o85p"]
+atlas = ExtResource("36_aks50")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4o1yx"]
+atlas = ExtResource("36_aks50")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_15r3x"]
+atlas = ExtResource("36_aks50")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v3b1t"]
+atlas = ExtResource("36_aks50")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wvcvq"]
+atlas = ExtResource("36_aks50")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vo30"]
+atlas = ExtResource("36_aks50")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hlul1"]
+atlas = ExtResource("36_aks50")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_hj35d")
 }, {
 "duration": 1.0,
@@ -1475,7 +1517,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jryu5")
+}],
+"loop": 0,
+"name": &"Count",
+"speed": 1.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3o85p")
 }, {
@@ -1483,15 +1530,30 @@ animations = [{
 "texture": SubResource("AtlasTexture_4o1yx")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_iuw0u")
+"texture": SubResource("AtlasTexture_15r3x")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hyo1t")
+"texture": SubResource("AtlasTexture_v3b1t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wvcvq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2vo30")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hlul1")
 }],
-"loop": 1,
-"name": &"default",
-"speed": 5.0
+"loop": 0,
+"name": &"Jhon",
+"speed": 14.0
 }]
+
+[sub_resource type="Theme" id="Theme_dnlh1"]
+default_font_size = 64
+
+[sub_resource type="Theme" id="Theme_yduox"]
+default_font_size = 64
 
 [node name="Main" type="Node2D" unique_id=1107761980]
 script = ExtResource("1_0evub")
@@ -1500,7 +1562,6 @@ script = ExtResource("1_0evub")
 zoom = Vector2(2.3, 2.3)
 
 [node name="Lasagne" type="Node2D" parent="." unique_id=537758055]
-visible = false
 script = ExtResource("2_3qnm5")
 
 [node name="Minigame 1" type="Node2D" parent="Lasagne" unique_id=102660986]
@@ -1673,7 +1734,7 @@ text = "Track the white box with your mouse to stir"
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Lasagne/Minigame 3" unique_id=571151645]
 z_index = -1
 sprite_frames = SubResource("SpriteFrames_5vgkp")
-animation = &"Looping"
+animation = &"First_Adding"
 
 [node name="Minigame 4" type="Node2D" parent="Lasagne" unique_id=918677780]
 position = Vector2(4, 106)
@@ -1728,7 +1789,6 @@ text = "Temp"
 script = ExtResource("19_msp3q")
 
 [node name="Minigame 1" type="Node2D" parent="Pizza" unique_id=2054242857]
-visible = false
 scale = Vector2(4, 4)
 script = ExtResource("20_8g7ue")
 
@@ -1752,7 +1812,6 @@ wait_time = 10.0
 one_shot = true
 
 [node name="Minigame 2" type="Node2D" parent="Pizza" unique_id=1356050981]
-visible = false
 scale = Vector2(4, 4)
 script = ExtResource("21_pocwo")
 
@@ -1760,7 +1819,7 @@ script = ExtResource("21_pocwo")
 position = Vector2(0, -3)
 scale = Vector2(0.9, 0.9)
 sprite_frames = SubResource("SpriteFrames_gwmvc")
-animation = &"Init1"
+animation = &"Pre_Roll"
 
 [node name="Arrow" type="Node2D" parent="Pizza/Minigame 2" unique_id=335770906]
 position = Vector2(-1, 8)
@@ -1780,7 +1839,6 @@ theme = SubResource("Theme_2w5on")
 text = "Temp"
 
 [node name="Minigame 3" type="Node2D" parent="Pizza" unique_id=442232733]
-visible = false
 scale = Vector2(6, 6)
 script = ExtResource("24_41s4g")
 
@@ -1809,64 +1867,158 @@ scale = Vector2(0.5, 0.5)
 script = ExtResource("26_01qm0")
 
 [node name="Knob 1" type="Node2D" parent="Pizza/Minigame 4" unique_id=612083833]
-position = Vector2(-100, -110)
+position = Vector2(16, 154)
 script = ExtResource("27_if3pv")
 metadata/_edit_group_ = true
-
-[node name="Back" type="Sprite2D" parent="Pizza/Minigame 4/Knob 1" unique_id=1635419116]
-texture = ExtResource("28_s60kf")
 
 [node name="Knob" type="Marker2D" parent="Pizza/Minigame 4/Knob 1" unique_id=557591029]
 
 [node name="Knob" type="Sprite2D" parent="Pizza/Minigame 4/Knob 1/Knob" unique_id=324096791]
-position = Vector2(0, -30.000002)
-scale = Vector2(0.0625, 0.37109375)
-texture = ExtResource("28_s60kf")
+position = Vector2(0, -4)
+scale = Vector2(3, 3)
+texture = ExtResource("33_yduox")
 
 [node name="KnobPoint" type="Marker2D" parent="Pizza/Minigame 4/Knob 1/Knob" unique_id=1770857533]
-position = Vector2(0, -51)
+position = Vector2(0, -13)
 
 [node name="MiddlePoint" type="Marker2D" parent="Pizza/Minigame 4/Knob 1/Knob" unique_id=1655813382]
 position = Vector2(0, -64)
 
+[node name="Label" type="Label" parent="Pizza/Minigame 4/Knob 1" unique_id=1202919047]
+offset_left = 32.0
+offset_top = -38.0
+offset_right = 72.0
+offset_bottom = -15.0
+scale = Vector2(0.5, 0.5)
+text = "50"
+
+[node name="Label2" type="Label" parent="Pizza/Minigame 4/Knob 1" unique_id=583276945]
+offset_left = 50.0
+offset_top = -11.0
+offset_right = 90.0
+offset_bottom = 12.0
+scale = Vector2(0.5, 0.5)
+text = "100"
+
+[node name="Label3" type="Label" parent="Pizza/Minigame 4/Knob 1" unique_id=2027312629]
+offset_left = 36.0
+offset_top = 24.0
+offset_right = 76.0
+offset_bottom = 47.0
+scale = Vector2(0.5, 0.5)
+text = "150"
+
+[node name="Label4" type="Label" parent="Pizza/Minigame 4/Knob 1" unique_id=1573789951]
+offset_left = -6.0
+offset_top = 38.0
+offset_right = 34.0
+offset_bottom = 61.0
+scale = Vector2(0.5, 0.5)
+text = "200"
+
+[node name="Label5" type="Label" parent="Pizza/Minigame 4/Knob 1" unique_id=726640580]
+offset_left = -50.0
+offset_top = 22.0
+offset_right = -10.0
+offset_bottom = 45.0
+scale = Vector2(0.5, 0.5)
+text = "250"
+
+[node name="Label6" type="Label" parent="Pizza/Minigame 4/Knob 1" unique_id=528447957]
+offset_left = -60.0
+offset_top = -10.0
+offset_right = -20.0
+offset_bottom = 13.0
+scale = Vector2(0.5, 0.5)
+text = "300"
+
+[node name="Label7" type="Label" parent="Pizza/Minigame 4/Knob 1" unique_id=1666791858]
+offset_left = -44.0
+offset_top = -38.0
+offset_right = -4.0
+offset_bottom = -15.0
+scale = Vector2(0.5, 0.5)
+text = "350"
+
 [node name="Knob 2" type="Node2D" parent="Pizza/Minigame 4" unique_id=2019344627]
-position = Vector2(100, -110)
+position = Vector2(240, 146)
 script = ExtResource("29_if55n")
 metadata/_edit_group_ = true
-
-[node name="Back" type="Sprite2D" parent="Pizza/Minigame 4/Knob 2" unique_id=1527692042]
-texture = ExtResource("28_s60kf")
 
 [node name="Knob" type="Marker2D" parent="Pizza/Minigame 4/Knob 2" unique_id=2108409718]
 
 [node name="Knob" type="Sprite2D" parent="Pizza/Minigame 4/Knob 2/Knob" unique_id=639263097]
-position = Vector2(0, -30.000002)
-scale = Vector2(0.0625, 0.37109375)
-texture = ExtResource("28_s60kf")
+position = Vector2(0, -4)
+scale = Vector2(3, 3)
+texture = ExtResource("33_yduox")
 
 [node name="KnobPoint" type="Marker2D" parent="Pizza/Minigame 4/Knob 2/Knob" unique_id=775708740]
-position = Vector2(0, -51)
+position = Vector2(0, -13)
 
 [node name="MiddlePoint" type="Marker2D" parent="Pizza/Minigame 4/Knob 2/Knob" unique_id=539325184]
-position = Vector2(0, -64)
 
-[node name="Oven" type="Sprite2D" parent="Pizza/Minigame 4" unique_id=1550868312]
+[node name="Area2D" type="Area2D" parent="Pizza/Minigame 4" unique_id=740928162]
 position = Vector2(3.8146973e-06, 138)
 scale = Vector2(5.96875, 2)
-texture = ExtResource("28_s60kf")
 
-[node name="Area2D" type="Area2D" parent="Pizza/Minigame 4/Oven" unique_id=740928162]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Pizza/Minigame 4/Oven/Area2D" unique_id=768963841]
-position = Vector2(-0.16754247, -1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pizza/Minigame 4/Area2D" unique_id=768963841]
+position = Vector2(-1.9173349e-06, 133)
 shape = SubResource("RectangleShape2D_5vgkp")
 
 [node name="Background" type="AnimatedSprite2D" parent="." unique_id=900090352]
-visible = false
 z_index = -10
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_othpo")
-frame_progress = 0.055025067
+animation = &"oven"
+autoplay = "default"
+metadata/_edit_lock_ = true
+
+[node name="countdown" type="AnimatedSprite2D" parent="." unique_id=1324984294]
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+animation = &"Jhon"
+
+[node name="countdowntimer" type="Timer" parent="." unique_id=2099516191]
+wait_time = 3.0
+one_shot = true
+
+[node name="jhontimer" type="Timer" parent="." unique_id=1166249755]
+wait_time = 0.5
+one_shot = true
+
+[node name="book" type="Sprite2D" parent="." unique_id=879545985]
+visible = false
+position = Vector2(0, -9)
+scale = Vector2(4, 4)
+texture = ExtResource("37_dnlh1")
+
+[node name="label_left" type="Label" parent="book" unique_id=91991923]
+offset_left = -28.0
+offset_top = -26.0
+offset_right = 511.99994
+offset_bottom = 1013.9999
+scale = Vector2(0.05, 0.05)
+theme = SubResource("Theme_dnlh1")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="label_right" type="Label" parent="book" unique_id=779398562]
+offset_left = 1.0
+offset_top = -26.0
+offset_right = 525.99994
+offset_bottom = 1008.9999
+scale = Vector2(0.05, 0.05)
+theme = SubResource("Theme_yduox")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="close" type="Button" parent="book" unique_id=256328528]
+offset_left = 23.75
+offset_top = -30.5
+offset_right = 48.75
+offset_bottom = -5.5
+scale = Vector2(0.3, 0.3)
+icon = ExtResource("38_yduox")
+flat = true
 
 [connection signal="animation_finished" from="Lasagne/Minigame 1/FirstDown" to="Lasagne/Minigame 1" method="_on_first_down_animation_finished"]
 [connection signal="area_entered" from="Lasagne/Minigame 2/Bar/Green" to="Lasagne/Minigame 2" method="_on_green_area_entered"]
@@ -1898,5 +2050,6 @@ frame_progress = 0.055025067
 [connection signal="mouse_exited" from="Pizza/Minigame 3/Area2D" to="Pizza/Minigame 3" method="_on_area_2d_mouse_exited"]
 [connection signal="knob1" from="Pizza/Minigame 4/Knob 1" to="Pizza/Minigame 4" method="_on_knob_1_knob_1"]
 [connection signal="knob2" from="Pizza/Minigame 4/Knob 2" to="Pizza/Minigame 4" method="_on_knob_2_knob_2"]
-[connection signal="mouse_entered" from="Pizza/Minigame 4/Oven/Area2D" to="Pizza/Minigame 4" method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="Pizza/Minigame 4/Oven/Area2D" to="Pizza/Minigame 4" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="Pizza/Minigame 4/Area2D" to="Pizza/Minigame 4" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Pizza/Minigame 4/Area2D" to="Pizza/Minigame 4" method="_on_area_2d_mouse_exited"]
+[connection signal="pressed" from="book/close" to="." method="_on_close_pressed"]
