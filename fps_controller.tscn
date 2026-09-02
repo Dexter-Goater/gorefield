@@ -46,9 +46,10 @@ current = true
 [node name="SpotLight3D" type="SpotLight3D" parent="Yaw/Pitch/Camera3D" unique_id=1632578534]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.299, 1.0515409)
 light_color = Color(0.92941177, 0.8235294, 0.79607844, 1)
-light_energy = 3.0
+light_energy = 2.0
 light_volumetric_fog_energy = 0.1
 spot_range = 100.0
+spot_angle = 35.0
 spot_angle_attenuation = 3.0
 
 [node name="MovementController" type="Node" parent="." unique_id=370495041]

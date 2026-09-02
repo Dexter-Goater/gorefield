@@ -22,7 +22,7 @@ const CAM_HEIGHT_CROUCH : float = 0.0
 @export_group("")
 @export_category("Character Settings")
 @export var walk_speed    : float = 5.0
-@export var sprint_speed  : float = 100.0
+@export var sprint_speed  : float = 8.0
 ## Character's crouch speed.
 ## This controls how fast the character
 ## moves while crouched.

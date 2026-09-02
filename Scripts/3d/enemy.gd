@@ -4,8 +4,8 @@ enum State { PATROL_GENERATOR, WAIT_AT_GENERATOR, CHASE }
 var state: State = State.PATROL_GENERATOR
 
 @export_category("Speeds")
-@export var speed_patrol: float = 7.0
-@export var speed_chase: float = 13.0
+@export var speed_patrol: float = 4.0
+@export var speed_chase: float = 7.0
 @export var turn_speed: float = 10.0
 
 @export_category("Generator Patrol")
@@ -179,6 +179,7 @@ func _pick_random_generator() -> void:
 	current_generator = valid_generators.pick_random()
 	navigation_agent_3d.target_position = current_generator.global_position
 	state = State.PATROL_GENERATOR
+	Globals.chasingplayer = false
 	_reset_stuck_tracker()
 
 func _pick_nearest_generator() -> void:
@@ -197,6 +198,7 @@ func _pick_nearest_generator() -> void:
 		current_generator = nearest
 		navigation_agent_3d.target_position = current_generator.global_position
 		state = State.PATROL_GENERATOR
+		Globals.chasingplayer = false
 		_reset_stuck_tracker()
 
 func _on_patrol_generator(delta: float) -> void:

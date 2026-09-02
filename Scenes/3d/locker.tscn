@@ -6,7 +6,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_o21aq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q46xx"]
-albedo_color = Color(2.3584067e-05, 0.21709391, 0.6419295, 1)
+albedo_color = Color(0.34362087, 7.009041e-07, 0.04809533, 1)
 
 [node name="Locker" type="Area3D" unique_id=1697958646]
 script = ExtResource("1_woy3j")
