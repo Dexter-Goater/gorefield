@@ -46,4 +46,3 @@ func _process(delta: float) -> void:
 			var ang := knob_angle
 			if ang >= 4 and ang <= 4.3:
 				knob1.emit()
-				print("knob1")

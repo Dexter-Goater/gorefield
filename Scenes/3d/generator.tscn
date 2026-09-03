@@ -46,6 +46,7 @@ shape = SubResource("ConcavePolygonShape3D_84oj5")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1553795062]
 stream = ExtResource("3_gcmc6")
+max_distance = 10.0
 parameters/looping = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

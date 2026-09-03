@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bh0t5obsus0u1"
+path="res://.godot/imported/Cheap Trick - Surrender (Official Audio).mp3-58a2a27afd54687f8f7bb10e833d5361.mp3str"
+
+[deps]
+
+source_file="res://Art/Credits/Cheap Trick - Surrender (Official Audio).mp3"
+dest_files=["res://.godot/imported/Cheap Trick - Surrender (Official Audio).mp3-58a2a27afd54687f8f7bb10e833d5361.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -3,8 +3,9 @@
 [resource]
 background_mode = 1
 background_color = Color(1, 1, 1, 1)
-background_energy_multiplier = 0.04
+background_energy_multiplier = 0.02
 ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.5
 reflected_light_source = 1
 tonemap_mode = 2
 fog_enabled = true

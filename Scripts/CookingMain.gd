@@ -4,13 +4,11 @@ func _ready() -> void:
 	$countdown.hide()
 	$book.hide()
 	Globals.gorefield_appeasment = 5
-	
+	Globals.load_book_text()
 	Globals.current_recipie = Globals.recipies.pick_random()
 	for recipie in Globals.old_recipies:
 		if Globals.current_recipie == recipie:
 			Globals.current_recipie = Globals.recipies.pick_random()
-			print(Globals.current_recipie)
-	print(Globals.current_recipie)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

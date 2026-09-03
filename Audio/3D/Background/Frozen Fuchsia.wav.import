@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bx1e5f8gdmaus"
+path="res://.godot/imported/Frozen Fuchsia.wav-429d1fedac000de07504b4d096aef789.sample"
+
+[deps]
+
+source_file="res://Audio/3D/Background/Frozen Fuchsia.wav"
+dest_files=["res://.godot/imported/Frozen Fuchsia.wav-429d1fedac000de07504b4d096aef789.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -36,7 +36,7 @@
 [ext_resource type="Texture2D" uid="uid://f7usqavv1lm0" path="res://Art/2D/Pizza/Minigame 4/Oven switch.png" id="33_yduox"]
 [ext_resource type="Texture2D" uid="uid://c18w0cbtn4vkp" path="res://Art/2D/Background/Background with the oven knibs and updated oven.png" id="35_pitq4"]
 [ext_resource type="Texture2D" uid="uid://cxfgw37vymvn" path="res://Art/2D/Global/count down-Sheet.png" id="36_aks50"]
-[ext_resource type="Texture2D" uid="uid://cn8mk4qj5gche" path="res://Art/2D/Global/booktemp.png" id="37_dnlh1"]
+[ext_resource type="Texture2D" uid="uid://dyeei5qvw6atx" path="res://Art/2D/Global/How to play book.png" id="37_yduox"]
 [ext_resource type="Texture2D" uid="uid://d1qghm6jltqql" path="res://Art/2D/Global/cross.png" id="38_yduox"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ybe6u"]
@@ -1581,7 +1581,7 @@ animation = &"Veg 3"
 autoplay = "Veg 1"
 
 [node name="Timer" type="Timer" parent="Lasagne/Minigame 1" unique_id=1173723208]
-wait_time = 5.0
+wait_time = 10.0
 one_shot = true
 
 [node name="Label" type="Label" parent="Lasagne/Minigame 1" unique_id=68766460]
@@ -1733,6 +1733,7 @@ text = "Track the white box with your mouse to stir"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Lasagne/Minigame 3" unique_id=571151645]
 z_index = -1
+position = Vector2(0, 0.25)
 sprite_frames = SubResource("SpriteFrames_5vgkp")
 animation = &"First_Adding"
 
@@ -1986,26 +1987,25 @@ wait_time = 0.5
 one_shot = true
 
 [node name="book" type="Sprite2D" parent="." unique_id=879545985]
-visible = false
 position = Vector2(0, -9)
 scale = Vector2(4, 4)
-texture = ExtResource("37_dnlh1")
+texture = ExtResource("37_yduox")
 
 [node name="label_left" type="Label" parent="book" unique_id=91991923]
-offset_left = -28.0
-offset_top = -26.0
-offset_right = 511.99994
-offset_bottom = 1013.9999
+offset_left = -28.25
+offset_top = -21.0
+offset_right = 511.74994
+offset_bottom = 1018.9999
 scale = Vector2(0.05, 0.05)
 theme = SubResource("Theme_dnlh1")
 horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="label_right" type="Label" parent="book" unique_id=779398562]
-offset_left = 1.0
-offset_top = -26.0
-offset_right = 525.99994
-offset_bottom = 1008.9999
+offset_left = 3.5
+offset_top = -20.5
+offset_right = 528.49994
+offset_bottom = 1014.4999
 scale = Vector2(0.05, 0.05)
 theme = SubResource("Theme_yduox")
 horizontal_alignment = 1

@@ -23,7 +23,7 @@ text = "E"
 font_size = 128
 
 [node name="ExitPosition" type="Marker3D" parent="." unique_id=144597748]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4372387, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4372387, 0.11008763, 0)
 
 [node name="Locker" type="MeshInstance3D" parent="." unique_id=979719135]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0.086743474, 1.6115804, -0.022644669)

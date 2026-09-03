@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bqqi6elxhlg1" path="res://player.gd" id="1_vhbvx"]
 [ext_resource type="Script" uid="uid://b8ts8uc3gchd5" path="res://components/movement_controller.gd" id="2_5ow1q"]
+[ext_resource type="Script" uid="uid://cqghuck28fsy8" path="res://Scripts/3d/stambar.gd" id="3_ics4w"]
+[ext_resource type="Texture2D" uid="uid://d11k2ven3lvl2" path="res://Art/3D/sprint bart.png" id="3_xfl77"]
+[ext_resource type="Texture2D" uid="uid://bvrbu5d7j8wck" path="res://Art/3D/sprint bart full.png" id="4_ics4w"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wqxis"]
 
@@ -44,12 +47,12 @@ unique_name_in_owner = true
 current = true
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Yaw/Pitch/Camera3D" unique_id=1632578534]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.299, 1.0515409)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.14700863, 1.0515409)
 light_color = Color(0.92941177, 0.8235294, 0.79607844, 1)
 light_energy = 2.0
 light_volumetric_fog_energy = 0.1
 spot_range = 100.0
-spot_angle = 35.0
+spot_angle = 25.0
 spot_angle_attenuation = 3.0
 
 [node name="MovementController" type="Node" parent="." unique_id=370495041]
@@ -60,3 +63,18 @@ script = ExtResource("2_5ow1q")
 unique_name_in_owner = true
 shape = SubResource("CapsuleShape3D_5ow1q")
 target_position = Vector3(0, 0, 0)
+
+[node name="StaminaUI" type="CanvasLayer" parent="." unique_id=1171764032 node_paths=PackedStringArray("player")]
+script = ExtResource("3_ics4w")
+player = NodePath("..")
+hide_when_full = false
+
+[node name="Barroot" type="Node2D" parent="StaminaUI" unique_id=1304544843]
+
+[node name="StaminaBarBG" type="Sprite2D" parent="StaminaUI/Barroot" unique_id=1369413]
+texture = ExtResource("3_xfl77")
+centered = false
+
+[node name="StaminaBarFill" type="Sprite2D" parent="StaminaUI/Barroot" unique_id=704900761]
+texture = ExtResource("4_ics4w")
+centered = false

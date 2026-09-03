@@ -3,8 +3,6 @@ extends Node
 var _movement_state_machine : MovementStateMachine
 
 func initialize(player : Player):
-	if player.can_debug:
-		print_debug("Initializing movement controller...")
 	_movement_state_machine = MovementStateMachine.new()
 	_movement_state_machine.set_crouch_action(player.crouch)
 	_movement_state_machine.set_jump_action(player.jump)
@@ -15,5 +13,3 @@ func initialize(player : Player):
 		_movement_state_machine.idle_state, 
 		player.can_debug
 	)
-	if player.can_debug:
-		print_debug("Movement controller initialized!")

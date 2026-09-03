@@ -10,30 +10,28 @@ var pastaed = false
 var ingredient
 var book_shown_for_step = false
 var minigame_started = false
-
 func _process(delta: float) -> void:
 	if Globals.minigame == 4 and Globals.current_recipie == "Lasagne":
 		if not book_shown_for_step:
 			Globals.showbook()
 			book_shown_for_step = true
-
 		if not minigame_started and Globals.countdownfin:
 			minigame_started = true
-
 		if minigame_started:
 			ingredient = order[0]
 			if ingredient == "end":
-				Globals.minigame_over = true
 				Globals.countdownfin = false
-				for recipie in Globals.old_recipies:
-					print(Globals.old_recipies)
-					if Globals.old_recipies.size() != Globals.recipies.size():
-						if Globals.current_recipie == recipie:
-							Globals.current_recipie = Globals.recipies.pick_random()
-						elif Globals.current_recipie != recipie:
-							Globals.minigame = 1
-					else:
-						Globals.minigame_over = true
+				if not Globals.old_recipies.has(Globals.current_recipie):
+					Globals.old_recipies.append(Globals.current_recipie)
+				if Globals.old_recipies.size() >= Globals.recipies.size():
+					Globals.minigame_over = true
+				else:
+					var next_recipie = Globals.current_recipie
+					while Globals.old_recipies.has(next_recipie):
+						next_recipie = Globals.recipies.pick_random()
+					Globals.current_recipie = next_recipie
+					Globals.minigame = 1
+					Globals.minigame_over = false
 			else:
 				$Label.text = "Required ingredient = {ingredient}".format({"ingredient":ingredient})
 				if Input.is_action_just_pressed("Left Click"):
@@ -49,7 +47,6 @@ func _process(delta: float) -> void:
 						raguud = false
 						sauced = false
 						pastaed = true
-
 					if intray:
 						if sauced:
 							$Tray/Sprite2D.play("Bechamel")
@@ -72,31 +69,23 @@ func _process(delta: float) -> void:
 							else:
 								Globals.gorefield_appeasment -= 4
 							order.pop_front()
-
 func _on_tray_mouse_entered() -> void:
 	if Globals.minigame == 4 and Globals.current_recipie == "Lasagne":
 		intray = true
-
 func _on_tray_mouse_exited() -> void:
 	intray = false
-
 func _on_ragu_mouse_entered() -> void:
 	if Globals.minigame == 4 and Globals.current_recipie == "Lasagne":
 		inragu = true
-
 func _on_ragu_mouse_exited() -> void:
 	inragu = false
-
 func _on_bechamel_sauce_mouse_entered() -> void:
 	if Globals.minigame == 4 and Globals.current_recipie == "Lasagne":
 		insauce = true
-
 func _on_bechamel_sauce_mouse_exited() -> void:
 	insauce = false
-
 func _on_pasta_mouse_entered() -> void:
 	if Globals.minigame == 4 and Globals.current_recipie == "Lasagne":
 		inpasta = true
-
 func _on_pasta_mouse_exited() -> void:
 	inpasta = false

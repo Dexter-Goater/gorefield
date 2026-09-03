@@ -144,7 +144,6 @@ func _play_random_voice_line() -> void:
 	if voice_lines.size() > 0 and voice_line_player:
 		voice_line_player.stream = voice_lines.pick_random()
 		voice_line_player.play()
-		print("sound played")
 
 func _check_stuck(delta: float) -> void:
 	if state == State.WAIT_AT_GENERATOR:

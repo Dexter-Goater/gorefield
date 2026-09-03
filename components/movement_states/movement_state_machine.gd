@@ -49,8 +49,6 @@ func _physics_process(delta: float) -> void:
 func initialize_state_machine(character_body : Player, initial_state : MovementState, can_debug : bool = false) -> void:
 	target = character_body
 	_can_debug = can_debug
-	if _can_debug:
-		print_debug("Movement State Machine initialized, switching to Idle State\nCharacter target is " + str(target))
 	change_state(initial_state)
 
 func change_state(new_state : MovementState) -> void:
@@ -61,9 +59,6 @@ func change_state(new_state : MovementState) -> void:
 
 func change_stance_check() -> void:
 	if target.shape_cast_standing.is_colliding():
-		#if true:
-			#await get_tree().create_timer(0.5).timeout
-			#print_debug("ShapeCast3D is colliding")
 		return
 	change_stance_stand()
 
@@ -83,22 +78,16 @@ func change_stance_stand() -> void:
 func has_crouch() -> bool:
 	if crouch_action:
 		return true
-	if _can_debug:
-		print_debug("No crouch button set")
 	return false
 
 func has_jump() -> bool:
 	if jump_action:
 		return true
-	if _can_debug:
-		print_debug("No jump button set")
 	return false
 
 func has_sprint() -> bool:
 	if sprint_action:
 		return true
-	if _can_debug:
-		print_debug("No sprint button set")
 	return false
 
 func is_crouching() -> bool:
